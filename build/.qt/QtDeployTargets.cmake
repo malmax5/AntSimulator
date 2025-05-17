@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_MyQtProject_FILE /home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject)
+set(__QT_DEPLOY_TARGET_MyQtProject_TYPE EXECUTABLE)

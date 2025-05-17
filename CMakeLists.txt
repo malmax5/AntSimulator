@@ -9,11 +9,23 @@ set(CMAKE_PREFIX_PATH /home/cbf/Qt/6.8.0/gcc_64)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
-set(SOURCES
-    main.cpp
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+set(HEADERS
+    include/MainWindow.hpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
+set(SOURCES
+    main.cpp
+
+    src/MainWindow.cpp
+)
+
+add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets)
 
