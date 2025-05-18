@@ -19,6 +19,7 @@ set(HEADERS
     include/MainWindow.hpp
 
     include/model/Ant.hpp
+    include/model/FoodStorage.hpp
 )
 
 set(SOURCES
@@ -27,6 +28,7 @@ set(SOURCES
     src/MainWindow.cpp
 
     src/model/Ant.cpp
+    src/model/FoodStorage.cpp
 )
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
