@@ -17,12 +17,16 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 set(HEADERS
     include/MainWindow.hpp
+
+    include/model/Ant.hpp
 )
 
 set(SOURCES
     main.cpp
 
     src/MainWindow.cpp
+
+    src/model/Ant.cpp
 )
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})

@@ -4,8 +4,10 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/moc_predefs.h \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/main.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/Ant.cpp \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
