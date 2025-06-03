@@ -25,8 +25,7 @@ void MainWindow::initUI()
     antField->setText("antField");
     leftLayout->addWidget(antField);
 
-    QLabel* settingsPanel = new QLabel();
-    settingsPanel->setText("settingsPanel");
+    SettingsPanel* settingsPanel = new SettingsPanel();
 
     QSplitter* splitter = new QSplitter(Qt::Horizontal);
     splitter->addWidget(leftPanel);

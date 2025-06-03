@@ -18,6 +18,8 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 set(HEADERS
     include/MainWindow.hpp
 
+    include/widgets/SettingsPanel.hpp
+
     include/model/Ant.hpp
     include/model/FoodStorage.hpp
     include/model/PheromoneMap.hpp
@@ -27,6 +29,8 @@ set(SOURCES
     main.cpp
 
     src/MainWindow.cpp
+
+    src/widgets/SettingsPanel.cpp
 
     src/model/Ant.cpp
     src/model/FoodStorage.cpp

@@ -9,6 +9,8 @@
 #include <QVBoxLayout>
 #include <QSplitter>
 
+#include "widgets/SettingsPanel.hpp"
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

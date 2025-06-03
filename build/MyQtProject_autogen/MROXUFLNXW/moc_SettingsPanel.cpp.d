@@ -1,7 +1,5 @@
-/home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/6YEA5652QU/moc_MainWindow.cpp: /home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
+/home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/MROXUFLNXW/moc_SettingsPanel.cpp: /home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/moc_predefs.h \
-  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
@@ -48,7 +46,6 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qglobalstatic.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qhash.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qhashfunctions.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiodevice.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiodevicebase.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterable.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterator.h \
@@ -118,7 +115,6 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtversionchecks.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtypeinfo.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtypes.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qurl.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qutf8stringview.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvariant.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvarlengtharray.h \
@@ -138,35 +134,19 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qkeysequence.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpaintdevice.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpalette.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpicture.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpixelformat.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpixmap.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpolygon.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qregion.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qrgb.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qrgba64.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtgui-config.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiglobal.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QHBoxLayout \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QLabel \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QMainWindow \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSplitter \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qboxlayout.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgridlayout.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlabel.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlayout.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlayoutitem.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsplitter.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
