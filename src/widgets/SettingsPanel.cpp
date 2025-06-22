@@ -64,12 +64,12 @@ SettingsPanel::SettingsPanel(QWidget* parent)
 
 void SettingsPanel::updateAntCount(int count)
 {
-    
+    antCountSlider->setValue(count);
 }
 
 void SettingsPanel::updateSimulationSpeed(qreal speed)
 {
-    
+    speedSlider->setValue(static_cast<int>(speed));
 }
 
 void SettingsPanel::onAddFoodButtonClicked()

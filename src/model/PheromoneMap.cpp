@@ -87,3 +87,17 @@ inline bool PheromoneMap::isValid(int x, int y) const
     return x >= 0 && y >= 0 && x < width && y < height;
 }
 
+int PheromoneMap::getWidth()
+{
+    return width;
+}
+
+int PheromoneMap::getHeight()
+{
+    return height;
+}
+
+qreal PheromoneMap::getValue(int x, int y)
+{
+    return map[x][y];
+}

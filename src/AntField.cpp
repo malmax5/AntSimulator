@@ -1,0 +1,93 @@
+#include "../include/AntField.hpp"
+
+#include <QPainter>
+#include <QPaintEvent>
+#include <QWheelEvent>
+
+AntField::AntField(QWidget* parent)
+    : QWidget(parent), pheromoneMap(width(), height())
+{
+    bufferPixmap = QPixmap(size());
+    bufferPixmap.fill(Qt::white);
+}
+
+void AntField::redraw(const QVector<Ant>& ants)
+{
+    currentAnts = ants;
+
+    for (const auto& ant : ants)
+    {
+        pheromoneMap.addPheromone(ant.position, 0.5);
+    }
+
+    pheromoneMap.evaporate();
+
+    update();
+}
+
+void AntField::addFood(const QPointF& pos)
+{
+    foodPositions.append(pos);
+
+    update();
+}
+
+void AntField::wheelEvent(QWheelEvent* event)
+{
+    if (event->angleDelta().y() > 0)
+    {
+
+    }
+    else
+    {
+
+    }
+}
+
+void AntField::paintEvent(QPaintEvent* event)
+{
+    Q_UNUSED(event);
+
+    bufferPixmap = QPixmap(size());
+    bufferPixmap.fill(Qt::white);
+
+    QPainter painter(&bufferPixmap);
+    painter.setRenderHint(QPainter::Antialiasing);
+
+    painter.scale(scale, scale);
+
+    const qreal pheromoneAlpha = 0.3;
+    painter.setPen(Qt::NoPen);
+    painter.setBrush(QColor(255, 0, 0, static_cast<int>(255 * pheromoneAlpha)));
+
+    for (int x = 0; x < pheromoneMap.getWidth(); x++)
+    {
+        for (int y = 0; y < pheromoneMap.getHeight(); y++)
+        {
+            qreal strength = pheromoneMap.getValue(x, y);
+
+            if (strength > 0.1)
+            {
+                painter.drawEllipse(QPointF(x, y), scale * 2, scale * 2);
+            }
+        }
+    }
+
+    painter.setBrush(Qt::green);
+    for (const auto& food : foodPositions)
+    {
+        painter.drawEllipse(food, scale * 5, scale * 5);
+    }
+
+    painter.setBrush(Qt::black);
+    for (const auto& ant : currentAnts)
+    {
+        painter.drawEllipse(ant.position, scale * 3, scale * 3);
+    }
+
+    painter.setBrush(Qt::red);
+    painter.drawEllipse(QPointF(width() / 2.0, height() / 2.0), 10, 10);
+
+    QPainter thisPainter(this);
+    thisPainter.drawPixmap(0, 0, bufferPixmap);
+}
