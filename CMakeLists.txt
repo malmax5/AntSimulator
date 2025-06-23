@@ -17,6 +17,8 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 set(HEADERS
     include/MainWindow.hpp
+    include/AntField.hpp
+    include/AntSimulator.hpp
 
     include/widgets/SettingsPanel.hpp
 
@@ -29,6 +31,8 @@ set(SOURCES
     main.cpp
 
     src/MainWindow.cpp
+    src/AntField.cpp
+    src/AntSimulator.cpp
 
     src/widgets/SettingsPanel.cpp
 
