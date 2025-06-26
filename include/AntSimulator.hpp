@@ -49,6 +49,6 @@ private:
 
     QVector<Ant> ants;
     PheromoneMap pheromoneMap;
-    QVector<QPointF> foodPositions;
+    FoodStorage foodStorage;
     QPointF nestPosition;
 };

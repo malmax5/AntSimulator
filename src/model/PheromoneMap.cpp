@@ -56,8 +56,8 @@ QPointF PheromoneMap::getDirection(const QPointF& pos)
 
     for (int i = 0; i < 8; i++)
     {
-        int nx = dx[i];
-        int ny = dy[i];
+        int nx = x + dx[i];
+        int ny = y + dy[i];
 
         if (isValid(nx, ny))
         {

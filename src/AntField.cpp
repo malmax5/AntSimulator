@@ -5,15 +5,22 @@
 #include <QWheelEvent>
 
 AntField::AntField(QWidget* parent)
-    : QWidget(parent), pheromoneMap(width(), height())
+    : QWidget(parent), pheromoneMap(400, 400)
 {
-    bufferPixmap = QPixmap(size());
+    bufferPixmap = QPixmap(QSize(400, 400));
     bufferPixmap.fill(Qt::white);
+
+    setFixedSize(400, 400);
 }
 
 void AntField::redraw(const QVector<Ant>& ants)
 {
     currentAnts = ants;
+
+    // for (int i = 0; i < ants.size(); i++)
+    // {
+    //     qDebug() << i <<  " - " << ants[i].position;
+    // }
 
     for (const auto& ant : ants)
     {
@@ -27,7 +34,7 @@ void AntField::redraw(const QVector<Ant>& ants)
 
 void AntField::addFood(const QPointF& pos)
 {
-    foodPositions.append(pos);
+    foodPositions.addFood(pos);
 
     update();
 }
@@ -74,7 +81,7 @@ void AntField::paintEvent(QPaintEvent* event)
     }
 
     painter.setBrush(Qt::green);
-    for (const auto& food : foodPositions)
+    for (const auto& food : foodPositions.getFoods())
     {
         painter.drawEllipse(food, scale * 5, scale * 5);
     }

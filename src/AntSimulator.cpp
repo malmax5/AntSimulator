@@ -5,10 +5,12 @@
 #include <QThread>
 #include <QRandomGenerator>
 
+#include <QDebug>
+
 AntSimulator::AntSimulator(QObject* parent)
-    : QObject(parent), pheromoneMap(200, 200)
+    : QObject(parent), pheromoneMap(400, 400)
 {
-    nestPosition = QPointF(100, 100);
+    nestPosition = QPointF(200, 200);
 }
 
 void AntSimulator::run()
@@ -28,8 +30,9 @@ void AntSimulator::run()
         if (!isPaused)
         {
             moveAnts();
+            evaporatePheromones();
             emit updateData(ants);
-            emit updateActivity(foodPositions.size());
+            emit updateActivity(foodStorage.foodCount());
         }
 
         QThread::msleep(static_cast<unsigned long>(100 / simulationSpeed));
@@ -49,10 +52,10 @@ void AntSimulator::pause()
 void AntSimulator::reset()
 {
     ants.clear();
-    foodPositions.clear();
-    pheromoneMap = PheromoneMap(200, 200);
+    foodStorage.clearFood();
+    pheromoneMap = PheromoneMap(400, 400);
     emit updateData(ants);
-    emit updateActivity(foodPositions.size());
+    emit updateActivity(foodStorage.foodCount());
 }
 
 void AntSimulator::stop()
@@ -73,24 +76,42 @@ void AntSimulator::setSimulationSpeed(qreal speed)
 
 void AntSimulator::initializeAnts()
 {
+    
     ants.clear();
     ants.reserve(antCount);
 
-    for (int i = 0; i <= ants.size(); i++)
+    for (int i = 0; i < antCount; i++)
     {
         Ant ant;
-        ant.position = nestPosition + QPointF(QRandomGenerator::global()->bounded(5, -5),
-                                              QRandomGenerator::global()->bounded(5, -5));
+
+        int newX = nestPosition.x() + QRandomGenerator::global()->bounded(-5, 5);
+        int newY = nestPosition.y() + QRandomGenerator::global()->bounded(-5, 5);
+
+        qDebug() << nestPosition.x() << " " << nestPosition.y();
+
+        if (newX < 0 || newY < 0 || newX > 400 || newY > 400)
+        {
+            continue;
+        }
+
+        ant.position = nestPosition + QPointF(QRandomGenerator::global()->bounded(-5, 5),
+                                              QRandomGenerator::global()->bounded(-5, 5));
         ant.target = getRandomDiraction();
         ant.hasFood = false;
         ants.append(ant);
     }
+
+    emit updateData(ants);
 }
 
 void AntSimulator::moveAnts()
 {
     for (int i = 0; i < ants.size(); i++)
     {
+        ants[i].target = getRandomDiraction();
+
+        ants[i].position += ants[i].target * moveStep;
+
         if (ants[i].hasFood)
         {
             returnToNest(ants[i]);
@@ -99,17 +120,20 @@ void AntSimulator::moveAnts()
         {
             searchForFood(ants[i]);
         }
-
     }
 }
 
 void AntSimulator::searchForFood(Ant& ant)
 {
-    for (int i = 0; i < foodPositions.size(); i++)
+    for (int i = 0; i < foodStorage.foodCount(); i++)
     {
-        if (QPointF::dotProduct(ant.position - foodPositions[i], ant.position - foodPositions[i]) < detectionRadius * detectionRadius)
+        QPointF nearestFood = foodStorage.getNearestFood(ant.position, detectionRadius);
+        if (!nearestFood.isNull())
         {
-            ant.target = foodPositions[i] - ant.position;
+            ant.hasFood = true;
+            foodStorage.removeFood(nearestFood);
+
+            ant.target = nearestFood - ant.position;
             ant.target /= detectionRadius;
             pheromoneMap.addPheromone(ant.position, 1.0);
             return;

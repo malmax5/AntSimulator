@@ -25,7 +25,7 @@ protected:
 
 private:
     QVector<Ant> currentAnts;
-    QVector<QPointF> foodPositions;
+    FoodStorage foodPositions;
     PheromoneMap pheromoneMap;
     QPixmap bufferPixmap;
 

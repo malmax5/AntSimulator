@@ -2,6 +2,8 @@
 
 #include <QWidget>
 #include <QPointF>
+#include <QSlider>
+#include <QPushButton>
 
 class SettingsPanel : public QWidget
 {
@@ -25,11 +27,14 @@ public slots:
     void updateSimulationSpeed(qreal speed);
 
 private slots:
-    void onAddFoodButtonClicked();
+    void onAddFoodButtonClicked(int x, int y);
 
 private:
     QSlider* antCountSlider;
     QSlider* speedSlider;
+
+    QPushButton* addFoodButton;
+
     QPushButton* startButton;
     QPushButton* pauseButton;
     QPushButton* resetButton;

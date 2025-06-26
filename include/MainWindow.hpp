@@ -11,6 +11,9 @@
 
 #include "widgets/SettingsPanel.hpp"
 
+#include "AntField.hpp"
+#include "AntSimulator.hpp"
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -19,7 +22,17 @@ public:
     explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
+    void init();
+
 private:
     void initUI();
+    void initSimulator();
+    void connectSignals();
+
+private:
+    AntField* antField;
+    SettingsPanel* settingsPanel;
+    AntSimulator* antSimulator;
+    QThread* simulationThread;
 
 };

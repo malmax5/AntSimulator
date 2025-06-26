@@ -6,6 +6,7 @@
 #include <QSlider>
 #include <QLabel>
 #include <QPushButton>
+#include <QSpinBox>
 
 SettingsPanel::SettingsPanel(QWidget* parent)
     : QWidget(parent)
@@ -26,6 +27,35 @@ SettingsPanel::SettingsPanel(QWidget* parent)
 
     antSettingsBox->setLayout(antLayout);
     mainLayout->addWidget(antSettingsBox);
+
+    //Food
+    QGroupBox* foodSettingsBox = new QGroupBox("Food Settings");
+    QHBoxLayout* foodCordLayout = new QHBoxLayout();
+    QVBoxLayout* foodLayout = new QVBoxLayout();
+    
+    QSpinBox* xFoodCord = new QSpinBox;
+    QSpinBox* yFoodCord = new QSpinBox;
+
+    xFoodCord->setRange(0, 400);
+    yFoodCord->setRange(0, 400);
+    xFoodCord->setValue(0);
+    yFoodCord->setValue(0);
+
+    foodCordLayout->addWidget(xFoodCord);
+    foodCordLayout->addWidget(yFoodCord);
+
+    addFoodButton = new QPushButton("Add Food");
+
+    foodLayout->addLayout(foodCordLayout);
+    foodLayout->addWidget(addFoodButton);
+
+    connect(addFoodButton, &QPushButton::clicked, [this, xFoodCord, yFoodCord]{
+        onAddFoodButtonClicked(xFoodCord->value(), yFoodCord->value());
+        qDebug() << xFoodCord->value() << " " << yFoodCord->value();
+    });
+
+    foodSettingsBox->setLayout(foodLayout);
+    mainLayout->addWidget(foodSettingsBox);
 
     // Speed
     QGroupBox* speedSettingsBox = new QGroupBox("Speed Settings");
@@ -72,7 +102,7 @@ void SettingsPanel::updateSimulationSpeed(qreal speed)
     speedSlider->setValue(static_cast<int>(speed));
 }
 
-void SettingsPanel::onAddFoodButtonClicked()
+void SettingsPanel::onAddFoodButtonClicked(int x, int y)
 {
-    
+    emit addFood(QPointF(x, y));
 }
