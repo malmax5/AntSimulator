@@ -2,6 +2,8 @@
 
 #include <cmath>
 
+#include <QDebug>
+
 void FoodStorage::addFood(const QPointF& pos)
 {
     foods.append(pos);

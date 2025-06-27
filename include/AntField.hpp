@@ -17,7 +17,10 @@ public:
     explicit AntField(QWidget* parent = nullptr);
 
     void redraw(const QVector<Ant>& ants);
+
+public slots:
     void addFood(const QPointF& pos);
+    void removeFood(const QPointF& pos);
 
 protected:
     void paintEvent(QPaintEvent* event) override;

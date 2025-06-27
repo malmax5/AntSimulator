@@ -39,6 +39,13 @@ void AntField::addFood(const QPointF& pos)
     update();
 }
 
+void AntField::removeFood(const QPointF& pos)
+{
+    foodPositions.removeFood(pos);
+
+    update();
+}
+
 void AntField::wheelEvent(QWheelEvent* event)
 {
     if (event->angleDelta().y() > 0)

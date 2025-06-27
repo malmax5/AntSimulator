@@ -51,7 +51,6 @@ SettingsPanel::SettingsPanel(QWidget* parent)
 
     connect(addFoodButton, &QPushButton::clicked, [this, xFoodCord, yFoodCord]{
         onAddFoodButtonClicked(xFoodCord->value(), yFoodCord->value());
-        qDebug() << xFoodCord->value() << " " << yFoodCord->value();
     });
 
     foodSettingsBox->setLayout(foodLayout);
