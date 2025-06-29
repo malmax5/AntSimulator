@@ -109,7 +109,12 @@ void AntSimulator::moveAnts()
 {
     for (int i = 0; i < ants.size(); i++)
     {
-        ants[i].target = getRandomDiraction();
+        ants[i].target = pheromoneMap.getDirection(ants[i].position);
+
+        if (ants[i].target.isNull())
+        {
+            ants[i].target = getRandomDiraction();
+        }
 
         if (ants[i].hasFood)
         {
@@ -132,7 +137,7 @@ void AntSimulator::searchForFood(Ant& ant)
     if (!nearestFood.isNull())
     {
         ant.target = nearestFood - ant.position;
-        pheromoneMap.addPheromone(ant.position, 1.0);
+        pheromoneMap.addPheromone(ant.position, 2.0);
 
         if (QPointF::dotProduct(ant.target, ant.target) < 1.0)
         {

@@ -1,5 +1,7 @@
 #include "../../include/model/PheromoneMap.hpp"
 
+#include <QDebug>
+
 PheromoneMap::PheromoneMap(int width, int height)
     : width(width), height(height)
 {
@@ -67,6 +69,11 @@ QPointF PheromoneMap::getDirection(const QPointF& pos)
                 bestDir = i;
             }
         }
+    }
+
+    if (maxStrength == 0)
+    {
+        return QPointF();
     }
 
     return QPointF(dx[bestDir], dy[bestDir]);
