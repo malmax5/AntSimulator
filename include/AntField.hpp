@@ -16,7 +16,7 @@ class AntField : public QWidget
 public:
     explicit AntField(QWidget* parent = nullptr);
 
-    void redraw(const QVector<Ant>& ants);
+    void redraw(const QVector<Ant>& ants, const FoodStorage& foodStorage, const PheromoneMap& pheromoneMap);
 
 public slots:
     void addFood(const QPointF& pos);

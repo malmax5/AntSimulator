@@ -56,8 +56,9 @@ void MainWindow::initSimulator()
 
 void MainWindow::connectSignals()
 {
-    connect(settingsPanel, &SettingsPanel::startSimulation, antSimulator, &AntSimulator::run);
+    connect(settingsPanel, &SettingsPanel::startSimulation, antSimulator, &AntSimulator::start);
     connect(settingsPanel, &SettingsPanel::pauseSimulation, antSimulator, &AntSimulator::pause);
+    connect(settingsPanel, &SettingsPanel::resumeSimulation, antSimulator, &AntSimulator::resume);
     connect(settingsPanel, &SettingsPanel::resetSimulation, antSimulator, &AntSimulator::reset);
 
     connect(antSimulator, &AntSimulator::updateData, antField, &AntField::redraw);

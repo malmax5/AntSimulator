@@ -13,21 +13,11 @@ AntField::AntField(QWidget* parent)
     setFixedSize(400, 400);
 }
 
-void AntField::redraw(const QVector<Ant>& ants)
+void AntField::redraw(const QVector<Ant>& ants, const FoodStorage& foodStorage, const PheromoneMap& pheromoneMap)
 {
-    currentAnts = ants;
-
-    // for (int i = 0; i < ants.size(); i++)
-    // {
-    //     qDebug() << i <<  " - " << ants[i].position;
-    // }
-
-    for (const auto& ant : ants)
-    {
-        pheromoneMap.addPheromone(ant.position, 0.5);
-    }
-
-    pheromoneMap.evaporate();
+    this->currentAnts = ants;
+    this->foodPositions = foodStorage;
+    this->pheromoneMap = pheromoneMap;
 
     update();
 }

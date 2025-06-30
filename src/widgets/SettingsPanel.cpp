@@ -78,14 +78,17 @@ SettingsPanel::SettingsPanel(QWidget* parent)
 
     startButton = new QPushButton("Start");
     pauseButton = new QPushButton("Pause");
+    resumeButton = new QPushButton("Resume");
     resetButton = new QPushButton("Reset");
 
     controlLayout->addWidget(startButton);
     controlLayout->addWidget(pauseButton);
+    controlLayout->addWidget(resumeButton);
     controlLayout->addWidget(resetButton);
 
     QObject::connect(startButton, &QPushButton::clicked, this, &SettingsPanel::startSimulation);
     QObject::connect(pauseButton, &QPushButton::clicked, this, &SettingsPanel::pauseSimulation);
+    QObject::connect(resumeButton, &QPushButton::clicked, this, &SettingsPanel::resumeSimulation);
     QObject::connect(resetButton, &QPushButton::clicked, this, &SettingsPanel::resetSimulation);
 
     mainLayout->addLayout(controlLayout);

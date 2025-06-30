@@ -4,6 +4,7 @@
 #include <QVector>
 #include <QPointF>
 #include <QTimer>
+#include <QMutex>
 
 #include "model/Ant.hpp"
 #include "model/FoodStorage.hpp"
@@ -17,7 +18,9 @@ public:
     explicit AntSimulator(QObject* parent = nullptr);
 
 public slots:
+
     void run();
+    void start();
     void resume();
     void pause();
     void reset();
@@ -29,19 +32,21 @@ public slots:
     void addFood(const QPointF& pos);
 
 signals:
-    void updateData(const QVector<Ant>& ants);
+    void updateData(const QVector<Ant>& ants, const FoodStorage& foodStorage, const PheromoneMap& pheromoneMap);
+    void updateCollectedFood(int count);
     void collectedFood(QPointF foodPosition);
 
 private:
     void initializeAnts();
     void moveAnts();
-    void searchForFood(Ant& ant);
+    bool searchForFood(Ant& ant);
     void returnToNest(Ant& ant);
     void evaporatePheromones();
     QPointF getRandomDiraction() const;
 
 private:
     int antCount = 10;
+    int foodCollected = 0;
     qreal simulationSpeed = 1.0;
     qreal moveStep = 1.0;
     qreal detectionRadius = 20.0;
@@ -53,4 +58,7 @@ private:
     PheromoneMap pheromoneMap;
     FoodStorage foodStorage;
     QPointF nestPosition;
+
+    QTimer* runTimer;
+    QMutex mutex;
 };

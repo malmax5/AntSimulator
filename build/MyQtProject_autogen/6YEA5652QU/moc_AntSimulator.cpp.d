@@ -4,6 +4,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QTimer \
@@ -39,6 +40,8 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcontainertools_impl.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdarwinhelpers.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdatastream.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdeadlinetimer.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qelapsedtimer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qexceptionhandling.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qflags.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfloat16.h \
@@ -60,6 +63,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetacontainer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetatype.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qminmax.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmutex.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qnamespace.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qnumeric.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qobject.h \
@@ -101,6 +105,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtnoop.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtpreprocessorsupport.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtresource.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtsan_impl.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qttranslation.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qttypetraits.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtversion.h \

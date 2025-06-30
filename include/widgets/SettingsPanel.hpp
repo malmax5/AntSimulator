@@ -15,6 +15,7 @@ public:
 signals:
     void startSimulation();
     void pauseSimulation();
+    void resumeSimulation();
     void resetSimulation();
 
     void antCountChanged(int count);
@@ -37,6 +38,7 @@ private:
 
     QPushButton* startButton;
     QPushButton* pauseButton;
+    QPushButton* resumeButton;
     QPushButton* resetButton;
     
 };

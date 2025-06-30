@@ -15,7 +15,22 @@ AntSimulator::AntSimulator(QObject* parent)
 
 void AntSimulator::run()
 {
-    if (isRunning)
+    if (!isRunning)
+    {
+        return;
+    }
+
+    if (!isPaused)
+    {
+        moveAnts();
+        evaporatePheromones();
+        emit updateData(ants, foodStorage, pheromoneMap);
+    }
+}
+
+void AntSimulator::start()
+{
+    if(isRunning)
     {
         return;
     }
@@ -25,17 +40,9 @@ void AntSimulator::run()
 
     initializeAnts();
 
-    while (isRunning)
-    {
-        if (!isPaused)
-        {
-            moveAnts();
-            evaporatePheromones();
-            emit updateData(ants);
-        }
-
-        QThread::msleep(static_cast<unsigned long>(100 / simulationSpeed));
-    }
+    runTimer = new QTimer(this);
+    connect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
+    runTimer->start(100 / simulationSpeed);
 }
 
 void AntSimulator::resume()
@@ -45,20 +52,41 @@ void AntSimulator::resume()
 
 void AntSimulator::pause()
 {
+    if (isPaused)
+    {
+        return;
+    }
+
     isPaused = true;
 }
 
 void AntSimulator::reset()
 {
+    stop();
+
+    if (runTimer)
+    {
+        runTimer->stop();
+        disconnect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
+        delete runTimer;
+    }
+
     ants.clear();
     foodStorage.clearFood();
     pheromoneMap = PheromoneMap(400, 400);
-    emit updateData(ants);
+
+    emit updateData(ants, foodStorage, pheromoneMap);
 }
 
 void AntSimulator::stop()
 {
+    if (!isRunning)
+    {
+        return;
+    }
+
     isRunning = false;
+    isPaused = false;
 }
 
 void AntSimulator::setAntCount(int count)
@@ -102,7 +130,7 @@ void AntSimulator::initializeAnts()
         ants.append(ant);
     }
 
-    emit updateData(ants);
+    emit updateData(ants, foodStorage, pheromoneMap);
 }
 
 void AntSimulator::moveAnts()
@@ -111,26 +139,28 @@ void AntSimulator::moveAnts()
     {
         ants[i].target = pheromoneMap.getDirection(ants[i].position);
 
-        if (ants[i].target.isNull())
-        {
-            ants[i].target = getRandomDiraction();
-        }
-
         if (ants[i].hasFood)
         {
             returnToNest(ants[i]);
         }
-        else
+        else if (searchForFood(ants[i]))
         {
-            searchForFood(ants[i]);
+            
+        }
+        else if (ants[i].target.isNull()) // if target null -> get random
+        {
+            ants[i].target = getRandomDiraction();
+        }
+        else // if not null -> dir from pheromone map
+        {
+            pheromoneMap.addPheromone(ants[i].position, 1.0);
         }
 
         ants[i].position += ants[i].target * moveStep;
-
     }
 }
 
-void AntSimulator::searchForFood(Ant& ant)
+bool AntSimulator::searchForFood(Ant& ant)
 {
     QPointF nearestFood = foodStorage.getNearestFood(ant.position, detectionRadius);
 
@@ -148,7 +178,11 @@ void AntSimulator::searchForFood(Ant& ant)
         }
         
         ant.target /= std::sqrt(QPointF::dotProduct(ant.target, ant.target));
+
+        return true;
     }
+
+    return false;
 }
 
 void AntSimulator::returnToNest(Ant& ant)
@@ -160,7 +194,9 @@ void AntSimulator::returnToNest(Ant& ant)
     if (distance < 1.0)
     {
         ant.hasFood = false;
-        pheromoneMap.addPheromone(ant.position, 1.0);
+        foodCollected += 1;
+
+        emit updateCollectedFood(foodCollected);
     }
 }
 
