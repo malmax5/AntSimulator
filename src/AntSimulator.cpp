@@ -69,6 +69,7 @@ void AntSimulator::reset()
         runTimer->stop();
         disconnect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
         delete runTimer;
+        runTimer = nullptr;
     }
 
     ants.clear();
