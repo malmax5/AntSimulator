@@ -3,7 +3,7 @@
 #include <QThread>
 
 MainWindow::MainWindow(QWidget* parent)
-    : QMainWindow(parent)
+    : QMainWindow(parent), antColonyModel(new AntColonyModel(400))
 {
     init();
 }
@@ -30,7 +30,7 @@ void MainWindow::initUI()
     QWidget* leftPanel = new QWidget();
     QVBoxLayout* leftLayout = new QVBoxLayout(leftPanel);
 
-    antField = new AntField();
+    antField = new AntField(antColonyModel);
     leftLayout->addWidget(antField);
 
     settingsPanel = new SettingsPanel();
@@ -45,7 +45,7 @@ void MainWindow::initUI()
 void MainWindow::initSimulator()
 {
     simulationThread = new QThread(this);
-    antSimulator = new AntSimulator();
+    antSimulator = new AntSimulator(antColonyModel);
 
     antSimulator->moveToThread(simulationThread);
 
@@ -65,6 +65,4 @@ void MainWindow::connectSignals()
 
     connect(settingsPanel, &SettingsPanel::addFood, antField, &AntField::addFood);
     connect(settingsPanel, &SettingsPanel::addFood, antSimulator, &AntSimulator::addFood);
-    
-    connect(antSimulator, &AntSimulator::collectedFood, antField, &AntField::removeFood);
 }

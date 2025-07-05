@@ -1,6 +1,7 @@
 /home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/6YEA5652QU/moc_AntSimulator.cpp: /home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntSimulator.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/moc_predefs.h \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
+  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \

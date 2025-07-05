@@ -40,7 +40,7 @@ void PheromoneMap::evaporate()
     }
 }
 
-QPointF PheromoneMap::getDirection(const QPointF& pos)
+QPointF PheromoneMap::getDirection(const QPointF& pos) const
 {
     int x = toIndexX(pos.x());
     int y = toIndexY(pos.y());
@@ -104,7 +104,15 @@ int PheromoneMap::getHeight()
     return height;
 }
 
-qreal PheromoneMap::getValue(int x, int y)
+qreal PheromoneMap::getValue(int x, int y) const
 {
     return map[x][y];
+}
+
+void PheromoneMap::clear()
+{
+    for (int x = 0; x < width; x++)
+    {
+        map[x].clear();
+    }
 }

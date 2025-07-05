@@ -6,19 +6,16 @@
 #include <QTimer>
 #include <QMutex>
 
-#include "model/Ant.hpp"
-#include "model/FoodStorage.hpp"
-#include "model/PheromoneMap.hpp"
+#include "model/AntColonyModel.hpp"
 
 class AntSimulator : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit AntSimulator(QObject* parent = nullptr);
+    explicit AntSimulator(AntColonyModel* antColonyModel, QObject* parent = nullptr);
 
 public slots:
-
     void run();
     void start();
     void resume();
@@ -32,9 +29,8 @@ public slots:
     void addFood(const QPointF& pos);
 
 signals:
-    void updateData(const QVector<Ant>& ants, const FoodStorage& foodStorage, const PheromoneMap& pheromoneMap);
     void updateCollectedFood(int count);
-    void collectedFood(QPointF foodPosition);
+    void updateData();
 
 private:
     void initializeAnts();
@@ -54,9 +50,7 @@ private:
     bool isRunning = false;
     bool isPaused = false;
 
-    QVector<Ant> ants;
-    PheromoneMap pheromoneMap;
-    FoodStorage foodStorage;
+    AntColonyModel* antColonyModel;
     QPointF nestPosition;
 
     QTimer* runTimer;

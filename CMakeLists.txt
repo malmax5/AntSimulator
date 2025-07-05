@@ -25,6 +25,7 @@ set(HEADERS
     include/model/Ant.hpp
     include/model/FoodStorage.hpp
     include/model/PheromoneMap.hpp
+    include/model/AntColonyModel.hpp
 )
 
 set(SOURCES
@@ -39,6 +40,7 @@ set(SOURCES
     src/model/Ant.cpp
     src/model/FoodStorage.cpp
     src/model/PheromoneMap.cpp
+    src/model/AntColonyModel.cpp
 )
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})

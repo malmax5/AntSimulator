@@ -4,8 +4,8 @@
 #include <QPaintEvent>
 #include <QWheelEvent>
 
-AntField::AntField(QWidget* parent)
-    : QWidget(parent), pheromoneMap(400, 400)
+AntField::AntField(AntColonyModel* antColonyModel, QWidget* parent)
+    : antColonyModel(antColonyModel), QWidget(parent)
 {
     bufferPixmap = QPixmap(QSize(400, 400));
     bufferPixmap.fill(Qt::white);
@@ -13,25 +13,21 @@ AntField::AntField(QWidget* parent)
     setFixedSize(400, 400);
 }
 
-void AntField::redraw(const QVector<Ant>& ants, const FoodStorage& foodStorage, const PheromoneMap& pheromoneMap)
+void AntField::redraw()
 {
-    this->currentAnts = ants;
-    this->foodPositions = foodStorage;
-    this->pheromoneMap = pheromoneMap;
-
     update();
 }
 
 void AntField::addFood(const QPointF& pos)
 {
-    foodPositions.addFood(pos);
+    antColonyModel->addFood(pos);
 
     update();
 }
 
 void AntField::removeFood(const QPointF& pos)
 {
-    foodPositions.removeFood(pos);
+    antColonyModel->removeFood(pos);
 
     update();
 }
@@ -64,11 +60,11 @@ void AntField::paintEvent(QPaintEvent* event)
     painter.setPen(Qt::NoPen);
     painter.setBrush(QColor(255, 0, 0, static_cast<int>(255 * pheromoneAlpha)));
 
-    for (int x = 0; x < pheromoneMap.getWidth(); x++)
+    for (int x = 0; x < antColonyModel->getWidth(); x++)
     {
-        for (int y = 0; y < pheromoneMap.getHeight(); y++)
+        for (int y = 0; y < antColonyModel->getHeigth(); y++)
         {
-            qreal strength = pheromoneMap.getValue(x, y);
+            qreal strength = antColonyModel->getPheromoneMap().getValue(x, y);
 
             if (strength > 0.1)
             {
@@ -78,13 +74,13 @@ void AntField::paintEvent(QPaintEvent* event)
     }
 
     painter.setBrush(Qt::green);
-    for (const auto& food : foodPositions.getFoods())
+    for (const auto& food : antColonyModel->getFoods())
     {
         painter.drawEllipse(food, scale * 5, scale * 5);
     }
 
     painter.setBrush(Qt::black);
-    for (const auto& ant : currentAnts)
+    for (const auto& ant : antColonyModel->getAnts())
     {
         painter.drawEllipse(ant.position, scale * 3, scale * 3);
     }

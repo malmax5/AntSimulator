@@ -11,6 +11,8 @@
 
 #include "widgets/SettingsPanel.hpp"
 
+#include "model/AntColonyModel.hpp"
+
 #include "AntField.hpp"
 #include "AntSimulator.hpp"
 
@@ -30,9 +32,9 @@ private:
     void connectSignals();
 
 private:
+    AntColonyModel* antColonyModel;
     AntField* antField;
     SettingsPanel* settingsPanel;
     AntSimulator* antSimulator;
     QThread* simulationThread;
-
 };

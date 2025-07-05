@@ -3,6 +3,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntField.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntSimulator.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
+  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \

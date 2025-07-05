@@ -5,18 +5,16 @@
 #include <QVector>
 #include <QPointF>
 
-#include "model/Ant.hpp"
-#include "model/FoodStorage.hpp"
-#include "model/PheromoneMap.hpp"
+#include "model/AntColonyModel.hpp"
 
 class AntField : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit AntField(QWidget* parent = nullptr);
+    explicit AntField(AntColonyModel* antColonyModel, QWidget* parent = nullptr);
 
-    void redraw(const QVector<Ant>& ants, const FoodStorage& foodStorage, const PheromoneMap& pheromoneMap);
+    void redraw();
 
 public slots:
     void addFood(const QPointF& pos);
@@ -27,9 +25,7 @@ protected:
     void wheelEvent(QWheelEvent* event) override;
 
 private:
-    QVector<Ant> currentAnts;
-    FoodStorage foodPositions;
-    PheromoneMap pheromoneMap;
+    AntColonyModel* antColonyModel;
     QPixmap bufferPixmap;
 
     qreal scale = 1.0;

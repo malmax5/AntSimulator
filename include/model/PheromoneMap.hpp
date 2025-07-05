@@ -14,10 +14,12 @@ public:
 
     void addPheromone(const QPointF& pos, qreal strength);
     void evaporate();
-    QPointF getDirection(const QPointF& pos);
-    qreal getValue(int x, int y);
+    QPointF getDirection(const QPointF& pos) const;
+    qreal getValue(int x, int y) const;
     int getWidth();
     int getHeight();
+
+    void clear();
 
 private:
     qreal evaporateRate = 0.95;
