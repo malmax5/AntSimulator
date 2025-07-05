@@ -7,10 +7,10 @@
 AntField::AntField(AntColonyModel* antColonyModel, QWidget* parent)
     : antColonyModel(antColonyModel), QWidget(parent)
 {
-    bufferPixmap = QPixmap(QSize(400, 400));
+    bufferPixmap = QPixmap(QSize(antColonyModel->getWidth(), antColonyModel->getHeigth())); // !size
     bufferPixmap.fill(Qt::white);
 
-    setFixedSize(400, 400);
+    setFixedSize(antColonyModel->getWidth(), antColonyModel->getHeigth()); // !size
 }
 
 void AntField::redraw()
@@ -60,9 +60,9 @@ void AntField::paintEvent(QPaintEvent* event)
     painter.setPen(Qt::NoPen);
     painter.setBrush(QColor(255, 0, 0, static_cast<int>(255 * pheromoneAlpha)));
 
-    for (int x = 0; x < antColonyModel->getWidth(); x++)
+    for (int x = 0; x < antColonyModel->getWidth(); x++) // !size
     {
-        for (int y = 0; y < antColonyModel->getHeigth(); y++)
+        for (int y = 0; y < antColonyModel->getHeigth(); y++) // !size
         {
             qreal strength = antColonyModel->getPheromoneMap().getValue(x, y);
 
@@ -74,7 +74,7 @@ void AntField::paintEvent(QPaintEvent* event)
     }
 
     painter.setBrush(Qt::green);
-    for (const auto& food : antColonyModel->getFoods())
+    for (const auto& food : antColonyModel->getFoodStorage().getFoods())
     {
         painter.drawEllipse(food, scale * 5, scale * 5);
     }

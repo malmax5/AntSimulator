@@ -10,7 +10,7 @@
 AntSimulator::AntSimulator(AntColonyModel* antColonyModel, QObject* parent)
     : QObject(parent), antColonyModel(antColonyModel)
 {
-    nestPosition = QPointF(200, 200); // heigth and width
+    nestPosition = QPointF(antColonyModel->getWidth() / 2, antColonyModel->getHeigth() / 2); // heigth and width
 }
 
 void AntSimulator::run()
@@ -99,12 +99,6 @@ void AntSimulator::setSimulationSpeed(qreal speed)
     simulationSpeed = speed;
 }
 
-void AntSimulator::addFood(const QPointF& pos)
-{
-    antColonyModel->addFood(pos);
-    emit updateData();
-}
-
 void AntSimulator::initializeAnts()
 {   
     antColonyModel->getAnts().clear();
@@ -117,14 +111,14 @@ void AntSimulator::initializeAnts()
         int newX = nestPosition.x() + QRandomGenerator::global()->bounded(-5, 5);
         int newY = nestPosition.y() + QRandomGenerator::global()->bounded(-5, 5);
 
-        if (newX < 0 || newY < 0 || newX > antColonyModel->getWidth() || newY > antColonyModel->getHeigth())
+        if (newX < 0 || newY < 0 || newX > antColonyModel->getWidth() || newY > antColonyModel->getHeigth()) // !size
         {
             continue;
         }
 
         ant.position = nestPosition + QPointF(QRandomGenerator::global()->bounded(-5, 5),
                                               QRandomGenerator::global()->bounded(-5, 5));
-        ant.target = getRandomDiraction();
+        
         ant.hasFood = false;
         antColonyModel->addAnt(ant);
     }
@@ -136,46 +130,35 @@ void AntSimulator::moveAnts()
 {
     for (int i = 0; i < antColonyModel->getAnts().size(); i++)
     {
-        antColonyModel->getAnts()[i].target = antColonyModel->getDiractionByPheromones(antColonyModel->getAnts()[i].position);
+        Ant& currAnt = antColonyModel->getAnt(i);
 
-        if (antColonyModel->getAnts()[i].hasFood)
+        currAnt.target = antColonyModel->getDiractionByPheromones(currAnt.position);
+
+        if (currAnt.hasFood)
         {
-            returnToNest(antColonyModel->getAnts()[i]);
+            returnToNest(currAnt);
         }
-        else if (searchForFood(antColonyModel->getAnts()[i]))
+        else if (searchForFood(currAnt))
         {
             
         }
-        else if (antColonyModel->getAnts()[i].target.isNull()) // if target null -> get random
+        else if (currAnt.target.isNull()) // if target null -> get random
         {
-            antColonyModel->getAnts()[i].target = getRandomDiraction();
+            currAnt.target = getRandomDiraction();
         }
         else // if not null -> dir from pheromone map
         {
-            antColonyModel->addPheromone(antColonyModel->getAnts()[i].position, 1.0);
+            
         }
 
-        antColonyModel->getAnts()[i].position += antColonyModel->getAnts()[i].target * moveStep;
+        currAnt.position += currAnt.target * moveStep;
     }
 }
 
 bool AntSimulator::searchForFood(Ant& ant)
 {
-    //
-    QPointF nearestFood;
-    qreal minDistance = std::numeric_limits<qreal>::max();
-    int maxDistance = 20;
-    for (auto& foodPosition : antColonyModel->getFoods())
-    {
-        qreal distSq = QPointF::dotProduct(ant.position - foodPosition, ant.position - foodPosition);
+    QPointF nearestFood = antColonyModel->getFoodStorage().getNearestFood(ant.position, 20); // !maxDistance
 
-        if ((maxDistance <= 0 || distSq < maxDistance * maxDistance) && distSq < minDistance)
-        {
-            minDistance = distSq;
-            nearestFood = foodPosition;
-        }
-    }
-    //
     if (!nearestFood.isNull())
     {
         ant.target = nearestFood - ant.position;
@@ -185,6 +168,7 @@ bool AntSimulator::searchForFood(Ant& ant)
         {
             ant.hasFood = true;
             antColonyModel->removeFood(nearestFood);
+            emit updateData();
         }
         
         ant.target /= std::sqrt(QPointF::dotProduct(ant.target, ant.target));
@@ -200,6 +184,8 @@ void AntSimulator::returnToNest(Ant& ant)
     ant.target = nestPosition - ant.position;
     qreal distance = std::sqrt(QPointF::dotProduct(ant.target, ant.target));
     ant.target /= distance;
+
+    antColonyModel->addPheromone(ant.position, 1.0);
 
     if (distance < 1.0)
     {

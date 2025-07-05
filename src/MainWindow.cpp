@@ -62,7 +62,5 @@ void MainWindow::connectSignals()
     connect(settingsPanel, &SettingsPanel::resetSimulation, antSimulator, &AntSimulator::reset);
 
     connect(antSimulator, &AntSimulator::updateData, antField, &AntField::redraw);
-
     connect(settingsPanel, &SettingsPanel::addFood, antField, &AntField::addFood);
-    connect(settingsPanel, &SettingsPanel::addFood, antSimulator, &AntSimulator::addFood);
 }

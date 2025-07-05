@@ -47,7 +47,7 @@ QPointF PheromoneMap::getDirection(const QPointF& pos) const
 
     if (!isValid(x, y))
     {
-        return QPointF(0, 0);
+        return QPointF();
     }
 
     static const int dx[] = {-1, 0, 1, -1, 1, -1, 0, 1};
@@ -71,7 +71,7 @@ QPointF PheromoneMap::getDirection(const QPointF& pos) const
         }
     }
 
-    if (maxStrength == 0)
+    if (maxStrength <= 0)
     {
         return QPointF();
     }
@@ -111,8 +111,11 @@ qreal PheromoneMap::getValue(int x, int y) const
 
 void PheromoneMap::clear()
 {
+    map.clear();
+    map.resize(width);
+
     for (int x = 0; x < width; x++)
     {
-        map[x].clear();
+        map[x].resize(height, 0);
     }
 }

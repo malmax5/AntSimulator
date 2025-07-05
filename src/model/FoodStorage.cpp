@@ -14,7 +14,7 @@ void FoodStorage::removeFood(const QPointF& pos)
     foods.removeOne(pos);
 }
 
-void FoodStorage::clearFood()
+void FoodStorage::clear()
 {
     foods.clear();
 }
@@ -24,12 +24,12 @@ int FoodStorage::foodCount()
     return foods.size();
 }
 
-QList<QPointF> FoodStorage::getFoods() const
+const QList<QPointF> FoodStorage::getFoods() const
 {
     return foods;
 }
 
-QPointF FoodStorage::getNearestFood(QPointF position, qreal maxDistance)
+QPointF FoodStorage::getNearestFood(QPointF position, qreal maxDistance) const
 {
     QPointF nearestFood;
     qreal minDistance = std::numeric_limits<qreal>::max();

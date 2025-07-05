@@ -69,6 +69,7 @@
         "semaphore": "cpp",
         "format": "cpp",
         "stdfloat": "cpp",
-        "qdebug": "cpp"
+        "qdebug": "cpp",
+        "qpointf": "cpp"
     }
 }

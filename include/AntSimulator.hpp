@@ -26,8 +26,6 @@ public slots:
     void setAntCount(int count);
     void setSimulationSpeed(qreal speed);
 
-    void addFood(const QPointF& pos);
-
 signals:
     void updateCollectedFood(int count);
     void updateData();

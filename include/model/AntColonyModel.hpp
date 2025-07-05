@@ -18,12 +18,13 @@ public:
     void setAnts(const QVector<Ant>& ants);
     void addAnt(const Ant& ant);
     void removeAnt(int index);
+    Ant& getAnt(int index);
     QVector<Ant>& getAnts();
 
-    void setFoods(const QList<QPointF>& foods);
+    void setFoods(const FoodStorage& foods);
     void addFood(const QPointF& pos);
     void removeFood(const QPointF& pos);
-    const QList<QPointF>& getFoods() const;
+    const FoodStorage& getFoodStorage() const;
 
     void addPheromone(const QPointF& pos, qreal strength);
     void evaporatePheromones();
@@ -37,6 +38,6 @@ private:
     int width;
 
     QVector<Ant> ants;
-    QList<QPointF> foods;
+    FoodStorage foods;
     PheromoneMap pheromoneMap;
 };

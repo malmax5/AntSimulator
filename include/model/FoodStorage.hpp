@@ -9,10 +9,10 @@ class FoodStorage
 public:
     void addFood(const QPointF& pos);
     void removeFood(const QPointF& pos);
-    void clearFood();
+    void clear();
     int foodCount();
-    QList<QPointF> getFoods() const;
-    QPointF getNearestFood(QPointF position, qreal maxDistance = 0.0);
+    const QList<QPointF> getFoods() const;
+    QPointF getNearestFood(QPointF position, qreal maxDistance = 0.0) const;
 
 private:
     QList<QPointF> foods;

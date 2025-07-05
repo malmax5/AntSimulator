@@ -33,27 +33,32 @@ void AntColonyModel::removeAnt(int index)
     ants.removeAt(index);
 }
 
+Ant& AntColonyModel::getAnt(int index)
+{
+    return ants[index];
+}
+
 QVector<Ant>& AntColonyModel::getAnts()
 {
     return ants;
 }
 
-void AntColonyModel::setFoods(const QList<QPointF>& foods)
+void AntColonyModel::setFoods(const FoodStorage& foods)
 {
     this->foods = foods;
 }
 
 void AntColonyModel::addFood(const QPointF& pos)
 {
-    foods.append(pos);
+    foods.addFood(pos);
 }
 
 void AntColonyModel::removeFood(const QPointF& pos)
 {
-    foods.removeOne(pos);
+    foods.removeFood(pos);
 }
 
-const QList<QPointF>& AntColonyModel::getFoods() const
+const FoodStorage& AntColonyModel::getFoodStorage() const
 {
     return foods;
 }

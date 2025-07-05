@@ -21,7 +21,7 @@ signals:
     void antCountChanged(int count);
     void simulationSpeedChanged(qreal speed);
 
-    void addFood(QPointF positin);
+    void addFood(const QPointF& positin);
 
 public slots:
     void updateAntCount(int count);
