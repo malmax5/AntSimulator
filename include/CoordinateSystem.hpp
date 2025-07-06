@@ -16,9 +16,18 @@ public:
     QPointF worldToScreen(const QPointF& logicPos) const;
     QPointF screenToWorld(const QPointF& screenPos) const;
 
+    void setZoom(qreal zoomFactor);
+    void setOffset(const QPointF& offset);
+    void moveOffset(const QPointF& dxy);
+    void moveOffset(qreal dx, qreal dy);
+
+    qreal getZoom() const;
+
 private:
     qreal worldWidth = 1.0;
     qreal worldHeight = 1.0;
     qreal windowWidth = 400.0;
     qreal windowHeight = 400.0;
+    qreal zoom = 1.0;
+    QPointF offset;
 };
