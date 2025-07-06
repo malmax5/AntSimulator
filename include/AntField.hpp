@@ -30,6 +30,4 @@ protected:
 private:
     AntColonyModel* antColonyModel;
     QPixmap bufferPixmap;
-
-    qreal scale = 1.0;
 };

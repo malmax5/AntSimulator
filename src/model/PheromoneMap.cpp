@@ -3,7 +3,7 @@
 #include <QDebug>
 
 PheromoneMap::PheromoneMap(int width, int height)
-    : width(width), height(height)
+    // : width(width), height(height) !!!
 {
     map.resize(width);
 
@@ -26,18 +26,19 @@ void PheromoneMap::addPheromone(const QPointF& pos, qreal strength)
 
 void PheromoneMap::evaporate()
 {
-    for (int x = 0; x < width; x++)
-    {
-        for (int y = 0; y < height; y++)
-        {
-            map[x][y] *= evaporateRate;
+    // !
+    // for (int x = 0; x < width; x++)
+    // {
+    //     for (int y = 0; y < height; y++)
+    //     {
+    //         map[x][y] *= evaporateRate;
 
-            if (map[x][y] - 0.01 < 0)
-            {
-                map[x][y] = 0;
-            }
-        }
-    }
+    //         if (map[x][y] - 0.01 < 0)
+    //         {
+    //             map[x][y] = 0;
+    //         }
+    //     }
+    // }
 }
 
 QPointF PheromoneMap::getDirection(const QPointF& pos) const
@@ -91,17 +92,8 @@ inline int PheromoneMap::toIndexY(qreal y) const
 
 inline bool PheromoneMap::isValid(int x, int y) const
 {
-    return x >= 0 && y >= 0 && x < width && y < height;
-}
-
-int PheromoneMap::getWidth()
-{
-    return width;
-}
-
-int PheromoneMap::getHeight()
-{
-    return height;
+    // !
+    // return x >= 0 && y >= 0 && x < width && y < height;
 }
 
 qreal PheromoneMap::getValue(int x, int y) const
@@ -111,11 +103,12 @@ qreal PheromoneMap::getValue(int x, int y) const
 
 void PheromoneMap::clear()
 {
-    map.clear();
-    map.resize(width);
+    // !
+    // map.clear();
+    // map.resize(width);
 
-    for (int x = 0; x < width; x++)
-    {
-        map[x].resize(height, 0);
-    }
+    // for (int x = 0; x < width; x++)
+    // {
+    //     map[x].resize(height, 0);
+    // }
 }

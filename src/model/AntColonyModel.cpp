@@ -3,7 +3,7 @@
 #include <QDebug>
 
 AntColonyModel::AntColonyModel()
-    : heigth(1), width(1), nestPosition(0.5, 0.5)
+    : nestPosition(0.5, 0.5) // !
 {
 
 }
@@ -71,16 +71,6 @@ QPointF AntColonyModel::getDiractionByPheromones(const QPointF& pos) const
 const PheromoneMap& AntColonyModel::getPheromoneMap()
 {
     return pheromoneMap;
-}
-
-int AntColonyModel::getHeigth()
-{
-    return heigth;
-}
-
-int AntColonyModel::getWidth()
-{
-    return width;
 }
 
 QPointF AntColonyModel::getNestPosition()

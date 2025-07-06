@@ -14,9 +14,6 @@ public:
     explicit AntColonyModel(int size);
 
 public:
-    int getHeigth();
-    int getWidth();
-
     void setAnts(const QVector<Ant>& ants);
     void addAnt(const Ant& ant);
     void removeAnt(int index);
@@ -35,13 +32,9 @@ public:
 
     QPointF getNestPosition();
 
-    void resize(const QSize& size);
-    
     void reset();
 
 private:
-    int heigth;
-    int width;
 
     QPointF nestPosition;
     QVector<Ant> ants;

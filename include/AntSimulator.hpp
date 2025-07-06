@@ -42,8 +42,8 @@ private:
     int antCount = 10;
     int foodCollected = 0;
     qreal simulationSpeed = 1.0;
-    qreal moveStep = 0.01;
-    qreal detectionRadius = 20.0;
+    qreal moveStep = 0.001;
+    qreal detectionRadius = 0.02;
 
     bool isRunning = false;
     bool isPaused = false;
