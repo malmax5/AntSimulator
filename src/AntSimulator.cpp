@@ -108,8 +108,8 @@ void AntSimulator::initializeAnts()
     {
         Ant ant;
 
-        qreal newX = antColonyModel->getNestPosition().x() + (QRandomGenerator::global()->generateDouble() * 2 - 1) * 0.05;
-        qreal newY = antColonyModel->getNestPosition().y() + (QRandomGenerator::global()->generateDouble() * 2 - 1) * 0.05;
+        qreal newX = antColonyModel->getNestPosition().x() + (QRandomGenerator::global()->generateDouble() * 2 - 1) * 0.001;
+        qreal newY = antColonyModel->getNestPosition().y() + (QRandomGenerator::global()->generateDouble() * 2 - 1) * 0.001;
 
         if (newX < 0 || newY < 0 || newX > 1 || newY > 1)
         {
@@ -133,6 +133,7 @@ void AntSimulator::moveAnts()
 
         // !
         // currAnt.target = antColonyModel->getDiractionByPheromones(currAnt.getScreenPosition(antColonyModel->getWidth(), antColonyModel->getHeigth()));
+        currAnt.target = QPointF();
 
         if (currAnt.hasFood)
         {
