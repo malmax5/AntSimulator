@@ -19,9 +19,7 @@ public:
     qreal getValue(int x, int y) const;
     int getWidth();
     int getHeight();
-
-    void resize(const QSize& size);
-
+    
     void clear();
 
 private:

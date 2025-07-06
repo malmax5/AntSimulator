@@ -31,13 +31,6 @@ void AntField::removeFood(const QPointF& pos)
     update();
 }
 
-void AntField::resizeEvent(QResizeEvent* event)
-{
-    QWidget::resizeEvent(event);
-    antColonyModel->resize(event->size());
-    update();
-}
-
 void AntField::wheelEvent(QWheelEvent* event)
 {
     if (event->angleDelta().y() > 0)

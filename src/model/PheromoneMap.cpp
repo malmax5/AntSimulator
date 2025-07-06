@@ -109,18 +109,6 @@ qreal PheromoneMap::getValue(int x, int y) const
     return map[x][y];
 }
 
-void PheromoneMap::resize(const QSize& size)
-{
-    width = size.width();
-    height = size.height();
-
-    map.resize(width);
-    for (int x = 0; x < width; x++)
-    {
-        map[x].resize(height);
-    }
-}
-
 void PheromoneMap::clear()
 {
     map.clear();
