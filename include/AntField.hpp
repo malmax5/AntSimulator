@@ -16,11 +16,15 @@ public:
 
     void redraw();
 
+signals:
+    void resized();
+
 public slots:
     void addFood(const QPointF& pos);
     void removeFood(const QPointF& pos);
 
 protected:
+    void resizeEvent(QResizeEvent* event) override;
     void paintEvent(QPaintEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
 

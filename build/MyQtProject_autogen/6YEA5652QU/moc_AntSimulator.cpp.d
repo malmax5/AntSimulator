@@ -8,6 +8,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QTimer \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QVector \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
@@ -60,6 +61,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlist.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlogging.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmalloc.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmargins.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmath.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetacontainer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetatype.h \
@@ -78,6 +80,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrefcount.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopedpointer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopeguard.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsize.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstring.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringalgorithms.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringbuilder.h \

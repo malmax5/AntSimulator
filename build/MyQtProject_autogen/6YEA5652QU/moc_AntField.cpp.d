@@ -6,6 +6,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QVector \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \

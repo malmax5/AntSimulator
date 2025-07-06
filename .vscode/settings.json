@@ -70,6 +70,7 @@
         "format": "cpp",
         "stdfloat": "cpp",
         "qdebug": "cpp",
-        "qpointf": "cpp"
+        "qpointf": "cpp",
+        "qwheelevent": "cpp"
     }
 }

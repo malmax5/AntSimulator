@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QSize>
+
 #include "Ant.hpp"
 #include "FoodStorage.hpp"
 #include "PheromoneMap.hpp"
@@ -31,12 +33,17 @@ public:
     QPointF getDiractionByPheromones(const QPointF& pos) const;
     const PheromoneMap& getPheromoneMap();
 
+    QPointF getNestPosition();
+
+    void resize(const QSize& size);
+    
     void reset();
 
 private:
     int heigth;
     int width;
 
+    QPointF nestPosition;
     QVector<Ant> ants;
     FoodStorage foods;
     PheromoneMap pheromoneMap;

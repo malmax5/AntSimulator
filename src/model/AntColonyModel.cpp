@@ -1,13 +1,14 @@
 #include "../../include/model/AntColonyModel.hpp"
 
 AntColonyModel::AntColonyModel()
-    : heigth(400), width(400), pheromoneMap(400, 400)
+    : heigth(400), width(400), pheromoneMap(400, 400), nestPosition(200, 200)
 {
 
 }
 
 AntColonyModel::AntColonyModel(int heigth, int width)
-    : heigth(heigth), width(width), pheromoneMap(heigth, width)
+    : heigth(heigth), width(width), pheromoneMap(width, heigth),
+      nestPosition(width / 2, heigth / 2)
 {
 
 }
@@ -91,6 +92,31 @@ int AntColonyModel::getHeigth()
 int AntColonyModel::getWidth()
 {
     return width;
+}
+
+QPointF AntColonyModel::getNestPosition()
+{
+    return nestPosition;
+}
+
+void AntColonyModel::resize(const QSize& size)
+{
+    for (auto& ant : ants)
+    {
+        qreal dx = width - size.width();
+        qreal dy = heigth - size.height();
+
+        ant.position.setX(ant.position.x() - dx);
+        ant.position.setY(ant.position.y() - dy);
+    }
+
+    width = size.width();
+    heigth = size.height();
+
+    nestPosition.setX(width / 2);
+    nestPosition.setY(heigth / 2);
+
+    pheromoneMap.resize(size);
 }
 
 void AntColonyModel::reset()

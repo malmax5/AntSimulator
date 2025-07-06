@@ -49,7 +49,6 @@ private:
     bool isPaused = false;
 
     AntColonyModel* antColonyModel;
-    QPointF nestPosition;
 
     QTimer* runTimer;
     QMutex mutex;

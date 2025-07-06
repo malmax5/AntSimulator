@@ -10,7 +10,7 @@
 AntSimulator::AntSimulator(AntColonyModel* antColonyModel, QObject* parent)
     : QObject(parent), antColonyModel(antColonyModel)
 {
-    nestPosition = QPointF(antColonyModel->getWidth() / 2, antColonyModel->getHeigth() / 2); // heigth and width
+
 }
 
 void AntSimulator::run()
@@ -108,16 +108,16 @@ void AntSimulator::initializeAnts()
     {
         Ant ant;
 
-        int newX = nestPosition.x() + QRandomGenerator::global()->bounded(-5, 5);
-        int newY = nestPosition.y() + QRandomGenerator::global()->bounded(-5, 5);
+        int newX = antColonyModel->getNestPosition().x() + QRandomGenerator::global()->bounded(-5, 5);
+        int newY = antColonyModel->getNestPosition().y() + QRandomGenerator::global()->bounded(-5, 5);
 
         if (newX < 0 || newY < 0 || newX > antColonyModel->getWidth() || newY > antColonyModel->getHeigth()) // !size
         {
             continue;
         }
 
-        ant.position = nestPosition + QPointF(QRandomGenerator::global()->bounded(-5, 5),
-                                              QRandomGenerator::global()->bounded(-5, 5));
+        ant.position = antColonyModel->getNestPosition() + QPointF(QRandomGenerator::global()->bounded(-5, 5),
+                                                                   QRandomGenerator::global()->bounded(-5, 5));
         
         ant.hasFood = false;
         antColonyModel->addAnt(ant);
@@ -181,7 +181,7 @@ bool AntSimulator::searchForFood(Ant& ant)
 
 void AntSimulator::returnToNest(Ant& ant)
 {
-    ant.target = nestPosition - ant.position;
+    ant.target = antColonyModel->getNestPosition() - ant.position;
     qreal distance = std::sqrt(QPointF::dotProduct(ant.target, ant.target));
     ant.target /= distance;
 

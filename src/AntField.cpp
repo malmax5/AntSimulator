@@ -3,14 +3,13 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include <QWheelEvent>
+#include <QResizeEvent>
 
 AntField::AntField(AntColonyModel* antColonyModel, QWidget* parent)
     : antColonyModel(antColonyModel), QWidget(parent)
 {
-    bufferPixmap = QPixmap(QSize(antColonyModel->getWidth(), antColonyModel->getHeigth())); // !size
+    bufferPixmap = QPixmap(QSize(width(), height())); // !size
     bufferPixmap.fill(Qt::white);
-
-    setFixedSize(antColonyModel->getWidth(), antColonyModel->getHeigth()); // !size
 }
 
 void AntField::redraw()
@@ -29,6 +28,13 @@ void AntField::removeFood(const QPointF& pos)
 {
     antColonyModel->removeFood(pos);
 
+    update();
+}
+
+void AntField::resizeEvent(QResizeEvent* event)
+{
+    QWidget::resizeEvent(event);
+    antColonyModel->resize(event->size());
     update();
 }
 
@@ -86,7 +92,7 @@ void AntField::paintEvent(QPaintEvent* event)
     }
 
     painter.setBrush(Qt::red);
-    painter.drawEllipse(QPointF(width() / 2.0, height() / 2.0), 10, 10);
+    painter.drawEllipse(antColonyModel->getNestPosition(), 10, 10);
 
     QPainter thisPainter(this);
     thisPainter.drawPixmap(0, 0, bufferPixmap);

@@ -11,6 +11,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QTimer \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QVector \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
