@@ -52,14 +52,15 @@ void AntField::paintEvent(QPaintEvent* event)
 {
     Q_UNUSED(event);
 
+    qreal zoom = coordinateSystem.getZoom();
+
     bufferPixmap = QPixmap(size());
     bufferPixmap.fill(Qt::white);
 
     QPainter painter(&bufferPixmap);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    // !
-    // painter.scale(scale, scale);
+    painter.scale(zoom, zoom);
 
     const qreal pheromoneAlpha = 0.3;
     painter.setPen(Qt::NoPen);
@@ -80,21 +81,21 @@ void AntField::paintEvent(QPaintEvent* event)
     // }
 
     // !
-    // painter.setBrush(Qt::green);
-    // for (const auto& food : antColonyModel->getFoodStorage().getFoods())
-    // {
-    //     painter.drawEllipse(antColonyModel->toScreenPos(food), scale * 5, scale * 5);
-    // }
+    painter.setBrush(Qt::green);
+    for (const auto& food : antColonyModel->getFoodStorage().getFoods())
+    {
+        painter.drawEllipse(coordinateSystem.worldToScreen(food), zoom * 5, zoom * 5);
+    }
 
-    // painter.setBrush(Qt::black);
-    // for (const auto& ant : antColonyModel->getAnts())
-    // {
-    //     painter.drawEllipse(ant.getScreenPosition(width(), height()), scale * 3, scale * 3);
-    // }
+    painter.setBrush(Qt::black);
+    for (const auto& ant : antColonyModel->getAnts())
+    {
+        painter.drawEllipse(coordinateSystem.worldToScreen(ant.logicalPosition), zoom * 3, zoom * 3);
+    }
 
-    // painter.setBrush(Qt::red);
-    // painter.drawEllipse(antColonyModel->toScreenPos(antColonyModel->getNestPosition()), 10, 10);
+    painter.setBrush(Qt::red);
+    painter.drawEllipse(coordinateSystem.worldToScreen(antColonyModel->getNestPosition()), zoom * 10, zoom * 10);
 
-    // QPainter thisPainter(this);
-    // thisPainter.drawPixmap(0, 0, bufferPixmap);
+    QPainter thisPainter(this);
+    thisPainter.drawPixmap(0, 0, bufferPixmap);
 }

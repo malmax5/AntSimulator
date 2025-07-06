@@ -41,6 +41,11 @@ void CoordinateSystem::setZoom(qreal zoomFactor)
     zoom = zoomFactor;
 }
 
+qreal CoordinateSystem::getZoom() const
+{
+    return zoom;
+}
+
 void CoordinateSystem::setOffset(const QPointF& offset)
 {
     this->offset = offset;
