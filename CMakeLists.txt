@@ -19,6 +19,7 @@ set(HEADERS
     include/MainWindow.hpp
     include/AntField.hpp
     include/AntSimulator.hpp
+    include/CoordinateSystem.hpp
 
     include/widgets/SettingsPanel.hpp
 
@@ -34,6 +35,7 @@ set(SOURCES
     src/MainWindow.cpp
     src/AntField.cpp
     src/AntSimulator.cpp
+    src/CoordinateSystem.cpp
 
     src/widgets/SettingsPanel.cpp
 

@@ -5,6 +5,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/moc_predefs.h \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntField.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntSimulator.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/CoordinateSystem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
@@ -14,6 +15,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/main.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntField.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntSimulator.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/CoordinateSystem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/Ant.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/AntColonyModel.cpp \
