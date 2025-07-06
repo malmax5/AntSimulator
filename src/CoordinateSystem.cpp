@@ -24,16 +24,20 @@ void CoordinateSystem::setWindowSize(const QSize& size)
     windowHeight = size.height();
 }
 
-QPointF CoordinateSystem::worldToScreen(const QPointF& logicPos) const
+QPointF CoordinateSystem::worldToScreen(const QPointF& worldPos) const
 {
-    return QPointF(logicPos.x() * worldWidth, logicPos.y() * worldHeight);
+    qreal cx = windowWidth / worldWidth;
+    qreal cy = windowHeight / worldHeight; 
+    return QPointF((worldPos.x() * zoom - offset.x()) * cx,
+                   (worldPos.y() * zoom - offset.y()) * cy);
 }
 
 QPointF CoordinateSystem::screenToWorld(const QPointF& screenPos) const
 {
     qreal cx = worldWidth / windowWidth;
     qreal cy = worldHeight / windowHeight; 
-    return QPointF(screenPos.x() * cx, screenPos.y() * cy);
+    return QPointF((screenPos.x() * cx + offset.x()) * zoom,
+                   (screenPos.y() * cy + offset.y()) * zoom);
 }
 
 void CoordinateSystem::setZoom(qreal zoomFactor)

@@ -13,7 +13,7 @@ public:
     void setWindowSize(qreal width, qreal height);
     void setWindowSize(const QSize& size);
 
-    QPointF worldToScreen(const QPointF& logicPos) const;
+    QPointF worldToScreen(const QPointF& worldPos) const;
     QPointF screenToWorld(const QPointF& screenPos) const;
 
     void setZoom(qreal zoomFactor);
