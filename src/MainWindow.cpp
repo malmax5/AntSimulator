@@ -3,7 +3,7 @@
 #include <QThread>
 
 MainWindow::MainWindow(QWidget* parent)
-    : QMainWindow(parent), antColonyModel(new AntColonyModel(400))
+    : QMainWindow(parent), antColonyModel(new AntColonyModel())
 {
     init();
 }

@@ -81,7 +81,7 @@ void AntField::paintEvent(QPaintEvent* event)
     painter.setBrush(Qt::black);
     for (const auto& ant : antColonyModel->getAnts())
     {
-        painter.drawEllipse(ant.position, scale * 3, scale * 3);
+        painter.drawEllipse(ant.getScreenPosition(width(), height()), scale * 3, scale * 3);
     }
 
     painter.setBrush(Qt::red);

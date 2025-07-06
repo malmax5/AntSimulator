@@ -3,20 +3,7 @@
 #include <QDebug>
 
 AntColonyModel::AntColonyModel()
-    : heigth(400), width(400), pheromoneMap(400, 400), nestPosition(200, 200)
-{
-
-}
-
-AntColonyModel::AntColonyModel(int heigth, int width)
-    : heigth(heigth), width(width), pheromoneMap(width, heigth),
-      nestPosition(width / 2, heigth / 2)
-{
-
-}
-
-AntColonyModel::AntColonyModel(int size)
-    : AntColonyModel(size, size)
+    : heigth(1), width(1), nestPosition(0.5, 0.5)
 {
 
 }

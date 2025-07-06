@@ -4,8 +4,10 @@
 
 struct Ant
 {
-    QPointF position;
+    QPointF logicalPosition;
     QPointF target;
     bool hasFood;
     qreal pheromoneStrength;
+
+    QPointF getScreenPosition(qreal windowWidth, qreal windowHeight) const;
 };
