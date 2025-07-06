@@ -22,98 +22,213 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/FoodStorage.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/PheromoneMap.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/widgets/SettingsPanel.cpp \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDeadlineTimer \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QHash \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMap \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QString \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QStringList \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QTimer \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QVariant \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QVector \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QtCore \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QtCoreDepends \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20algorithm.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20chrono.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20map.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20memory.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20type_traits.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20vector.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q23functional.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q23utility.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q26numeric.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qabstractanimation.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qabstractitemmodel.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qabstractproxymodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qalgorithms.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qanimationgroup.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qanystringview.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qapplicationstatic.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qarraydata.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qarraydataops.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qarraydatapointer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qassert.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qassociativeiterable.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qatomic.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qatomic_cxx11.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qatomicscopedvaluerollback.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbasicatomic.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbasictimer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbindingstorage.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbitarray.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbuffer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbytearray.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbytearrayalgorithms.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbytearraylist.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbytearraymatcher.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qbytearrayview.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcache.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcalendar.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcborarray.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcborcommon.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcbormap.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcborstream.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcborstreamreader.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcborstreamwriter.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcborvalue.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qchar.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qchronotimer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcollator.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcommandlineoption.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcommandlineparser.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcompare.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcompare_impl.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcomparehelpers.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcompilerdetection.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qconcatenatetablesproxymodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qconfig.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qconstructormacros.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcontainerfwd.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcontainerinfo.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcontainertools_impl.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcontiguouscache.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcoreapplication.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcoreapplication_platform.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcoreevent.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qcryptographichash.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdarwinhelpers.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdatastream.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdatetime.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdeadlinetimer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdebug.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdir.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdiriterator.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdirlisting.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qeasingcurve.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qelapsedtimer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qendian.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qeventloop.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qexception.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qexceptionhandling.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfactoryinterface.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfile.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfiledevice.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfileinfo.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfileselector.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfilesystemwatcher.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qflags.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfloat16.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qforeach.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfunctionaltools_impl.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfunctionpointer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfuture.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfuture_impl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfutureinterface.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfuturesynchronizer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfuturewatcher.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qgenericatomic.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qglobal.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qglobalstatic.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qhash.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qhashfunctions.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qidentityproxymodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiodevice.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiodevicebase.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qitemselectionmodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterable.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterator.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qjsonarray.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qjsondocument.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qjsonobject.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qjsonvalue.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlatin1stringmatcher.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlatin1stringview.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlibrary.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlibraryinfo.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qline.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlist.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlockfile.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlogging.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qloggingcategory.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmalloc.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmap.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmargins.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmath.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmessageauthenticationcode.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetacontainer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetaobject.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmetatype.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmimedata.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmimedatabase.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmimetype.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qminmax.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmutex.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qnamespace.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qnativeinterface.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qnumeric.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qobject.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qobject_impl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qobjectcleanuphandler.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qobjectdefs.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qoperatingsystemversion.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qoverload.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpair.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qparallelanimationgroup.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpauseanimation.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpermissions.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qplugin.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpluginloader.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpoint.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpointer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qprocess.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qprocessordetection.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpromise.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qproperty.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpropertyanimation.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpropertyprivate.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qqueue.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrandom.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qreadwritelock.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrect.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrefcount.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qregularexpression.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qresource.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qresultstore.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrunnable.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsavefile.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopedpointer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopedvaluerollback.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopeguard.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsemaphore.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsequentialiterable.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qset.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsettings.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qshareddata.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qshareddata_impl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsharedmemory.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsharedpointer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsignalmapper.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsimd.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsize.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsocketnotifier.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsortfilterproxymodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qspan.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstack.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstandardpaths.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstaticlatin1stringmatcher.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstorageinfo.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstring.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringalgorithms.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringbuilder.h \
@@ -121,6 +236,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringconverter_base.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringfwd.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringlist.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringlistmodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringliteral.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringmatcher.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringtokenizer.h \
@@ -128,34 +244,60 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qswap.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsysinfo.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsystemdetection.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsystemsemaphore.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtaggedpointer.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtclasshelpermacros.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtconfiginclude.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtconfigmacros.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtcore-config.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtcoreexports.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtcoreversion.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtemporarydir.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtemporaryfile.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtenvironmentvariables.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtextboundaryfinder.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtextstream.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qthread.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qthreadpool.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qthreadstorage.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtimeline.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtimer.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtimezone.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtipccommon.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtmetamacros.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtnoop.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtranslator.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtransposeproxymodel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtresource.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtsan_impl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtsymbolmacros.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qttranslation.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qttypetraits.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtversion.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtversionchecks.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtypeinfo.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtyperevision.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qtypes.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qurl.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qurlquery.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qutf8stringview.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/quuid.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvariant.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvariantanimation.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvarianthash.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvariantlist.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvariantmap.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvarlengtharray.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvector.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qversionnumber.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qversiontagging.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qwaitcondition.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qwineventnotifier.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxmlstream.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxpfunctional.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxptype_traits.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qyieldcpu.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/QPixmap \
@@ -468,11 +610,15 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/bits/allocated_ptr.h \
 	/usr/include/c++/10/bits/allocator.h \
 	/usr/include/c++/10/bits/atomic_base.h \
+	/usr/include/c++/10/bits/atomic_futex.h \
 	/usr/include/c++/10/bits/atomic_lockfree_defines.h \
+	/usr/include/c++/10/bits/basic_ios.h \
+	/usr/include/c++/10/bits/basic_ios.tcc \
 	/usr/include/c++/10/bits/basic_string.h \
 	/usr/include/c++/10/bits/basic_string.tcc \
 	/usr/include/c++/10/bits/char_traits.h \
 	/usr/include/c++/10/bits/charconv.h \
+	/usr/include/c++/10/bits/codecvt.h \
 	/usr/include/c++/10/bits/concept_check.h \
 	/usr/include/c++/10/bits/cpp_type_traits.h \
 	/usr/include/c++/10/bits/cxxabi_forced.h \
@@ -482,6 +628,10 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/bits/exception.h \
 	/usr/include/c++/10/bits/exception_defines.h \
 	/usr/include/c++/10/bits/exception_ptr.h \
+	/usr/include/c++/10/bits/fs_dir.h \
+	/usr/include/c++/10/bits/fs_fwd.h \
+	/usr/include/c++/10/bits/fs_ops.h \
+	/usr/include/c++/10/bits/fs_path.h \
 	/usr/include/c++/10/bits/functexcept.h \
 	/usr/include/c++/10/bits/functional_hash.h \
 	/usr/include/c++/10/bits/hash_bytes.h \
@@ -489,20 +639,30 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/bits/hashtable_policy.h \
 	/usr/include/c++/10/bits/invoke.h \
 	/usr/include/c++/10/bits/ios_base.h \
+	/usr/include/c++/10/bits/istream.tcc \
 	/usr/include/c++/10/bits/iterator_concepts.h \
 	/usr/include/c++/10/bits/list.tcc \
 	/usr/include/c++/10/bits/locale_classes.h \
 	/usr/include/c++/10/bits/locale_classes.tcc \
+	/usr/include/c++/10/bits/locale_conv.h \
+	/usr/include/c++/10/bits/locale_facets.h \
+	/usr/include/c++/10/bits/locale_facets.tcc \
+	/usr/include/c++/10/bits/locale_facets_nonio.h \
+	/usr/include/c++/10/bits/locale_facets_nonio.tcc \
 	/usr/include/c++/10/bits/localefwd.h \
 	/usr/include/c++/10/bits/memoryfwd.h \
 	/usr/include/c++/10/bits/move.h \
 	/usr/include/c++/10/bits/nested_exception.h \
 	/usr/include/c++/10/bits/node_handle.h \
+	/usr/include/c++/10/bits/ostream.tcc \
 	/usr/include/c++/10/bits/ostream_insert.h \
 	/usr/include/c++/10/bits/parse_numbers.h \
 	/usr/include/c++/10/bits/postypes.h \
 	/usr/include/c++/10/bits/predefined_ops.h \
 	/usr/include/c++/10/bits/ptr_traits.h \
+	/usr/include/c++/10/bits/quoted_string.h \
+	/usr/include/c++/10/bits/random.h \
+	/usr/include/c++/10/bits/random.tcc \
 	/usr/include/c++/10/bits/range_access.h \
 	/usr/include/c++/10/bits/range_cmp.h \
 	/usr/include/c++/10/bits/ranges_uninitialized.h \
@@ -511,8 +671,10 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/bits/shared_ptr_atomic.h \
 	/usr/include/c++/10/bits/shared_ptr_base.h \
 	/usr/include/c++/10/bits/specfun.h \
+	/usr/include/c++/10/bits/sstream.tcc \
 	/usr/include/c++/10/bits/std_abs.h \
 	/usr/include/c++/10/bits/std_function.h \
+	/usr/include/c++/10/bits/std_mutex.h \
 	/usr/include/c++/10/bits/stl_algo.h \
 	/usr/include/c++/10/bits/stl_algobase.h \
 	/usr/include/c++/10/bits/stl_bvector.h \
@@ -539,6 +701,7 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/bits/string_view.tcc \
 	/usr/include/c++/10/bits/stringfwd.h \
 	/usr/include/c++/10/bits/uniform_int_dist.h \
+	/usr/include/c++/10/bits/unique_lock.h \
 	/usr/include/c++/10/bits/unique_ptr.h \
 	/usr/include/c++/10/bits/unordered_map.h \
 	/usr/include/c++/10/bits/uses_allocator.h \
@@ -550,7 +713,9 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/climits \
 	/usr/include/c++/10/clocale \
 	/usr/include/c++/10/cmath \
+	/usr/include/c++/10/codecvt \
 	/usr/include/c++/10/concepts \
+	/usr/include/c++/10/condition_variable \
 	/usr/include/c++/10/cstddef \
 	/usr/include/c++/10/cstdint \
 	/usr/include/c++/10/cstdio \
@@ -558,6 +723,7 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/cstring \
 	/usr/include/c++/10/ctime \
 	/usr/include/c++/10/cwchar \
+	/usr/include/c++/10/cwctype \
 	/usr/include/c++/10/debug/assertions.h \
 	/usr/include/c++/10/debug/debug.h \
 	/usr/include/c++/10/exception \
@@ -569,27 +735,38 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/c++/10/ext/numeric_traits.h \
 	/usr/include/c++/10/ext/string_conversions.h \
 	/usr/include/c++/10/ext/type_traits.h \
+	/usr/include/c++/10/filesystem \
 	/usr/include/c++/10/functional \
+	/usr/include/c++/10/future \
 	/usr/include/c++/10/initializer_list \
+	/usr/include/c++/10/iomanip \
+	/usr/include/c++/10/ios \
 	/usr/include/c++/10/iosfwd \
+	/usr/include/c++/10/istream \
 	/usr/include/c++/10/iterator \
 	/usr/include/c++/10/limits \
 	/usr/include/c++/10/list \
+	/usr/include/c++/10/locale \
 	/usr/include/c++/10/map \
 	/usr/include/c++/10/memory \
+	/usr/include/c++/10/mutex \
 	/usr/include/c++/10/new \
 	/usr/include/c++/10/numeric \
 	/usr/include/c++/10/optional \
+	/usr/include/c++/10/ostream \
 	/usr/include/c++/10/pstl/execution_defs.h \
 	/usr/include/c++/10/pstl/glue_algorithm_defs.h \
 	/usr/include/c++/10/pstl/glue_memory_defs.h \
 	/usr/include/c++/10/pstl/glue_numeric_defs.h \
+	/usr/include/c++/10/random \
 	/usr/include/c++/10/ratio \
+	/usr/include/c++/10/sstream \
 	/usr/include/c++/10/stdexcept \
 	/usr/include/c++/10/streambuf \
 	/usr/include/c++/10/string \
 	/usr/include/c++/10/string_view \
 	/usr/include/c++/10/system_error \
+	/usr/include/c++/10/thread \
 	/usr/include/c++/10/tr1/bessel_function.tcc \
 	/usr/include/c++/10/tr1/beta_function.tcc \
 	/usr/include/c++/10/tr1/ell_integral.tcc \
@@ -614,6 +791,7 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/errno.h \
 	/usr/include/features-time64.h \
 	/usr/include/features.h \
+	/usr/include/libintl.h \
 	/usr/include/limits.h \
 	/usr/include/linux/errno.h \
 	/usr/include/linux/limits.h \
@@ -628,6 +806,7 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/strings.h \
 	/usr/include/time.h \
 	/usr/include/wchar.h \
+	/usr/include/wctype.h \
 	/usr/include/x86_64-linux-gnu/asm/errno.h \
 	/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
 	/usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -692,6 +871,7 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/waitflags.h \
 	/usr/include/x86_64-linux-gnu/bits/waitstatus.h \
 	/usr/include/x86_64-linux-gnu/bits/wchar.h \
+	/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
 	/usr/include/x86_64-linux-gnu/bits/wordsize.h \
 	/usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/atomic_word.h \
@@ -699,18 +879,91 @@ MyQtProject_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/c++locale.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h \
+	/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h \
+	/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/gthr-default.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/gthr.h \
+	/usr/include/x86_64-linux-gnu/c++/10/bits/messages_members.h \
+	/usr/include/x86_64-linux-gnu/c++/10/bits/opt_random.h \
 	/usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
+	/usr/include/x86_64-linux-gnu/c++/10/bits/time_members.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
 	/usr/include/x86_64-linux-gnu/sys/cdefs.h \
 	/usr/include/x86_64-linux-gnu/sys/select.h \
 	/usr/include/x86_64-linux-gnu/sys/types.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/adxintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx2intrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx5124fmapsintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx5124vnniwintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512bf16intrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512bf16vlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512bitalgintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512bwintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512cdintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512dqintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512erintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512fintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512ifmaintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512ifmavlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512pfintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vbmi2intrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vbmi2vlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vbmiintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vbmivlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vlbwintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vldqintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vnniintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vnnivlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vp2intersectintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vp2intersectvlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vpopcntdqintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avx512vpopcntdqvlintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/avxintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/bmi2intrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/bmiintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/cetintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/cldemoteintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/clflushoptintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/clwbintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/emmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/enqcmdintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/f16cintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/fmaintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/fxsrintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/gfniintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/immintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/lzcntintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/mm_malloc.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/mmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/movdirintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/pconfigintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/pkuintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/pmmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/popcntintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/prfchwintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/rdseedintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/rtmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/sgxintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/shaintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/smmintrin.h \
 	/usr/lib/gcc/x86_64-linux-gnu/10/include/stdarg.h \
 	/usr/lib/gcc/x86_64-linux-gnu/10/include/stdbool.h \
 	/usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/tmmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/vaesintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/vpclmulqdqintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/waitpkgintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/wbnoinvdintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/wmmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/xmmintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/xsavecintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/xsaveintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/xsaveoptintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/xsavesintrin.h \
+	/usr/lib/gcc/x86_64-linux-gnu/10/include/xtestintrin.h \
 	/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \

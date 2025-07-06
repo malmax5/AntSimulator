@@ -43,6 +43,11 @@ void AntField::wheelEvent(QWheelEvent* event)
     }
 }
 
+void AntField::resizeEvent(QResizeEvent* event)
+{
+    coordinateSystem.setWindowSize(event->size());
+}
+
 void AntField::paintEvent(QPaintEvent* event)
 {
     Q_UNUSED(event);

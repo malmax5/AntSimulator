@@ -6,6 +6,7 @@
 #include <QPointF>
 
 #include "model/AntColonyModel.hpp"
+#include "CoordinateSystem.hpp"
 
 class AntField : public QWidget
 {
@@ -24,10 +25,12 @@ public slots:
     void removeFood(const QPointF& pos);
 
 protected:
+    void resizeEvent(QResizeEvent* event) override;
     void paintEvent(QPaintEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
 
 private:
+    CoordinateSystem coordinateSystem;
     AntColonyModel* antColonyModel;
     QPixmap bufferPixmap;
 };
