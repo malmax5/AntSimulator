@@ -58,6 +58,10 @@ void AntField::mouseMoveEvent(QMouseEvent* event)
 
 void AntField::wheelEvent(QWheelEvent* event)
 {
+    qreal oldZoom = coordinateSystem.getZoom();
+    QPointF oldOffset = coordinateSystem.getOffset();
+    QPointF cursorWorldPos = coordinateSystem.screenToWorld(event->position());
+
     if (event->angleDelta().y() > 0)
     {
         coordinateSystem.setZoom(coordinateSystem.getZoom() * 1.1);
@@ -66,6 +70,14 @@ void AntField::wheelEvent(QWheelEvent* event)
     {
         coordinateSystem.setZoom(coordinateSystem.getZoom() / 1.1);
     }
+
+    qreal zoomRatio = oldZoom / coordinateSystem.getZoom();
+    QPointF newOffset(
+        cursorWorldPos.x() - (cursorWorldPos.x() - oldOffset.x()) * zoomRatio,
+        cursorWorldPos.y() - (cursorWorldPos.y() - oldOffset.y()) * zoomRatio
+    );
+
+    coordinateSystem.setOffset(newOffset);
 
     update();
 }
