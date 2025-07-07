@@ -12,7 +12,7 @@ struct PheromonePoint
 {
     QPointF pos;
     qreal strength;
-    qreal timestamp;
+    qint64 timestamp;
 };
 
 class PheromoneMap
@@ -20,7 +20,7 @@ class PheromoneMap
 public:
     void addPheromone(const QPointF& worldPos, qreal strength);
     void evaporate();
-    QPointF getDirection(const QPointF& pos) const;
+    QPointF getDirection(const QPointF& worldPos) const;
     void clear();
 
 private:
