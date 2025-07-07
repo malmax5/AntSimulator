@@ -25,6 +25,8 @@ public slots:
     void removeFood(const QPointF& pos);
 
 protected:
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
     void resizeEvent(QResizeEvent* event) override;
     void paintEvent(QPaintEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
@@ -33,4 +35,6 @@ private:
     CoordinateSystem coordinateSystem;
     AntColonyModel* antColonyModel;
     QPixmap bufferPixmap;
+
+    QPointF lastMousePos;
 };

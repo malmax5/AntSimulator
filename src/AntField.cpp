@@ -4,6 +4,7 @@
 #include <QPaintEvent>
 #include <QWheelEvent>
 #include <QResizeEvent>
+#include <QMouseEvent>
 
 AntField::AntField(AntColonyModel* antColonyModel, QWidget* parent)
     : antColonyModel(antColonyModel), QWidget(parent)
@@ -31,16 +32,42 @@ void AntField::removeFood(const QPointF& pos)
     update();
 }
 
+void AntField::mousePressEvent(QMouseEvent* event)
+{
+    if (event->button() == Qt::LeftButton)
+    {
+        lastMousePos = event->pos();
+    }
+}
+
+void AntField::mouseMoveEvent(QMouseEvent* event)
+{
+    if (event->buttons() & Qt::LeftButton)
+    {
+        QPointF delta = event->pos() - lastMousePos;
+
+        coordinateSystem.moveOffset(
+            -delta.x() / coordinateSystem.getWindowWidth() * coordinateSystem.getWorldWidth(),
+            -delta.y() / coordinateSystem.getWindowHeight() * coordinateSystem.getWorldHeight()
+        );
+
+        lastMousePos = event->pos();
+        update();
+    }
+}
+
 void AntField::wheelEvent(QWheelEvent* event)
 {
     if (event->angleDelta().y() > 0)
     {
-
+        coordinateSystem.setZoom(coordinateSystem.getZoom() * 1.1);
     }
     else
     {
-
+        coordinateSystem.setZoom(coordinateSystem.getZoom() / 1.1);
     }
+
+    update();
 }
 
 void AntField::resizeEvent(QResizeEvent* event)
