@@ -8,6 +8,13 @@
 #include <cmath>
 #include <algorithm>
 
+struct PheromonePoint
+{
+    QPointF pos;
+    qreal strength;
+    qreal timestamp;
+};
+
 class PheromoneMap
 {
 public:
