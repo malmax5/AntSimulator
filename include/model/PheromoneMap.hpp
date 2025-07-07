@@ -18,20 +18,13 @@ struct PheromonePoint
 class PheromoneMap
 {
 public:
-    explicit PheromoneMap(int width = 100, int height = 100);
-
-    void addPheromone(const QPointF& pos, qreal strength);
+    void addPheromone(const QPointF& worldPos, qreal strength);
     void evaporate();
     QPointF getDirection(const QPointF& pos) const;
-    qreal getValue(int x, int y) const;
     void clear();
 
 private:
+    QList<PheromonePoint> points;
     qreal evaporateRate = 0.95;
-
-    QVector<QVector<qreal>> map;
-
-    inline int toIndexX(qreal x) const;
-    inline int toIndexY(qreal y) const;
-    inline bool isValid(int x, int y) const;
+    qreal maxDistance = 0.1;
 };
