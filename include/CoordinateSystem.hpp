@@ -20,7 +20,6 @@ public:
     void setOffset(const QPointF& offset);
     void setOffset(qreal xCord, qreal yCord);
 
-
     void moveOffset(const QPointF& dxy);
     void moveOffset(qreal dx, qreal dy);
 

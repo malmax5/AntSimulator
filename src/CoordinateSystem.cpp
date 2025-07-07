@@ -1,7 +1,8 @@
 #include "../include/CoordinateSystem.hpp"
 
 CoordinateSystem::CoordinateSystem(qreal width, qreal height)
-    : worldWidth(width), worldHeight(height)
+    : worldWidth(width), worldHeight(height),
+      zoomMin(1.0), zoomMax(10.0)
 {
 
 }
@@ -26,21 +27,21 @@ void CoordinateSystem::setWindowSize(const QSize& size)
 
 QPointF CoordinateSystem::worldToScreen(const QPointF& worldPos) const
 {
-    qreal visibleWidth = worldWidth / zoom;
-    qreal visibleHeight = worldHeight / zoom;
-    
-    qreal x = (worldPos.x() - offset.x()) * (windowWidth / visibleWidth);
-    qreal y = (worldPos.y() - offset.y()) * (windowHeight / visibleHeight);
+    qreal cx = windowWidth / worldWidth;
+    qreal cy = windowHeight / worldHeight;
+
+    qreal x = (worldPos.x() - offset.x()) * cx;
+    qreal y = (worldPos.y() - offset.y()) * cy;
     return QPointF(x, y);
 }
 
 QPointF CoordinateSystem::screenToWorld(const QPointF& screenPos) const
 {
-    qreal visibleWidth = worldWidth / zoom;
-    qreal visibleHeight = worldHeight / zoom;
-    
-    qreal x = offset.x() + (screenPos.x() * visibleWidth / windowWidth);
-    qreal y = offset.y() + (screenPos.y() * visibleHeight / windowHeight);
+    qreal cx = worldWidth / windowWidth;
+    qreal cy = worldHeight / windowHeight;
+
+    qreal x = offset.x() + (screenPos.x() * cx);
+    qreal y = offset.y() + (screenPos.y() * cy);
     return QPointF(x, y);
 }
 
@@ -52,29 +53,29 @@ void CoordinateSystem::setZoom(qreal zoomFactor)
 
 void CoordinateSystem::setOffset(const QPointF& offset)
 {
-    qreal maxOffsetX = worldWidth * zoom - worldWidth;
-    qreal maxOffsetY = worldHeight * zoom - worldHeight;
-
-    this->offset.setX(qBound(0.0, offset.x(), maxOffsetX));
-    this->offset.setY(qBound(0.0, offset.y(), maxOffsetY));
+    this->offset = offset;
+    updateOffset();
 }
 
 void CoordinateSystem::setOffset(qreal xCord, qreal yCord)
 {
-    qreal maxOffsetX = worldWidth * zoom - worldWidth;
-    qreal maxOffsetY = worldHeight * zoom - worldHeight;
-
-    this->offset.setX(qBound(0.0, xCord, maxOffsetX));
-    this->offset.setY(qBound(0.0, yCord, maxOffsetY));
+    this->offset = QPointF(xCord, yCord);
+    updateOffset();
 }
 
 void CoordinateSystem::updateOffset()
 {
-    qreal maxOffsetX = worldWidth * zoom - worldWidth;
-    qreal maxOffsetY = worldHeight * zoom - worldHeight;
+    qreal visibleWidth = worldWidth / zoom;
+    qreal visibleHeight = worldHeight / zoom;
 
-    offset.setX(qBound(0.0, offset.x(), maxOffsetX));
-    offset.setY(qBound(0.0, offset.y(), maxOffsetY));
+    qreal minOffsetX = qMin(0.0, worldWidth - visibleWidth);
+    qreal maxOffsetX = qMax(0.0, worldWidth - visibleWidth);
+
+    qreal minOffsetY = qMin(0.0, worldHeight - visibleHeight);
+    qreal maxOffsetY = qMax(0.0, worldHeight - visibleHeight);
+
+    offset.setX(qBound(minOffsetX, offset.x(), maxOffsetX));
+    offset.setY(qBound(minOffsetY, offset.y(), maxOffsetY));
 }
 
 void CoordinateSystem::moveOffset(const QPointF& dxy)
