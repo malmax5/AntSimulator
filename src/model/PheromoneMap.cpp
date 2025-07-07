@@ -73,6 +73,11 @@ QPointF PheromoneMap::getDirection(const QPointF& worldPos) const
     return QPointF();
 }
 
+const QList<PheromonePoint>& PheromoneMap::getPheromonePoints() const
+{
+    return points;
+}
+
 void PheromoneMap::clear()
 {
     points.clear();

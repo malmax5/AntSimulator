@@ -21,6 +21,7 @@ public:
     void addPheromone(const QPointF& worldPos, qreal strength);
     void evaporate();
     QPointF getDirection(const QPointF& worldPos) const;
+    const QList<PheromonePoint>& getPheromonePoints() const;
     void clear();
 
 private:

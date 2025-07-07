@@ -8,7 +8,7 @@
 AntField::AntField(AntColonyModel* antColonyModel, QWidget* parent)
     : antColonyModel(antColonyModel), QWidget(parent)
 {
-    bufferPixmap = QPixmap(QSize(width(), height())); // !size
+    bufferPixmap = QPixmap(size());
     bufferPixmap.fill(Qt::white);
 }
 
@@ -80,7 +80,6 @@ void AntField::paintEvent(QPaintEvent* event)
     //     }
     // }
 
-    // !
     painter.setBrush(Qt::green);
     for (const auto& food : antColonyModel->getFoodStorage().getFoods())
     {
