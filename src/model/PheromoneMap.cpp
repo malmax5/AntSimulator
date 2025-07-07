@@ -15,7 +15,7 @@ void PheromoneMap::addPheromone(const QPointF& worldPos, qreal strength)
 
         if (dist < maxDistance)
         {
-            point.strength += strength;
+            point.strength = qMax(strength, point.strength);
             point.timestamp = QDateTime::currentMSecsSinceEpoch();
             merged = true;
             break;
@@ -45,7 +45,7 @@ void PheromoneMap::evaporate()
     }
 }
 
-QPointF PheromoneMap::getDirection(const QPointF& worldPos) const
+QPointF PheromoneMap::getDirection(const QPointF& worldPos, qreal radiusDetection) const
 {
     QPointF totalForce(0, 0);
     qreal totalStrength = 0;
@@ -56,13 +56,15 @@ QPointF PheromoneMap::getDirection(const QPointF& worldPos) const
         qreal dy = point.pos.y() - worldPos.y();
         qreal dist = std::sqrt(dx * dx + dy * dy);
 
-        if (dist < maxDistance)
+        if (dist > radiusDetection)
         {
-            qreal influence = point.strength / (dist * dist);
-            totalForce.rx() += dx * influence;
-            totalForce.ry() += dy * influence;
-            totalStrength += influence;
+            continue;
         }
+
+        qreal influence = point.strength / (dist * dist);
+        totalForce.rx() += dx * influence;
+        totalForce.ry() += dy * influence;
+        totalStrength += influence;
     }
 
     if (totalStrength > 0)

@@ -19,7 +19,7 @@ void AntField::redraw()
 
 void AntField::addFood(const QPointF& pos)
 {
-    antColonyModel->addFood(pos);
+    antColonyModel->addFood(coordinateSystem.screenToWorld(pos));
 
     update();
 }
@@ -64,21 +64,12 @@ void AntField::paintEvent(QPaintEvent* event)
 
     const qreal pheromoneAlpha = 0.3;
     painter.setPen(Qt::NoPen);
-    painter.setBrush(QColor(255, 0, 0, static_cast<int>(255 * pheromoneAlpha)));
-
-    // !
-    // for (int x = 0; x < antColonyModel->getWidth(); x++) // !size
-    // {
-    //     for (int y = 0; y < antColonyModel->getHeigth(); y++) // !size
-    //     {
-    //         qreal strength = antColonyModel->getPheromoneMap().getValue(x, y);
-
-    //         if (strength > 0.1)
-    //         {
-    //             painter.drawEllipse(QPointF(x, y), scale * 2, scale * 2);
-    //         }
-    //     }
-    // }
+    
+    for (const auto& point : antColonyModel->getPheromoneMap().getPheromonePoints()) // !size
+    {
+        painter.setBrush(QColor(255, 0, 0, qMin(255, qMax(30, static_cast<int>(255 * pheromoneAlpha)))));
+        painter.drawEllipse(coordinateSystem.worldToScreen(point.pos), zoom * 2, zoom * 2);
+    }
 
     painter.setBrush(Qt::green);
     for (const auto& food : antColonyModel->getFoodStorage().getFoods())

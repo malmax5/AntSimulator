@@ -20,12 +20,12 @@ class PheromoneMap
 public:
     void addPheromone(const QPointF& worldPos, qreal strength);
     void evaporate();
-    QPointF getDirection(const QPointF& worldPos) const;
+    QPointF getDirection(const QPointF& worldPos, qreal radiusDetection) const;
     const QList<PheromonePoint>& getPheromonePoints() const;
     void clear();
 
 private:
     QList<PheromonePoint> points;
     qreal evaporateRate = 0.95;
-    qreal maxDistance = 0.1;
+    qreal maxDistance = 0.003;
 };

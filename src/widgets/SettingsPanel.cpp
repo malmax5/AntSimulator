@@ -36,8 +36,8 @@ SettingsPanel::SettingsPanel(QWidget* parent)
     QSpinBox* xFoodCord = new QSpinBox;
     QSpinBox* yFoodCord = new QSpinBox;
 
-    xFoodCord->setRange(0, 400);
-    yFoodCord->setRange(0, 400);
+    xFoodCord->setRange(0, 1000);
+    yFoodCord->setRange(0, 1000);
     xFoodCord->setValue(0);
     yFoodCord->setValue(0);
 

@@ -43,7 +43,7 @@ private:
     int foodCollected = 0;
     qreal simulationSpeed = 1.0;
     qreal moveStep = 0.001;
-    qreal detectionRadius = 0.02;
+    qreal detectionRadius = 0.03;
 
     bool isRunning = false;
     bool isPaused = false;

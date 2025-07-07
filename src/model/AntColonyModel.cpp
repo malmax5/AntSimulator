@@ -63,9 +63,9 @@ void AntColonyModel::evaporatePheromones()
     pheromoneMap.evaporate();
 }
 
-QPointF AntColonyModel::getDiractionByPheromones(const QPointF& pos) const
+QPointF AntColonyModel::getDiractionByPheromones(const QPointF& pos, qreal detectionRadius) const
 {
-    return pheromoneMap.getDirection(pos);
+    return pheromoneMap.getDirection(pos, detectionRadius);
 }
 
 const PheromoneMap& AntColonyModel::getPheromoneMap()

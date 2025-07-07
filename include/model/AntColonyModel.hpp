@@ -27,7 +27,7 @@ public:
 
     void addPheromone(const QPointF& pos, qreal strength);
     void evaporatePheromones();
-    QPointF getDiractionByPheromones(const QPointF& pos) const;
+    QPointF getDiractionByPheromones(const QPointF& pos, qreal detectionRadius) const;
     const PheromoneMap& getPheromoneMap();
 
     QPointF getNestPosition();
