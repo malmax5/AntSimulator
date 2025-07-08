@@ -1,5 +1,6 @@
 #include "../include/AntField.hpp"
 
+#include <QApplication>
 #include <QPainter>
 #include <QPaintEvent>
 #include <QWheelEvent>
@@ -58,6 +59,11 @@ void AntField::mouseMoveEvent(QMouseEvent* event)
 
 void AntField::wheelEvent(QWheelEvent* event)
 {
+    if (!QApplication::keyboardModifiers().testFlag(Qt::ControlModifier))
+    {
+        return;
+    }
+
     qreal oldZoom = coordinateSystem.getZoom();
     QPointF oldOffset = coordinateSystem.getOffset();
     QPointF cursorWorldPos = coordinateSystem.screenToWorld(event->position());
