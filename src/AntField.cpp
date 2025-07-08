@@ -37,7 +37,14 @@ void AntField::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton)
     {
-        lastMousePos = event->pos();
+        if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier))
+        {
+            addFood(event->pos());
+        }
+        else
+        {
+            lastMousePos = event->pos();
+        }
     }
 }
 
