@@ -47,7 +47,6 @@ void PheromoneMap::evaporate()
 
 QPointF PheromoneMap::getDirection(const QPointF& worldPos, qreal radiusDetection) const
 {
-    qDebug() << points.size();
     QPointF totalForce(0, 0);
     qreal totalStrength = 0;
 
