@@ -26,6 +26,6 @@ public:
 
 private:
     QList<PheromonePoint> points;
-    qreal evaporateRate = 0.95;
+    qreal evaporateRate = 0.9;
     qreal maxDistance = 0.003;
 };
