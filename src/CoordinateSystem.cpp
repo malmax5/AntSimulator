@@ -40,8 +40,8 @@ QPointF CoordinateSystem::screenToWorld(const QPointF& screenPos) const
     qreal cx = worldWidth / windowWidth;
     qreal cy = worldHeight / windowHeight;
 
-    qreal x = offset.x() + (screenPos.x() * cx);
-    qreal y = offset.y() + (screenPos.y() * cy);
+    qreal x = offset.x() + (screenPos.x() * cx) / zoom;
+    qreal y = offset.y() + (screenPos.y() * cy) / zoom;
     return QPointF(x, y);
 }
 

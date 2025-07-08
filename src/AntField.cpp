@@ -52,6 +52,11 @@ void AntField::mouseMoveEvent(QMouseEvent* event)
 {
     if (event->buttons() & Qt::LeftButton)
     {
+        if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier))
+        {
+            return;
+        }
+        
         QPointF delta = event->pos() - lastMousePos;
 
         coordinateSystem.moveOffset(
