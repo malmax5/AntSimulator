@@ -2,7 +2,7 @@
 
 #include <QWidget>
 #include <QPointF>
-#include <QSlider>
+#include <QSpinBox>
 #include <QPushButton>
 
 class SettingsPanel : public QWidget
@@ -31,8 +31,8 @@ private slots:
     void onAddFoodButtonClicked(int x, int y);
 
 private:
-    QSlider* antCountSlider;
-    QSlider* speedSlider;
+    QSpinBox* antCountSpinBox;
+    QSpinBox* speedSpinBox;
 
     QPushButton* addFoodButton;
 

@@ -6,7 +6,6 @@
 #include <QSlider>
 #include <QLabel>
 #include <QPushButton>
-#include <QSpinBox>
 
 SettingsPanel::SettingsPanel(QWidget* parent)
     : QWidget(parent)
@@ -17,13 +16,20 @@ SettingsPanel::SettingsPanel(QWidget* parent)
     QGroupBox* antSettingsBox = new QGroupBox("Ant Settings");
     QVBoxLayout* antLayout = new QVBoxLayout();
 
-    antCountSlider = new QSlider(Qt::Horizontal);
+    antCountSpinBox = new QSpinBox();
+    antCountSpinBox->setRange(1, 1000);
+    antCountSpinBox->setValue(100);
+
+    QSlider* antCountSlider = new QSlider(Qt::Horizontal);
     antCountSlider->setRange(1, 1000);
     antCountSlider->setValue(100);
+    
     antLayout->addWidget(new QLabel("Ant count: "));
+    antLayout->addWidget(antCountSpinBox);
     antLayout->addWidget(antCountSlider);
 
-    QObject::connect(antCountSlider, &QSlider::valueChanged, this, &SettingsPanel::antCountChanged);
+    QObject::connect(antCountSpinBox, &QSpinBox::valueChanged, this, &SettingsPanel::antCountChanged);
+    QObject::connect(antCountSlider, &QSlider::valueChanged, antCountSpinBox, &QSpinBox::setValue);
 
     antSettingsBox->setLayout(antLayout);
     mainLayout->addWidget(antSettingsBox);
@@ -60,15 +66,19 @@ SettingsPanel::SettingsPanel(QWidget* parent)
     QGroupBox* speedSettingsBox = new QGroupBox("Speed Settings");
     QVBoxLayout* speedLayout = new QVBoxLayout();
 
-    speedSlider = new QSlider(Qt::Horizontal);
+    speedSpinBox = new QSpinBox();
+    speedSpinBox->setRange(1, 10);
+    speedSpinBox->setValue(1);
+
+    QSlider* speedSlider = new QSlider(Qt::Horizontal);
     speedSlider->setRange(1, 10);
     speedSlider->setValue(1);
     speedLayout->addWidget(new QLabel("Simulation Speed: "));
+    speedLayout->addWidget(speedSpinBox);
     speedLayout->addWidget(speedSlider);
 
-    QObject::connect(speedSlider, &QSlider::valueChanged, [this](int value){
-        emit simulationSpeedChanged(value / 1.0);
-    });
+    QObject::connect(speedSpinBox, &QSpinBox::valueChanged, this, &SettingsPanel::simulationSpeedChanged);
+    QObject::connect(speedSlider, &QSlider::valueChanged, speedSpinBox, &QSpinBox::setValue);
 
     speedSettingsBox->setLayout(speedLayout);
     mainLayout->addWidget(speedSettingsBox);
@@ -96,12 +106,12 @@ SettingsPanel::SettingsPanel(QWidget* parent)
 
 void SettingsPanel::updateAntCount(int count)
 {
-    antCountSlider->setValue(count);
+    antCountSpinBox->setValue(count);
 }
 
 void SettingsPanel::updateSimulationSpeed(qreal speed)
 {
-    speedSlider->setValue(static_cast<int>(speed));
+    speedSpinBox->setValue(static_cast<int>(speed));
 }
 
 void SettingsPanel::onAddFoodButtonClicked(int x, int y)

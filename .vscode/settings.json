@@ -71,6 +71,7 @@
         "stdfloat": "cpp",
         "qdebug": "cpp",
         "qpointf": "cpp",
-        "qwheelevent": "cpp"
+        "qwheelevent": "cpp",
+        "qspinbox": "cpp"
     }
 }
