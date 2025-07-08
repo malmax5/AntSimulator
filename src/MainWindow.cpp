@@ -1,6 +1,7 @@
 #include "MainWindow.hpp"
 
 #include <QThread>
+#include <QMutexLocker>
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), antColonyModel(new AntColonyModel())
@@ -49,6 +50,7 @@ void MainWindow::initSimulator()
 
     antSimulator->moveToThread(simulationThread);
 
+    connect(simulationThread, &QThread::finished, antSimulator, &QObject::deleteLater);
     connect(simulationThread, &QThread::finished, simulationThread, &QThread::deleteLater);
 
     simulationThread->start();
@@ -65,4 +67,15 @@ void MainWindow::connectSignals()
 
     connect(antSimulator, &AntSimulator::updateData, antField, &AntField::redraw);
     connect(settingsPanel, &SettingsPanel::addFood, antField, &AntField::addFood);
+}
+
+void MainWindow::closeEvent(QCloseEvent* event)
+{
+    if (simulationThread && simulationThread->isRunning())
+    {
+        simulationThread->quit();
+        simulationThread->wait(1000);
+    }
+
+    QMainWindow::closeEvent(event);
 }

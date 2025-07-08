@@ -1,20 +1,23 @@
 #include "../../include/model/AntColonyModel.hpp"
 
 #include <QDebug>
+#include <QMutexLocker>
 
 AntColonyModel::AntColonyModel()
     : nestPosition(0.5, 0.5)
 {
-
+    
 }
 
 void AntColonyModel::setAnts(const QVector<Ant>& ants)
 {
+    QMutexLocker locker(&dataMutex);
     this->ants = ants;
 }
 
 void AntColonyModel::addAnt(const Ant& ant)
 {
+    QMutexLocker locker(&dataMutex);
     ants.append(ant);
 }
 
@@ -25,6 +28,7 @@ void AntColonyModel::removeAnt(int index)
         return;
     }
 
+    QMutexLocker locker(&dataMutex);
     ants.removeAt(index);
 }
 
@@ -35,61 +39,73 @@ Ant* AntColonyModel::getAnt(int index)
         return nullptr;
     }
 
+    QMutexLocker locker(&dataMutex);
     return &ants[index];
 }
 
 QVector<Ant>& AntColonyModel::getAnts()
 {
+    QMutexLocker locker(&dataMutex);
     return ants;
 }
 
 void AntColonyModel::setFoods(const FoodStorage& foods)
 {
+    QMutexLocker locker(&dataMutex);
     this->foods = foods;
 }
 
 void AntColonyModel::addFood(const QPointF& pos)
 {
+    QMutexLocker locker(&dataMutex);
     foods.addFood(pos);
 }
 
 void AntColonyModel::removeFood(const QPointF& pos)
 {
+    QMutexLocker locker(&dataMutex);
     foods.removeFood(pos);
 }
 
 const FoodStorage& AntColonyModel::getFoodStorage() const
 {
+    QMutexLocker locker(&dataMutex);
     return foods;
 }
 
 void AntColonyModel::addPheromone(const QPointF& pos, qreal strength)
 {
+    QMutexLocker locker(&dataMutex);
     pheromoneMap.addPheromone(pos, strength);
 }
 
 void AntColonyModel::evaporatePheromones()
 {
+    QMutexLocker locker(&dataMutex);
     pheromoneMap.evaporate();
 }
 
 QPointF AntColonyModel::getDiractionByPheromones(const QPointF& pos, qreal detectionRadius) const
 {
+    QMutexLocker locker(&dataMutex);
     return pheromoneMap.getDirection(pos, detectionRadius);
 }
 
 const PheromoneMap& AntColonyModel::getPheromoneMap()
 {
+    QMutexLocker locker(&dataMutex);
     return pheromoneMap;
 }
 
 QPointF AntColonyModel::getNestPosition()
 {
+    QMutexLocker locker(&dataMutex);
     return nestPosition;
 }
 
 void AntColonyModel::reset()
 {
+    QMutexLocker locker(&dataMutex);
     ants.clear();
     foods.clear();
     pheromoneMap.clear();

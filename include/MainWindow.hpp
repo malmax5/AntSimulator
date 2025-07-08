@@ -31,6 +31,9 @@ private:
     void initSimulator();
     void connectSignals();
 
+protected:
+    void closeEvent(QCloseEvent* event) override;
+
 private:
     AntColonyModel* antColonyModel;
     AntField* antField;

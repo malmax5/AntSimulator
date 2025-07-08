@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QSize>
+#include <QMutex>
 
 #include "Ant.hpp"
 #include "FoodStorage.hpp"
@@ -35,7 +36,7 @@ public:
     void reset();
 
 private:
-
+    mutable QMutex dataMutex;
     QPointF nestPosition;
     QVector<Ant> ants;
     FoodStorage foods;
