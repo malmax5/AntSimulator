@@ -17,7 +17,7 @@ public:
     void setAnts(const QVector<Ant>& ants);
     void addAnt(const Ant& ant);
     void removeAnt(int index);
-    Ant& getAnt(int index);
+    Ant* getAnt(int index);
     QVector<Ant>& getAnts();
 
     void setFoods(const FoodStorage& foods);

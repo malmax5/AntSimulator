@@ -3,7 +3,7 @@
 #include <QDebug>
 
 AntColonyModel::AntColonyModel()
-    : nestPosition(0.5, 0.5) // !
+    : nestPosition(0.5, 0.5)
 {
 
 }
@@ -20,12 +20,22 @@ void AntColonyModel::addAnt(const Ant& ant)
 
 void AntColonyModel::removeAnt(int index)
 {
+    if (index < 0 || index >= ants.size())
+    {
+        return;
+    }
+
     ants.removeAt(index);
 }
 
-Ant& AntColonyModel::getAnt(int index)
+Ant* AntColonyModel::getAnt(int index)
 {
-    return ants[index];
+    if (index < 0 || index >= ants.size())
+    {
+        return nullptr;
+    }
+
+    return &ants[index];
 }
 
 QVector<Ant>& AntColonyModel::getAnts()
