@@ -4,10 +4,12 @@
         : QObject(parent), scene(scene), model(model)
     {
         createNest();
+        setPheromoneMap();
     }
 
     void SimulationVisualizer::createNest()
     {
+        if (!scene) return;
         constexpr qreal nestSize = 0.04;
         QPointF nestPos = model->getNestPosition();
 
@@ -25,6 +27,7 @@
 
     void SimulationVisualizer::updateAnts()
     {
+        if (!scene) return;
         const auto& ants = model->getAnts();
 
         for (const auto& ant : ants)
@@ -34,6 +37,10 @@
                 AntItem* newAnt = new AntItem(ant);
                 antItems[ant.id] = newAnt;
                 scene->addItem(newAnt);
+            }
+            else
+            {
+                antItems[ant.id]->updatePosition(ant.logicalPosition, ant.hasFood);
             }
         }
 
@@ -63,8 +70,9 @@
 
     void SimulationVisualizer::updateFood()
     {
+        if (!scene) return;
         const auto& foods = model->getFoodStorage().getFoods();
-        QSet<QPair<int, int>> currentFood;
+        QSet<QPair<qreal, qreal>> currentFood;
 
         for (const auto& food : foods)
         {
@@ -102,10 +110,12 @@
         }
     }
 
-    void SimulationVisualizer::updatePheromones()
+    void SimulationVisualizer::setPheromoneMap()
     {
+        if (!scene) return;
         if (pheromoneLayer)
         {
+            return;
             scene->removeItem(pheromoneLayer);
             delete pheromoneLayer;
         }
@@ -117,11 +127,8 @@
 
     void SimulationVisualizer::updateVisualization()
     {
+        if (!scene) return;
         QMutexLocker locker(&updateMutex);
-        {
-            QMutexLocker modelLocker(&model->dataMutex);
-            updateAnts();
-            updateFood();
-            updatePheromones();
-        }
+        updateAnts();
+        updateFood();
     }

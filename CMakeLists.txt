@@ -24,6 +24,7 @@ set(HEADERS
     include/graphics/AntItem.hpp
     include/graphics/PheromoneLayer.hpp
     include/graphics/SimulationVisualizer.hpp
+    include/graphics/CustomView.hpp
 
     include/widgets/SettingsPanel.hpp
 
@@ -44,6 +45,7 @@ set(SOURCES
     src/graphics/AntItem.cpp
     src/graphics/PheromoneLayer.cpp
     src/graphics/SimulationVisualizer.cpp
+    src/graphics/CustomView.cpp
 
     src/widgets/SettingsPanel.cpp
 

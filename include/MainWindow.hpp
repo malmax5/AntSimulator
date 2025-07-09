@@ -3,6 +3,9 @@
 #include <QObject>
 #include <QMainWindow>
 
+#include <QGraphicsScene>
+#include <QGraphicsView>
+
 #include <QLabel>
 
 #include <QHBoxLayout>
@@ -13,6 +16,8 @@
 
 #include "model/AntColonyModel.hpp"
 
+#include "graphics/CustomView.hpp"
+#include "graphics/SimulationVisualizer.hpp"
 #include "AntField.hpp"
 #include "AntSimulator.hpp"
 
@@ -28,6 +33,7 @@ public:
 
 private:
     void initUI();
+    void setupGraphics();
     void initSimulator();
     void connectSignals();
 
@@ -35,8 +41,12 @@ protected:
     void closeEvent(QCloseEvent* event) override;
 
 private:
+    QGraphicsScene* scene;
+    CustomView* view;
+    SimulationVisualizer* visualizer;
+
     AntColonyModel* antColonyModel;
-    AntField* antField;
+    // AntField* antField;
     SettingsPanel* settingsPanel;
     AntSimulator* antSimulator;
     QThread* simulationThread;

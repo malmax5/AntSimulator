@@ -68,7 +68,7 @@ void AntSimulator::reset()
     {
         runTimer->stop();
         disconnect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
-        delete runTimer;
+        runTimer->deleteLater();
         runTimer = nullptr;
     }
 
@@ -106,6 +106,7 @@ void AntSimulator::initializeAnts()
     for (int i = 0; i < antCount; i++)
     {
         Ant ant;
+        ant.id = i;
 
         qreal newX = antColonyModel->getNestPosition().x() + (QRandomGenerator::global()->generateDouble() * 2 - 1) * 0.001;
         qreal newY = antColonyModel->getNestPosition().y() + (QRandomGenerator::global()->generateDouble() * 2 - 1) * 0.001;

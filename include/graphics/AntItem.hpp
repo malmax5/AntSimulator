@@ -12,6 +12,8 @@ class AntItem : public QGraphicsEllipseItem
 public:
     explicit AntItem(const Ant& ant, QGraphicsItem* parent = nullptr);
 
+    QRectF boundingRect() const override;
+
     void updatePosition(const QPointF& newPos, bool hasFood);
 
 protected:

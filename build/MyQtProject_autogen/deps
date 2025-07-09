@@ -8,6 +8,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/CoordinateSystem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/AntItem.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/CustomView.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/PheromoneLayer.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/SimulationVisualizer.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
@@ -21,6 +22,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/CoordinateSystem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/AntItem.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/CustomView.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/PheromoneLayer.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/SimulationVisualizer.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/Ant.cpp \
@@ -346,6 +348,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsEllipseItem \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsItem \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsScene \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsView \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QHBoxLayout \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QLabel \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QMainWindow \
@@ -355,17 +358,20 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QVBoxLayout \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qboxlayout.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsitem.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsscene.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsview.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgridlayout.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlabel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlayout.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlayoutitem.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qmainwindow.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qscrollarea.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsizepolicy.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qspinbox.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsplitter.h \

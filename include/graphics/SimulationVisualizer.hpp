@@ -27,14 +27,14 @@ private:
     void createNest();
     void updateAnts();
     void updateFood();
-    void updatePheromones();
+    void setPheromoneMap();
 
     QGraphicsScene* scene;
     AntColonyModel* model;
-    PheromoneLayer* pheromoneLayer;
+    PheromoneLayer* pheromoneLayer = nullptr;
     QMutex updateMutex;
     
     QGraphicsEllipseItem* nestItem = nullptr;
     QHash<int, AntItem*> antItems;
-    QHash<QPair<int, int>, QGraphicsItem*> foodItems;
+    QHash<QPair<qreal, qreal>, QGraphicsItem*> foodItems;
 };

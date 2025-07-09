@@ -31,8 +31,25 @@ void MainWindow::initUI()
     QWidget* leftPanel = new QWidget();
     QVBoxLayout* leftLayout = new QVBoxLayout(leftPanel);
 
-    antField = new AntField(antColonyModel);
-    leftLayout->addWidget(antField);
+    // antField = new AntField(antColonyModel);
+    // leftLayout->addWidget(antField);
+
+    //
+    scene = new QGraphicsScene(this);
+    scene->setSceneRect(0, 0, 1, 1);
+
+    view = new CustomView(scene);
+    view->setRenderHint(QPainter::Antialiasing);
+    view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
+    view->setDragMode(QGraphicsView::ScrollHandDrag);
+    view->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+    view->setResizeAnchor(QGraphicsView::AnchorUnderMouse);
+    view->scale(400, 400);
+
+    visualizer = new SimulationVisualizer(scene, antColonyModel, this);
+
+    leftLayout->addWidget(view);
+    //
 
     settingsPanel = new SettingsPanel();
 
@@ -42,6 +59,7 @@ void MainWindow::initUI()
 
     mainLayout->addWidget(splitter);
 }
+
 
 void MainWindow::initSimulator()
 {
@@ -65,8 +83,24 @@ void MainWindow::connectSignals()
     connect(settingsPanel, &SettingsPanel::resumeSimulation, antSimulator, &AntSimulator::resume);
     connect(settingsPanel, &SettingsPanel::resetSimulation, antSimulator, &AntSimulator::reset);
 
-    connect(antSimulator, &AntSimulator::updateData, antField, &AntField::redraw);
-    connect(settingsPanel, &SettingsPanel::addFood, antField, &AntField::addFood);
+    // connect(antSimulator, &AntSimulator::updateData, antField, &AntField::redraw);
+    // connect(settingsPanel, &SettingsPanel::addFood, antField, &AntField::addFood);
+
+    connect(antSimulator, &AntSimulator::updateData, visualizer, &SimulationVisualizer::updateVisualization);
+    connect(settingsPanel, &SettingsPanel::addFood, [this](const QPointF& pos) {
+        if (!antColonyModel) return;
+        antColonyModel->addFood(pos);
+        if (visualizer) visualizer->updateVisualization();
+    });
+    connect(view, &CustomView::foodAddRequest, [this](const QPointF& pos) {
+        if (!antColonyModel) return;
+        antColonyModel->addFood(pos);
+        if (visualizer) visualizer->updateVisualization();
+    });
+    connect(view, &QGraphicsView::customContextMenuRequested, [this](const QPoint&) {
+        view->resetTransform();
+        view->scale(400, 400);
+    });
 }
 
 void MainWindow::closeEvent(QCloseEvent* event)
