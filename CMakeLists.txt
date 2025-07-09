@@ -21,6 +21,8 @@ set(HEADERS
     include/AntSimulator.hpp
     include/CoordinateSystem.hpp
 
+    include/graphics/AntItem.hpp
+
     include/widgets/SettingsPanel.hpp
 
     include/model/Ant.hpp
@@ -36,6 +38,8 @@ set(SOURCES
     src/AntField.cpp
     src/AntSimulator.cpp
     src/CoordinateSystem.cpp
+
+    src/graphics/AntItem.cpp
 
     src/widgets/SettingsPanel.cpp
 

@@ -7,6 +7,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntSimulator.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/CoordinateSystem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/AntItem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
@@ -17,6 +18,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntSimulator.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/CoordinateSystem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/AntItem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/Ant.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/AntColonyModel.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/FoodStorage.cpp \
