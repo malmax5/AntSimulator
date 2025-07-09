@@ -22,6 +22,8 @@ set(HEADERS
     include/CoordinateSystem.hpp
 
     include/graphics/AntItem.hpp
+    include/graphics/PheromoneLayer.hpp
+    include/graphics/SimulationVisualizer.hpp
 
     include/widgets/SettingsPanel.hpp
 
@@ -40,6 +42,8 @@ set(SOURCES
     src/CoordinateSystem.cpp
 
     src/graphics/AntItem.cpp
+    src/graphics/PheromoneLayer.cpp
+    src/graphics/SimulationVisualizer.cpp
 
     src/widgets/SettingsPanel.cpp
 

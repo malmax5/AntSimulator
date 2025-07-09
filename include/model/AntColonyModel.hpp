@@ -35,8 +35,9 @@ public:
 
     void reset();
 
-private:
     mutable QMutex dataMutex;
+    
+private:
     QPointF nestPosition;
     QVector<Ant> ants;
     FoodStorage foods;

@@ -2,4 +2,5 @@
 #include "6YEA5652QU/moc_AntField.cpp"
 #include "6YEA5652QU/moc_AntSimulator.cpp"
 #include "6YEA5652QU/moc_MainWindow.cpp"
+#include "O3IF7JM7YK/moc_SimulationVisualizer.cpp"
 #include "MROXUFLNXW/moc_SettingsPanel.cpp"

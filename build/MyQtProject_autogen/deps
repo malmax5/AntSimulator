@@ -8,6 +8,8 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/CoordinateSystem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/AntItem.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/PheromoneLayer.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/SimulationVisualizer.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
@@ -19,6 +21,8 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/CoordinateSystem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/AntItem.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/PheromoneLayer.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/SimulationVisualizer.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/Ant.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/AntColonyModel.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/FoodStorage.cpp \
@@ -30,7 +34,9 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMap \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPair \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSet \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QString \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QStringList \
@@ -302,6 +308,9 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxpfunctional.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxptype_traits.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qyieldcpu.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/QColor \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/QPainter \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/QPen \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/QPixmap \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qaction.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qbitmap.h \
@@ -315,7 +324,10 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qimage.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qkeysequence.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpaintdevice.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpainter.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpainterpath.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpalette.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpen.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpicture.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpixelformat.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpixmap.h \
@@ -324,12 +336,16 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qrgb.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qrgba64.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtextoption.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtgui-config.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiexports.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiglobal.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsEllipseItem \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsItem \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsScene \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QHBoxLayout \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QLabel \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QMainWindow \
@@ -342,6 +358,8 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qboxlayout.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsitem.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsscene.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgridlayout.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlabel.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qlayout.h \

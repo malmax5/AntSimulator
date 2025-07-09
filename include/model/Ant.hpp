@@ -8,4 +8,5 @@ struct Ant
     QPointF target;
     bool hasFood;
     qreal pheromoneStrength;
+    int id;
 };
