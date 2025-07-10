@@ -75,6 +75,7 @@
 #define __SCHAR_MAX__ 0x7f
 #define __FLT128_MANT_DIG__ 113
 #define __WCHAR_MIN__ (-__WCHAR_MAX__ - 1)
+#define QT_SVG_LIB 1
 #define __INT64_C(c) c ## L
 #define __GCC_ATOMIC_POINTER_LOCK_FREE 2
 #define __FLT32X_MANT_DIG__ 53
@@ -127,6 +128,7 @@
 #define __cpp_delegating_constructors 200604L
 #define __FLT32_HAS_INFINITY__ 1
 #define __DBL_MAX__ double(1.79769313486231570814527423731704357e+308L)
+#define QT_SVGWIDGETS_LIB 1
 #define __cpp_raw_strings 200710L
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1

@@ -1,0 +1,10 @@
+<!DOCTYPE RCC>
+<RCC>
+    <qresource prefix="/icon_resources">
+        <file>resources/icons/ant.svg</file>
+        <file>resources/icons/food.png</file>
+        <file>resources/icons/nest.png</file>
+        <file>resources/icons/pheromone.png</file>
+        <file>resources/icons/background.png</file>
+    </qresource>
+</RCC>

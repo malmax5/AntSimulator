@@ -72,6 +72,12 @@
         "qdebug": "cpp",
         "qpointf": "cpp",
         "qwheelevent": "cpp",
-        "qspinbox": "cpp"
+        "qspinbox": "cpp",
+        "qgraphicsellipseitem": "cpp",
+        "qgraphicspixmapitem": "cpp",
+        "qcolor": "cpp",
+        "qgraphicssvgitem": "cpp",
+        "qsvgrenderer": "cpp",
+        "set": "cpp"
     }
 }

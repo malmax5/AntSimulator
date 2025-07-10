@@ -1,38 +1,54 @@
 #include "../../include/graphics/AntItem.hpp"
 
-AntItem::AntItem(const Ant& ant, QGraphicsItem* parent)
-    : QGraphicsEllipseItem(-0.005, -0.005, 0.01, 0.01, parent)
+#include <QSvgRenderer>
+
+AntItem::AntItem(const Ant& ant, QGraphicsSvgItem* parent)
+    : QGraphicsSvgItem(parent)
 {
-    setPos(ant.logicalPosition);
-    setBrush(baseColor);
-    setPen(Qt::NoPen);
+    setSharedRenderer(new QSvgRenderer(QString(":/icon_resources/resources/icons/ant.svg")));
+    if (!renderer()->isValid())
+    {
+        qWarning() << "Failed to load Ant SVG";
+    }
+
+    scaleFactor = 0.00002;
+
+    QRectF bounds = boundingRect();
+    QTransform baseTransform = QTransform();
+    baseTransform.scale(scaleFactor, scaleFactor);
+    baseTransform.translate(-bounds.width() / 2, -bounds.height() / 2);
+
+    setTransform(baseTransform);
+
+    updatePosition(ant.logicalPosition, ant.hasFood, ant.target);
     setZValue(10);
-    hasFood = ant.hasFood;
 }
 
-QRectF AntItem::boundingRect() const
-{
-    return QRectF(-0.005, -0.005, 0.01, 0.01);
-}
-
-void AntItem::updatePosition(const QPointF& newPos, bool hasFood)
+void AntItem::updatePosition(const QPointF& newPos, bool hasFood, const QPointF& targetPos)
 {
     this->hasFood = hasFood;
+
     setPos(newPos);
+
+    if (!targetPos.isNull())
+    {
+        rotateToTarget(targetPos);
+    }
 }
 
-void AntItem::paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget)
+void AntItem::rotateToTarget(const QPointF& targetPos)
 {
-    painter->setPen(Qt::NoPen);
+    QPointF currentCenter = pos();
+    QPointF direction = targetPos;
 
-    if (hasFood)
-    {
-        painter->setBrush(Qt::blue);
-    }
-    else
-    {
-        painter->setBrush(baseColor);
-    }
+    qreal angleRad = qAtan2(direction.y(), direction.x());
+    qreal degrees = qRadiansToDegrees(angleRad) + 90;
 
-    painter->drawEllipse(rect());
+    QRectF bounds = boundingRect();
+    QTransform rotateTransform = QTransform();
+    rotateTransform.scale(scaleFactor, scaleFactor);
+    rotateTransform.rotate(degrees);
+    rotateTransform.translate(-bounds.width() / 2, -bounds.height() / 2);
+
+    setTransform(rotateTransform);    
 }

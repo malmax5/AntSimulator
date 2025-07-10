@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_PREFIX_PATH /home/cbf/Qt/6.8.0/gcc_64)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets SvgWidgets)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -55,8 +55,10 @@ set(SOURCES
     src/model/AntColonyModel.cpp
 )
 
-add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
+qt_add_resources(RESOURCES "resources.qrc")
 
-target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets)
+add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} ${RESOURCES})
+
+target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets Qt6::SvgWidgets)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_BINARY_DIR})

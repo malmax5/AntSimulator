@@ -40,7 +40,7 @@
             }
             else
             {
-                antItems[ant.id]->updatePosition(ant.logicalPosition, ant.hasFood);
+                antItems[ant.id]->updatePosition(ant.logicalPosition, ant.hasFood, ant.target);
             }
         }
 

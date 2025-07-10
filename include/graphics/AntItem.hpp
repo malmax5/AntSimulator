@@ -1,25 +1,24 @@
 #pragma once
 
-#include <QGraphicsEllipseItem>
+#include <QGraphicsSvgItem>
 #include <QColor>
 #include <QPen>
 #include <QPainter>
 
 #include "../model/Ant.hpp"
 
-class AntItem : public QGraphicsEllipseItem
+class AntItem : public QGraphicsSvgItem
 {
 public:
-    explicit AntItem(const Ant& ant, QGraphicsItem* parent = nullptr);
+    explicit AntItem(const Ant& ant, QGraphicsSvgItem* parent = nullptr);
 
-    QRectF boundingRect() const override;
+    void updatePosition(const QPointF& newPos, bool hasFood, const QPointF& targetPos);
 
-    void updatePosition(const QPointF& newPos, bool hasFood);
-
-protected:
-    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) override;
+    void rotateToTarget(const QPointF& targetPos);
 
 private:
+    qreal scaleFactor = 0.02;
+
     bool hasFood = false;
     QColor baseColor = Qt::black;
 };

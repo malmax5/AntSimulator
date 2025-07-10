@@ -17,6 +17,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/main.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/resources.qrc \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntField.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntSimulator.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/CoordinateSystem.cpp \
@@ -345,7 +346,12 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
-	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsEllipseItem \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qtsvgexports.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qtsvgglobal.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/QGraphicsSvgItem \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qgraphicssvgitem.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qtsvgwidgetsexports.h \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qtsvgwidgetsglobal.h \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsItem \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsScene \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsView \
@@ -605,6 +611,22 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgAdditionalTargetInfo.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgConfig.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgConfigVersion.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgConfigVersionImpl.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgDependencies.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgTargets-relwithdebinfo.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgTargets.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Svg/Qt6SvgVersionlessAliasTargets.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsAdditionalTargetInfo.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfig.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfigVersion.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfigVersionImpl.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsDependencies.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets-relwithdebinfo.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets.cmake \
+	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessAliasTargets.cmake \
 	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake \
 	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake \
 	/home/cbf/Qt/6.8.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake \

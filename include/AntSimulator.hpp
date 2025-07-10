@@ -33,8 +33,8 @@ signals:
 private:
     void initializeAnts();
     void moveAnts();
-    bool searchForFood(Ant& ant);
-    void returnToNest(Ant& ant);
+    QPointF searchForFood(Ant& ant);
+    QPointF returnToNest(Ant& ant);
     void evaporatePheromones();
     QPointF getRandomDiraction() const;
 
