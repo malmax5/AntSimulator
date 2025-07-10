@@ -78,6 +78,7 @@
         "qcolor": "cpp",
         "qgraphicssvgitem": "cpp",
         "qsvgrenderer": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "qpainter": "cpp"
     }
 }

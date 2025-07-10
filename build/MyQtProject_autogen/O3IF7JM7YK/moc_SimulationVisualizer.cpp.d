@@ -63,6 +63,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qglobalstatic.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qhash.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiodevice.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiodevicebase.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterable.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterator.h \
@@ -139,6 +140,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qvector.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qversiontagging.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxmlstream.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxptype_traits.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qyieldcpu.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/QColor \
@@ -166,13 +168,14 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiglobal.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/QSvgRenderer \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qsvgrenderer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qtsvgexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qtsvgglobal.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/QGraphicsSvgItem \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qgraphicssvgitem.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qtsvgwidgetsexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qtsvgwidgetsglobal.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsItem \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsScene \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsitem.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicsscene.h \

@@ -1,9 +1,14 @@
 #include "../../include/graphics/PheromoneLayer.hpp"
 
-PheromoneLayer::PheromoneLayer(const PheromoneMap& map, QGraphicsItem* parent)
-    : map(map), QGraphicsItem(parent)
+PheromoneLayer::PheromoneLayer(const PheromoneMap& map, QGraphicsSvgItem* parent)
+    : map(map), QGraphicsSvgItem(parent)
 {
+    renderer = new QSvgRenderer(QString(":/icon_resources/resources/icons/pheromone.svg"));
 
+    if (!renderer->isValid())
+    {
+        qWarning() << "Failed to create Pheromone SVGRenderer";
+    }
 }
 
 QRectF PheromoneLayer::boundingRect() const
@@ -17,7 +22,14 @@ void PheromoneLayer::paint(QPainter* painter, const QStyleOptionGraphicsItem* op
 
     for (const auto& point : map.getPheromonePoints())
     {
-        painter->setBrush(QColor(255, 0, 0, point.strength * 50));
-        painter->drawEllipse(point.pos, 0.001, 0.001);
+        qreal opacity = qBound(0.0, point.strength, 1.0);
+
+        painter->setOpacity(opacity);
+        qDebug() << "tyt";
+        QRectF targetRect(point.pos.x() - 0.005,
+                          point.pos.y() - 0.005,
+                          0.01, 0.01);
+        
+        renderer->render(painter, targetRect);
     }
 }

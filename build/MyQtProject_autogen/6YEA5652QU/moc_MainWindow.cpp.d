@@ -327,13 +327,14 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/QSvgRenderer \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qsvgrenderer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qtsvgexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvg/qtsvgglobal.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/QGraphicsSvgItem \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qgraphicssvgitem.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qtsvgwidgetsexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtSvgWidgets/qtsvgwidgetsglobal.h \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsItem \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsScene \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsView \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QHBoxLayout \
