@@ -41,7 +41,7 @@ void MainWindow::initUI()
     view = new CustomView(scene);
     view->setRenderHint(QPainter::Antialiasing);
     view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    view->setDragMode(QGraphicsView::ScrollHandDrag);
+    view->setDragMode(QGraphicsView::NoDrag);
     view->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
     view->setResizeAnchor(QGraphicsView::AnchorUnderMouse);
     view->scale(400, 400);

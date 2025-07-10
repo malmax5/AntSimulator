@@ -73,8 +73,10 @@ void AntSimulator::reset()
     }
 
     antColonyModel->reset();
+    foodCollected = 0;
 
     emit updateData();
+    emit updateCollectedFood(foodCollected);
 }
 
 void AntSimulator::stop()
