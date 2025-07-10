@@ -41,6 +41,8 @@ protected:
     void closeEvent(QCloseEvent* event) override;
 
 private:
+    QLabel* foodCollected;
+
     QGraphicsScene* scene;
     CustomView* view;
     SimulationVisualizer* visualizer;

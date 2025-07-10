@@ -49,6 +49,10 @@ void MainWindow::initUI()
     visualizer = new SimulationVisualizer(scene, antColonyModel, this);
 
     leftLayout->addWidget(view);
+
+    foodCollected  = new QLabel("Food collected: 0", view);
+    foodCollected->move(10, 10);
+    foodCollected->raise();
     //
 
     settingsPanel = new SettingsPanel();
@@ -100,6 +104,10 @@ void MainWindow::connectSignals()
     connect(view, &QGraphicsView::customContextMenuRequested, [this](const QPoint&) {
         view->resetTransform();
         view->scale(400, 400);
+    });
+
+    connect(antSimulator, &AntSimulator::updateCollectedFood, foodCollected, [this](int count){
+        foodCollected->setText(QString("Food collected: %1").arg(count));
     });
 }
 
