@@ -80,15 +80,7 @@
 
             if (!foodItems.contains({food.x(), food.y()}))
             {
-                auto* foodItem = new QGraphicsRectItem(
-                    food.x() - 0.005,
-                    food.y() - 0.005,
-                    0.01, 0.01
-                );
-
-                foodItem->setBrush(Qt::green);
-                foodItem->setPen(Qt::NoPen);
-                foodItem->setZValue(2);
+                FoodItem* foodItem = new FoodItem(food);
                 scene->addItem(foodItem);
                 foodItems.insert({food.x(), food.y()}, foodItem);
             }

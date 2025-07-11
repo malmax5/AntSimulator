@@ -11,6 +11,7 @@
 
 #include "../model/AntColonyModel.hpp"
 #include "../graphics/AntItem.hpp"
+#include "../graphics/FoodItem.hpp"
 #include "../graphics/PheromoneLayer.hpp"
 
 class SimulationVisualizer : public QObject

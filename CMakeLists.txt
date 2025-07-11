@@ -22,6 +22,7 @@ set(HEADERS
     include/CoordinateSystem.hpp
 
     include/graphics/AntItem.hpp
+    include/graphics/FoodItem.hpp
     include/graphics/PheromoneLayer.hpp
     include/graphics/SimulationVisualizer.hpp
     include/graphics/CustomView.hpp
@@ -43,6 +44,7 @@ set(SOURCES
     src/CoordinateSystem.cpp
 
     src/graphics/AntItem.cpp
+    src/graphics/FoodItem.cpp
     src/graphics/PheromoneLayer.cpp
     src/graphics/SimulationVisualizer.cpp
     src/graphics/CustomView.cpp

@@ -11,8 +11,6 @@ AntItem::AntItem(const Ant& ant, QGraphicsSvgItem* parent)
         qWarning() << "Failed to load Ant SVG";
     }
 
-    scaleFactor = 0.00002;
-
     QRectF bounds = boundingRect();
     QTransform baseTransform = QTransform();
     baseTransform.scale(scaleFactor, scaleFactor);

@@ -9,6 +9,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/MainWindow.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/AntItem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/CustomView.hpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/FoodItem.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/PheromoneLayer.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/SimulationVisualizer.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
@@ -24,6 +25,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/AntItem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/CustomView.cpp \
+	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/FoodItem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/PheromoneLayer.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/graphics/SimulationVisualizer.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/Ant.cpp \

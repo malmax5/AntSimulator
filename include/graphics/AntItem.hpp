@@ -17,7 +17,7 @@ public:
     void rotateToTarget(const QPointF& targetPos);
 
 private:
-    qreal scaleFactor = 0.02;
+    qreal scaleFactor = 0.00002;
 
     bool hasFood = false;
     QColor baseColor = Qt::black;

@@ -1,6 +1,7 @@
 /home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/O3IF7JM7YK/moc_SimulationVisualizer.cpp: /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/SimulationVisualizer.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/build/MyQtProject_autogen/moc_predefs.h \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/AntItem.hpp \
+  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/FoodItem.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/PheromoneLayer.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/Ant.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
