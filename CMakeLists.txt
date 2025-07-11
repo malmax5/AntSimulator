@@ -26,6 +26,7 @@ set(HEADERS
     include/graphics/NestItem.hpp
     include/graphics/PheromoneLayer.hpp
     include/graphics/SimulationVisualizer.hpp
+    include/graphics/CustomScene.hpp
     include/graphics/CustomView.hpp
 
     include/widgets/SettingsPanel.hpp
@@ -49,6 +50,7 @@ set(SOURCES
     src/graphics/NestItem.cpp
     src/graphics/PheromoneLayer.cpp
     src/graphics/SimulationVisualizer.cpp
+    src/graphics/CustomScene.cpp
     src/graphics/CustomView.cpp
 
     src/widgets/SettingsPanel.cpp

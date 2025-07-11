@@ -17,6 +17,7 @@
 #include "model/AntColonyModel.hpp"
 
 #include "graphics/CustomView.hpp"
+#include "graphics/CustomScene.hpp"
 #include "graphics/SimulationVisualizer.hpp"
 #include "AntField.hpp"
 #include "AntSimulator.hpp"
@@ -43,7 +44,7 @@ protected:
 private:
     QLabel* foodCollected;
 
-    QGraphicsScene* scene;
+    CustomScene* scene;
     CustomView* view;
     SimulationVisualizer* visualizer;
 

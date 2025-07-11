@@ -35,7 +35,7 @@ void MainWindow::initUI()
     // leftLayout->addWidget(antField);
 
     //
-    scene = new QGraphicsScene(this);
+    scene = new CustomScene(this);
     scene->setSceneRect(0, 0, 1, 1);
 
     view = new CustomView(scene);
