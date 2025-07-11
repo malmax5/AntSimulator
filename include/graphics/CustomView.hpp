@@ -14,4 +14,8 @@ signals:
 protected:
     void mousePressEvent(QMouseEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
+
+private:
+    qreal zoomDiff = 0.1;
+    qreal currentZoom = 1;
 };

@@ -20,14 +20,15 @@ void CustomView::wheelEvent(QWheelEvent* event)
 {
     if (event->modifiers() && QApplication::keyboardModifiers().testFlag(Qt::ControlModifier))
     {
-        qreal factor = (event->angleDelta().y() > 0) ? 1.1 : 0.9;
-        qreal currentScale = this->transform().m11();
-        if ((factor < 1 && currentScale < 0.1) || (factor > 1 && currentScale > 1000))
+        qreal factor = (event->angleDelta().y() > 0) ? (1.0 + zoomDiff) : (1.0 - zoomDiff);
+        qDebug() << currentZoom;
+        if (currentZoom * factor < 1 || currentZoom * factor > 10)
         {
             
         }
         else
         {
+            currentZoom *= factor;
             this->scale(factor, factor);
             event->accept();
         }
