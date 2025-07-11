@@ -79,6 +79,7 @@
         "qgraphicssvgitem": "cpp",
         "qsvgrenderer": "cpp",
         "set": "cpp",
-        "qpainter": "cpp"
+        "qpainter": "cpp",
+        "qrandomgenerator": "cpp"
     }
 }

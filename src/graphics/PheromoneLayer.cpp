@@ -25,7 +25,6 @@ void PheromoneLayer::paint(QPainter* painter, const QStyleOptionGraphicsItem* op
         qreal opacity = qBound(0.0, point.strength, 1.0);
 
         painter->setOpacity(opacity);
-        qDebug() << "tyt";
         QRectF targetRect(point.pos.x() - 0.005,
                           point.pos.y() - 0.005,
                           0.01, 0.01);
