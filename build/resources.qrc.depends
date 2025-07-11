@@ -3,7 +3,7 @@
     <qresource prefix="/icon_resources">
         <file>resources/icons/ant.svg</file>
         <file>resources/icons/food.svg</file>
-        <file>resources/icons/nest.png</file>
+        <file>resources/icons/nest.svg</file>
         <file>resources/icons/pheromone.svg</file>
         <file>resources/icons/background.png</file>
     </qresource>

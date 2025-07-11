@@ -23,6 +23,7 @@ set(HEADERS
 
     include/graphics/AntItem.hpp
     include/graphics/FoodItem.hpp
+    include/graphics/NestItem.hpp
     include/graphics/PheromoneLayer.hpp
     include/graphics/SimulationVisualizer.hpp
     include/graphics/CustomView.hpp
@@ -45,6 +46,7 @@ set(SOURCES
 
     src/graphics/AntItem.cpp
     src/graphics/FoodItem.cpp
+    src/graphics/NestItem.cpp
     src/graphics/PheromoneLayer.cpp
     src/graphics/SimulationVisualizer.cpp
     src/graphics/CustomView.cpp

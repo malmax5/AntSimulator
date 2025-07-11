@@ -12,6 +12,7 @@
 #include "../model/AntColonyModel.hpp"
 #include "../graphics/AntItem.hpp"
 #include "../graphics/FoodItem.hpp"
+#include "../graphics/NestItem.hpp"
 #include "../graphics/PheromoneLayer.hpp"
 
 class SimulationVisualizer : public QObject
@@ -35,7 +36,7 @@ private:
     PheromoneLayer* pheromoneLayer = nullptr;
     QMutex updateMutex;
     
-    QGraphicsEllipseItem* nestItem = nullptr;
+    NestItem* nestItem = nullptr;
     QHash<int, AntItem*> antItems;
     QHash<QPair<qreal, qreal>, QGraphicsItem*> foodItems;
 };

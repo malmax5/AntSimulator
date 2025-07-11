@@ -13,15 +13,8 @@
         constexpr qreal nestSize = 0.04;
         QPointF nestPos = model->getNestPosition();
 
-        nestItem = new QGraphicsEllipseItem(
-            nestPos.x() - nestSize / 2,
-            nestPos.y() - nestSize / 2,
-            nestSize, nestSize
-        );
-
-        nestItem->setBrush(QColor(150, 75, 0));
-        nestItem->setPen(Qt::NoPen);
-        nestItem->setZValue(1);
+        nestItem = new NestItem(nestPos);
+        
         scene->addItem(nestItem);
     }
 

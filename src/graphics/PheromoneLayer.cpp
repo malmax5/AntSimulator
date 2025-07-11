@@ -9,6 +9,8 @@ PheromoneLayer::PheromoneLayer(const PheromoneMap& map, QGraphicsSvgItem* parent
     {
         qWarning() << "Failed to create Pheromone SVGRenderer";
     }
+    
+    setZValue(1);
 }
 
 QRectF PheromoneLayer::boundingRect() const

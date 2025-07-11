@@ -19,7 +19,7 @@ AntItem::AntItem(const Ant& ant, QGraphicsSvgItem* parent)
     setTransform(baseTransform);
 
     updatePosition(ant.logicalPosition, ant.hasFood, ant.target);
-    setZValue(10);
+    setZValue(3);
 }
 
 void AntItem::updatePosition(const QPointF& newPos, bool hasFood, const QPointF& targetPos)
