@@ -3,6 +3,13 @@
     SimulationVisualizer::SimulationVisualizer(QGraphicsScene* scene, AntColonyModel* model, QObject* parent)
         : QObject(parent), scene(scene), model(model)
     {
+        QPixmap backgroundImage = QPixmap(QString(":/icon_resources/resources/icons/background.png"));
+        QGraphicsPixmapItem* backgroundItem = scene->addPixmap(backgroundImage);
+        qreal scaleFactor = qMax(1.0 / backgroundImage.width(), 1.0 / backgroundImage.height());
+        backgroundItem->setScale(scaleFactor);
+        backgroundItem->setPos(0, 0);
+        backgroundItem->setZValue(-1);
+
         createNest();
         setPheromoneMap();
     }
@@ -14,7 +21,7 @@
         QPointF nestPos = model->getNestPosition();
 
         nestItem = new NestItem(nestPos);
-        
+
         scene->addItem(nestItem);
     }
 
