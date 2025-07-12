@@ -10,7 +10,7 @@
 class AntItem : public QGraphicsSvgItem
 {
 public:
-    explicit AntItem(const Ant& ant, QGraphicsSvgItem* parent = nullptr);
+    explicit AntItem(const Ant* ant, QGraphicsSvgItem* parent = nullptr);
 
     void updatePosition(const QPointF& newPos, bool hasFood, const QPointF& targetPos);
 

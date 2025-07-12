@@ -2,7 +2,7 @@
 
 #include <QSvgRenderer>
 
-AntItem::AntItem(const Ant& ant, QGraphicsSvgItem* parent)
+AntItem::AntItem(const Ant* ant, QGraphicsSvgItem* parent)
     : QGraphicsSvgItem(parent)
 {
     setSharedRenderer(new QSvgRenderer(QString(":/icon_resources/resources/icons/ant.svg")));
@@ -18,7 +18,7 @@ AntItem::AntItem(const Ant& ant, QGraphicsSvgItem* parent)
 
     setTransform(baseTransform);
 
-    updatePosition(ant.logicalPosition, ant.hasFood, ant.target);
+    updatePosition(ant->logicalPosition(), ant->hasFood(), ant->target());
     setZValue(3);
 }
 

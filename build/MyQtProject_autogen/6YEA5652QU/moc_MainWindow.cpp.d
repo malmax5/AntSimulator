@@ -21,6 +21,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMap \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutexLocker \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPair \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \

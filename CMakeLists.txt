@@ -17,7 +17,7 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 set(HEADERS
     include/MainWindow.hpp
-    include/AntField.hpp
+    # include/AntField.hpp
     include/AntSimulator.hpp
     include/CoordinateSystem.hpp
 
@@ -42,7 +42,7 @@ set(SOURCES
     main.cpp
 
     src/MainWindow.cpp
-    src/AntField.cpp
+    # src/AntField.cpp
     src/AntSimulator.cpp
     src/CoordinateSystem.cpp
 

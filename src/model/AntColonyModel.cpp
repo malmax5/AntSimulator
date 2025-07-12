@@ -9,13 +9,18 @@ AntColonyModel::AntColonyModel()
     
 }
 
-void AntColonyModel::setAnts(const QVector<Ant>& ants)
+void AntColonyModel::setAnts(const QVector<Ant*>& ants)
 {
     QMutexLocker locker(&dataMutex);
     this->ants = ants;
 }
 
-void AntColonyModel::addAnt(const Ant& ant)
+void AntColonyModel::clearAnts()
+{
+    ants.clear();
+}
+
+void AntColonyModel::addAnt(Ant* ant)
 {
     QMutexLocker locker(&dataMutex);
     ants.append(ant);
@@ -40,10 +45,10 @@ Ant* AntColonyModel::getAnt(int index)
     }
 
     QMutexLocker locker(&dataMutex);
-    return &ants[index];
+    return ants[index];
 }
 
-QVector<Ant>& AntColonyModel::getAnts()
+const QVector<Ant*>& AntColonyModel::getAnts() const
 {
     QMutexLocker locker(&dataMutex);
     return ants;

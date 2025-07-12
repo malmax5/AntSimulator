@@ -49,8 +49,8 @@ private:
     void deleteTimer();
     void initializeAnts();
     void moveAnts();
-    QPointF searchForFood(Ant& ant);
-    QPointF returnToNest(Ant& ant);
+    QPointF searchForFood(const Ant* ant) const;
+    QPointF returnToNest(const Ant* ant) const;
     void evaporatePheromones();
     QPointF getRandomDiraction() const;
 

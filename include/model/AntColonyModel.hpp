@@ -15,11 +15,12 @@ public:
     explicit AntColonyModel(int size);
 
 public:
-    void setAnts(const QVector<Ant>& ants);
-    void addAnt(const Ant& ant);
+    void setAnts(const QVector<Ant*>& ants);
+    const QVector<Ant*>& getAnts() const;
+    void clearAnts();
+    void addAnt(Ant* ant);
     void removeAnt(int index);
     Ant* getAnt(int index);
-    QVector<Ant>& getAnts();
 
     void setFoods(const FoodStorage& foods);
     void addFood(const QPointF& pos);
@@ -39,9 +40,15 @@ public:
 
     friend QDataStream& operator<<(QDataStream& out, const AntColonyModel& model)
     {
-        out << model.nestPosition
-            << model.ants
-            << model.foods
+        out << model.nestPosition;
+        
+        out << model.ants.size();
+        for (const Ant* ant : model.ants)
+        {
+            out << *ant;
+        }
+
+        out << model.foods
             << model.pheromoneMap;
         
         return out;
@@ -49,9 +56,19 @@ public:
 
     friend QDataStream& operator>>(QDataStream& in, AntColonyModel& model)
     {
-        in >> model.nestPosition
-           >> model.ants
-           >> model.foods
+        in >> model.nestPosition;
+
+        int antCount;
+        in >> antCount; 
+        for (int i = 0; i < antCount; i++)
+        {
+            int antId;
+            in >> antId;
+            Ant* ant = new Ant(antId);
+            in >> *ant;
+        }
+
+        in >> model.foods
            >> model.pheromoneMap;
         
         return in;
@@ -62,7 +79,7 @@ public:
     
 private:
     QPointF nestPosition;
-    QVector<Ant> ants;
+    QVector<Ant*> ants;
     FoodStorage foods;
     PheromoneMap pheromoneMap;
 };

@@ -34,15 +34,15 @@
 
         for (const auto& ant : ants)
         {
-            if (antItems.find(ant.id) == antItems.end())
+            if (antItems.find(ant->id()) == antItems.end())
             {
                 AntItem* newAnt = new AntItem(ant);
-                antItems[ant.id] = newAnt;
+                antItems[ant->id()] = newAnt;
                 scene->addItem(newAnt);
             }
             else
             {
-                antItems[ant.id]->updatePosition(ant.logicalPosition, ant.hasFood, ant.target);
+                antItems[ant->id()]->updatePosition(ant->logicalPosition(), ant->hasFood(), ant->target());
             }
         }
 
@@ -54,7 +54,7 @@
             AntItem* item = it.value();
 
             bool exist = std::any_of(ants.begin(), ants.end(), 
-                [id](const Ant& a){ return a.id == id; });
+                [id](const Ant* a){ return a->id() == id; });
             
             if (!exist)
             {

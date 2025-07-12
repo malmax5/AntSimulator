@@ -21,7 +21,6 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/main.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/resources.qrc \
-	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntField.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/AntSimulator.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/CoordinateSystem.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/MainWindow.cpp \
@@ -43,6 +42,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMap \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutexLocker \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPair \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
