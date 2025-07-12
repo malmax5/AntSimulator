@@ -216,6 +216,10 @@ void AntSimulator::evaporatePheromones()
 
 QPointF AntSimulator::getRandomDiraction() const
 {
-    qreal angel = QRandomGenerator::global()->bounded(2 * M_PI);
-    return QPointF(std::cos(angel), std::sin(angel));
+    qreal angle = QRandomGenerator::global()->bounded(2 * M_PI);
+    
+    qreal dx = (std::cos(angle) + 1.0) / 2.0;
+    qreal dy = (std::sin(angle) + 1.0) / 2.0;
+    
+    return QPointF(dx, dy);
 }

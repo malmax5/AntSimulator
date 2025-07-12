@@ -4,7 +4,6 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/AntSimulator.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/CoordinateSystem.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/AntItem.hpp \
-  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/CustomScene.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/CustomView.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/FoodItem.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/graphics/NestItem.hpp \
@@ -23,7 +22,6 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QObject \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPair \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
-  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QRectF \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSet \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QString \

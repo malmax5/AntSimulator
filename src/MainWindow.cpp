@@ -31,11 +31,7 @@ void MainWindow::initUI()
     QWidget* leftPanel = new QWidget();
     QVBoxLayout* leftLayout = new QVBoxLayout(leftPanel);
 
-    // antField = new AntField(antColonyModel);
-    // leftLayout->addWidget(antField);
-
-    //
-    scene = new CustomScene(this);
+    scene = new QGraphicsScene(this);
     scene->setSceneRect(0, 0, 1, 1);
 
     view = new CustomView(scene);
@@ -51,9 +47,9 @@ void MainWindow::initUI()
     leftLayout->addWidget(view);
 
     foodCollected  = new QLabel("Food collected: 0", view);
+    foodCollected->setStyleSheet("color: white;");
     foodCollected->move(10, 10);
     foodCollected->raise();
-    //
 
     settingsPanel = new SettingsPanel();
 
@@ -81,14 +77,12 @@ void MainWindow::initSimulator()
 void MainWindow::connectSignals()
 {
     connect(settingsPanel, &SettingsPanel::antCountChanged, antSimulator, &AntSimulator::setAntCount);
+    connect(settingsPanel, &SettingsPanel::simulationSpeedChanged, antSimulator, &AntSimulator::setSimulationSpeed);
 
     connect(settingsPanel, &SettingsPanel::startSimulation, antSimulator, &AntSimulator::start);
     connect(settingsPanel, &SettingsPanel::pauseSimulation, antSimulator, &AntSimulator::pause);
     connect(settingsPanel, &SettingsPanel::resumeSimulation, antSimulator, &AntSimulator::resume);
     connect(settingsPanel, &SettingsPanel::resetSimulation, antSimulator, &AntSimulator::reset);
-
-    // connect(antSimulator, &AntSimulator::updateData, antField, &AntField::redraw);
-    // connect(settingsPanel, &SettingsPanel::addFood, antField, &AntField::addFood);
 
     connect(antSimulator, &AntSimulator::updateData, visualizer, &SimulationVisualizer::updateVisualization);
     connect(settingsPanel, &SettingsPanel::addFood, [this](const QPointF& pos) {

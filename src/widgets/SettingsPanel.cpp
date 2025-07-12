@@ -18,11 +18,11 @@ SettingsPanel::SettingsPanel(QWidget* parent)
 
     antCountSpinBox = new QSpinBox();
     antCountSpinBox->setRange(1, 1000);
-    antCountSpinBox->setValue(100);
+    antCountSpinBox->setValue(10);
 
     QSlider* antCountSlider = new QSlider(Qt::Horizontal);
     antCountSlider->setRange(1, 1000);
-    antCountSlider->setValue(100);
+    antCountSlider->setValue(10);
     
     antLayout->addWidget(new QLabel("Ant count: "));
     antLayout->addWidget(antCountSpinBox);
