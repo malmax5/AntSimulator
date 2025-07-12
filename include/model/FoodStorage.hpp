@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QList>
+#include <QVector>
 #include <QPointF>
 #include <QDataStream>
 
@@ -11,7 +11,7 @@ public:
     void removeFood(const QPointF& pos);
     void clear();
     int foodCount();
-    const QList<QPointF>& getFoods() const;
+    const QVector<QPointF>& getFoods() const;
     QPointF getNearestFood(QPointF position, qreal maxDistance = 0.0) const;
 
     friend QDataStream& operator<<(QDataStream& out, const FoodStorage& foodStorage)
@@ -27,5 +27,5 @@ public:
     }
 
 private:
-    QList<QPointF> foods;
+    QVector<QPointF> foods;
 };

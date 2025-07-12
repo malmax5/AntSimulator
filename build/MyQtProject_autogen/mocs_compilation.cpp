@@ -4,5 +4,6 @@
 #include "O3IF7JM7YK/moc_CustomView.cpp"
 #include "O3IF7JM7YK/moc_SimulationVisualizer.cpp"
 #include "Q6AU6LSD6J/moc_Ant.cpp"
+#include "Q6AU6LSD6J/moc_PheromoneMap.cpp"
 #include "6WJ5KOMAB3/moc_AppSettings.cpp"
 #include "MROXUFLNXW/moc_SettingsPanel.cpp"

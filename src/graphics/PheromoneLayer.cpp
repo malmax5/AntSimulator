@@ -24,11 +24,11 @@ void PheromoneLayer::paint(QPainter* painter, const QStyleOptionGraphicsItem* op
 
     for (const auto& point : map.getPheromonePoints())
     {
-        qreal opacity = qBound(0.0, point.strength, 1.0);
+        qreal opacity = qBound(0.0, point->strength(), 1.0);
 
         painter->setOpacity(opacity);
-        QRectF targetRect(point.pos.x() - 0.005,
-                          point.pos.y() - 0.005,
+        QRectF targetRect(point->pos().x() - 0.005,
+                          point->pos().y() - 0.005,
                           0.01, 0.01);
         
         renderer->render(painter, targetRect);
