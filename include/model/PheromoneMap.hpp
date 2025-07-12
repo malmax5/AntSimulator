@@ -14,6 +14,8 @@
 #include <cmath>
 #include <algorithm>
 
+#include <QDebug>
+
 class PheromonePoint : public QObject
 {
     Q_OBJECT
@@ -35,6 +37,7 @@ public:
 
     friend QDataStream& operator<<(QDataStream& out, const PheromonePoint& point)
     {
+        QMutexLocker locker(&point.m_mutex);
         out << point.m_pos
             << point.m_strength
             << point.m_timestamp;
@@ -44,6 +47,7 @@ public:
 
     friend QDataStream& operator>>(QDataStream& in, PheromonePoint& point)
     {
+        QMutexLocker locker(&point.m_mutex);
         in >> point.m_pos
            >> point.m_strength
            >> point.m_timestamp;
@@ -75,10 +79,11 @@ public:
 
     friend QDataStream& operator<<(QDataStream& out, const PheromoneMap& pheromoneMap)
     {
-        out << pheromoneMap.points.size();
-        for (const auto& point : pheromoneMap.points)
+        int pointsSize = pheromoneMap.points.size();
+        out << pointsSize;
+        for (int i = 0; i < pheromoneMap.points.size(); i++)
         {
-            out << *point;
+            out << *pheromoneMap.points[i];
         }
 
         return out;
@@ -88,7 +93,6 @@ public:
     {
         int pointsSize;
         in >> pointsSize;
-
         for (int i = 0; i < pointsSize; i++)
         {
             PheromonePoint* point = new PheromonePoint;

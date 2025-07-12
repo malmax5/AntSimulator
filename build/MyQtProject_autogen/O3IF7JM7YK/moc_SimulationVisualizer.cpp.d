@@ -9,6 +9,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDataStream \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDebug \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QHash \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMap \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \

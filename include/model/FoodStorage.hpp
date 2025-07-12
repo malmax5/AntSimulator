@@ -4,6 +4,8 @@
 #include <QPointF>
 #include <QDataStream>
 
+#include <QDebug>
+
 class FoodStorage
 {
 public:
@@ -16,13 +18,26 @@ public:
 
     friend QDataStream& operator<<(QDataStream& out, const FoodStorage& foodStorage)
     {
-        out << foodStorage.foods;
+        int foodStorageSize = foodStorage.foods.size();
+        out << foodStorageSize;
+        for (const auto& food : foodStorage.foods)
+        {
+            qDebug() << "<< Food";
+            out << food;
+        }
         return out;
     }
 
     friend QDataStream& operator>>(QDataStream& in, FoodStorage& foodStorage)
     {
-        in >> foodStorage.foods;
+        int foodsSize;
+        in >> foodsSize;
+        for (int i = 0; i < foodsSize; i++)
+        {
+            QPointF food;
+            in >> food;
+            foodStorage.foods.append(food);
+        }
         return in;
     }
 

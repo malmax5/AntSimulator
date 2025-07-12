@@ -17,6 +17,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDataStream \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDeadlineTimer \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDebug \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QHash \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMap \

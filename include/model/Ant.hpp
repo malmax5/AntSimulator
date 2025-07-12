@@ -6,6 +6,8 @@
 #include <QMutex>
 #include <QMutexLocker>
 
+#include <QDebug>
+
 class Ant : public QObject
 {
     Q_OBJECT
@@ -32,8 +34,9 @@ public:
 
     friend QDataStream& operator<<(QDataStream& out, const Ant& ant)
     {
-        out << ant.m_id
-            << ant.m_logicalPosition
+        qDebug() << "<< Ant";
+        QMutexLocker locker(&ant.m_mutex);
+        out << ant.m_logicalPosition
             << ant.m_target
             << ant.m_hasFood
             << ant.m_pheromoneStrength;
@@ -43,6 +46,8 @@ public:
 
     friend QDataStream& operator>>(QDataStream& in, Ant& ant)
     {
+        qDebug() << ">> Ant";
+        QMutexLocker locker(&ant.m_mutex);
         in >> ant.m_logicalPosition
            >> ant.m_target
            >> ant.m_hasFood

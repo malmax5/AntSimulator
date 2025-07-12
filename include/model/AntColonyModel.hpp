@@ -42,9 +42,11 @@ public:
     {
         out << model.nestPosition;
         
-        out << model.ants.size();
+        int antSize = model.ants.size();
+        out << antSize;
         for (const Ant* ant : model.ants)
         {
+            out << ant->id();
             out << *ant;
         }
 
@@ -59,13 +61,14 @@ public:
         in >> model.nestPosition;
 
         int antCount;
-        in >> antCount; 
+        in >> antCount;
         for (int i = 0; i < antCount; i++)
         {
             int antId;
             in >> antId;
             Ant* ant = new Ant(antId);
             in >> *ant;
+            model.ants.append(ant);
         }
 
         in >> model.foods

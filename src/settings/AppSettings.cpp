@@ -27,7 +27,7 @@ void AppSettings::saveModelData(const AntColonyModel* model)
         return;
     }
 
-    settings.beginGroup("Simulation model");
+    settings.beginGroup("SimulationModel");
     QByteArray modelData;
     QDataStream modelStream(&modelData, QIODevice::WriteOnly);
     modelStream << *model;
@@ -43,7 +43,7 @@ bool AppSettings::loadModelData(AntColonyModel* model)
         return false;
     }
 
-    settings.beginGroup("Simulation model");
+    settings.beginGroup("SimulationModel");
     QByteArray modelData = settings.value("modelData").toByteArray();
     QDataStream modelStream(&modelData, QIODevice::ReadOnly);
     modelStream >> *model;
@@ -61,7 +61,7 @@ void AppSettings::saveSimulationState(const AntSimulator* simulator)
         return;
     }
 
-    settings.beginGroup("Simulation state");
+    settings.beginGroup("SimulationState");
 
     settings.setValue("isRunning", simulator->isSimulationRunning());
     settings.setValue("isPaused", simulator->isSimulationPaused());
@@ -80,7 +80,7 @@ bool AppSettings::loadSimulationState(AntSimulator* simulator)
         return false;
     }
 
-    settings.beginGroup("Simulation");
+    settings.beginGroup("SimulationState");
 
     simulator->setSimulationRunning(settings.value("isRunning", false).toBool());
     simulator->setSimulationPaused(settings.value("isPaused", false).toBool());
