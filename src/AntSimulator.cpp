@@ -13,6 +13,57 @@ AntSimulator::AntSimulator(AntColonyModel* antColonyModel, QObject* parent)
 
 }
 
+bool AntSimulator::isSimulationRunning() const
+{
+    return isRunning;
+}
+
+bool AntSimulator::isSimulationPaused() const
+{
+    return isPaused;
+}
+
+int AntSimulator::collectedFood() const
+{
+    return foodCollected;
+}
+
+qreal AntSimulator::getSimulationSpeed() const
+{
+    return simulationSpeed;
+}
+
+qreal AntSimulator::getAntCount() const
+{
+    return antCount;
+}
+
+void AntSimulator::setSimulationRunning(bool isRunning)
+{
+    this->isRunning = isRunning;
+}
+
+void AntSimulator::setSimulationPaused(bool isPaused)
+{
+    this->isPaused = isPaused;
+}
+
+void AntSimulator::setCollectedFood(int collectedFood)
+{
+    emit updateCollectedFood(foodCollected);
+    this->foodCollected = collectedFood;
+}
+
+void AntSimulator::setGetSimulationSpeed(qreal simulationSpeed)
+{
+    this->simulationSpeed = simulationSpeed;
+}
+
+void AntSimulator::setGetAntCount(int antCount)
+{
+    this->antCount = antCount;
+}
+
 void AntSimulator::run()
 {
     if (!isRunning)
@@ -39,24 +90,33 @@ void AntSimulator::start()
     isPaused = false;
 
     initializeAnts();
-
-    runTimer = new QTimer(this);
-    connect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
-    runTimer->start(100 / simulationSpeed);
+    initializeTimer();
 }
 
 void AntSimulator::resume()
 {
+    if (!isRunning || !isPaused)
+    {
+        return;
+    }
+
+    updateTimer();
     isPaused = false;
 }
 
 void AntSimulator::pause()
 {
+    if (!isRunning)
+    {
+        return;
+    }
+
     if (isPaused)
     {
         return;
     }
 
+    runTimer->stop();
     isPaused = true;
 }
 
@@ -64,13 +124,7 @@ void AntSimulator::reset()
 {
     stop();
 
-    if (runTimer)
-    {
-        runTimer->stop();
-        disconnect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
-        runTimer->deleteLater();
-        runTimer = nullptr;
-    }
+    deleteTimer();
 
     antColonyModel->reset();
     foodCollected = 0;
@@ -98,6 +152,52 @@ void AntSimulator::setAntCount(int count)
 void AntSimulator::setSimulationSpeed(qreal speed)
 {
     simulationSpeed = speed;
+    updateTimer();
+}
+
+void AntSimulator::restore()
+{
+    if (isRunning)
+    {
+        if (!runTimer)
+        {
+            initializeTimer();
+        }
+        if (isPaused)
+        {
+            runTimer->stop();
+        }
+    }
+}
+
+void AntSimulator::initializeTimer()
+{
+    if (!runTimer)
+    {
+        runTimer = new QTimer(this);
+        connect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
+        runTimer->start(100 / simulationSpeed);
+    }
+}
+
+void AntSimulator::updateTimer()
+{
+    if (runTimer)
+    {
+        runTimer->stop();
+        runTimer->start(100 / simulationSpeed);
+    }
+}
+
+void AntSimulator::deleteTimer()
+{
+    if (runTimer)
+    {
+        runTimer->stop();
+        disconnect(runTimer, &QTimer::timeout, this, &AntSimulator::run);
+        runTimer->deleteLater();
+        runTimer = nullptr;
+    }
 }
 
 void AntSimulator::initializeAnts()

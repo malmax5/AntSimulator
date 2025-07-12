@@ -11,7 +11,7 @@
 class PheromoneLayer : public QGraphicsSvgItem
 {
 public:
-    explicit PheromoneLayer(const PheromoneMap& map, QGraphicsSvgItem* parent = nullptr);
+    explicit PheromoneLayer(PheromoneMap& map, QGraphicsSvgItem* parent = nullptr);
 
     QRectF boundingRect() const override;
 
@@ -19,5 +19,5 @@ public:
 
 private:
     QSvgRenderer* renderer;
-    const PheromoneMap& map;
+    PheromoneMap& map;
 };

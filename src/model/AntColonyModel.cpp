@@ -67,7 +67,7 @@ void AntColonyModel::removeFood(const QPointF& pos)
     foods.removeFood(pos);
 }
 
-const FoodStorage& AntColonyModel::getFoodStorage() const
+FoodStorage& AntColonyModel::getFoodStorage()
 {
     QMutexLocker locker(&dataMutex);
     return foods;
@@ -91,7 +91,7 @@ QPointF AntColonyModel::getDiractionByPheromones(const QPointF& pos, qreal detec
     return pheromoneMap.getDirection(pos, detectionRadius);
 }
 
-const PheromoneMap& AntColonyModel::getPheromoneMap()
+PheromoneMap& AntColonyModel::getPheromoneMap()
 {
     QMutexLocker locker(&dataMutex);
     return pheromoneMap;

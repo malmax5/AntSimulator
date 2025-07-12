@@ -2,6 +2,9 @@
 
 #include <QSettings>
 
+#include "../model/AntColonyModel.hpp"
+#include "../AntSimulator.hpp"
+
 class AppSettings : public QObject
 {
     Q_OBJECT
@@ -14,6 +17,9 @@ public:
 
     void setWindowSize(const QSize& size);
     QSize windowSize();
+
+    void saveSimulationState(AntColonyModel* model, AntSimulator* simulator);
+    bool loadSimulationState(AntColonyModel* model, AntSimulator* simulator); 
 
 signals:
     void settingsChanged();

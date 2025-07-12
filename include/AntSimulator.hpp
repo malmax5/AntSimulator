@@ -15,6 +15,18 @@ class AntSimulator : public QObject
 public:
     explicit AntSimulator(AntColonyModel* antColonyModel, QObject* parent = nullptr);
 
+    bool isSimulationRunning() const;
+    bool isSimulationPaused() const;
+    int collectedFood() const;
+    qreal getSimulationSpeed() const;
+    qreal getAntCount() const;
+
+    void setSimulationRunning(bool isRunning);
+    void setSimulationPaused(bool isPaused);
+    void setCollectedFood(int collectedFood);
+    void setGetSimulationSpeed(qreal simulationSpeed);
+    void setGetAntCount(int antCount);
+
 public slots:
     void run();
     void start();
@@ -22,6 +34,7 @@ public slots:
     void pause();
     void reset();
     void stop();
+    void restore();
 
     void setAntCount(int count);
     void setSimulationSpeed(qreal speed);
@@ -31,6 +44,9 @@ signals:
     void updateData();
 
 private:
+    void initializeTimer();
+    void updateTimer();
+    void deleteTimer();
     void initializeAnts();
     void moveAnts();
     QPointF searchForFood(Ant& ant);
@@ -50,6 +66,6 @@ private:
 
     AntColonyModel* antColonyModel;
 
-    QTimer* runTimer;
+    QTimer* runTimer = nullptr;
     QMutex mutex;
 };

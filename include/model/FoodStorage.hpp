@@ -10,7 +10,7 @@ public:
     void removeFood(const QPointF& pos);
     void clear();
     int foodCount();
-    const QList<QPointF> getFoods() const;
+    QList<QPointF>& getFoods();
     QPointF getNearestFood(QPointF position, qreal maxDistance = 0.0) const;
 
 private:

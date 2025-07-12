@@ -80,6 +80,7 @@
         "qsvgrenderer": "cpp",
         "set": "cpp",
         "qpainter": "cpp",
-        "qrandomgenerator": "cpp"
+        "qrandomgenerator": "cpp",
+        "qdatastream": "cpp"
     }
 }

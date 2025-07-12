@@ -75,7 +75,7 @@ QPointF PheromoneMap::getDirection(const QPointF& worldPos, qreal radiusDetectio
     return QPointF();
 }
 
-const QList<PheromonePoint>& PheromoneMap::getPheromonePoints() const
+QList<PheromonePoint>& PheromoneMap::getPheromonePoints()
 {
     return points;
 }

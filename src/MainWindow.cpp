@@ -9,6 +9,11 @@ MainWindow::MainWindow(QWidget* parent)
     resize(AppSettings::instance().windowSize());
 
     init();
+
+    AppSettings::instance().loadSimulationState(antColonyModel, antSimulator);
+    QMetaObject::invokeMethod(antSimulator, "restore", 
+                              Qt::QueuedConnection);
+    visualizer->updateVisualization();
 }
 
 MainWindow::~MainWindow()
@@ -109,13 +114,14 @@ void MainWindow::connectSignals()
 
 void MainWindow::closeEvent(QCloseEvent* event)
 {
+    AppSettings::instance().saveSimulationState(antColonyModel, antSimulator);
+    AppSettings::instance().setWindowSize(size());
+
     if (simulationThread && simulationThread->isRunning())
     {
         simulationThread->quit();
         simulationThread->wait(1000);
     }
-
-    AppSettings::instance().setWindowSize(size());
 
     QMainWindow::closeEvent(event);
 }

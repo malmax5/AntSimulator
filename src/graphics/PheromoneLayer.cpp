@@ -1,6 +1,6 @@
 #include "../../include/graphics/PheromoneLayer.hpp"
 
-PheromoneLayer::PheromoneLayer(const PheromoneMap& map, QGraphicsSvgItem* parent)
+PheromoneLayer::PheromoneLayer(PheromoneMap& map, QGraphicsSvgItem* parent)
     : map(map), QGraphicsSvgItem(parent)
 {
     renderer = new QSvgRenderer(QString(":/icon_resources/resources/icons/pheromone.svg"));

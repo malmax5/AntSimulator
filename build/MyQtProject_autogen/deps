@@ -37,6 +37,7 @@ MyQtProject_autogen/timestamp: \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/model/PheromoneMap.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/settings/AppSettings.cpp \
 	/home/cbf/LearningQT/Projects/Project_AntSimulator/src/widgets/SettingsPanel.cpp \
+	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDataStream \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDeadlineTimer \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QHash \
 	/home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QList \

@@ -24,12 +24,12 @@ public:
     void setFoods(const FoodStorage& foods);
     void addFood(const QPointF& pos);
     void removeFood(const QPointF& pos);
-    const FoodStorage& getFoodStorage() const;
+    FoodStorage& getFoodStorage();
 
     void addPheromone(const QPointF& pos, qreal strength);
     void evaporatePheromones();
     QPointF getDiractionByPheromones(const QPointF& pos, qreal detectionRadius) const;
-    const PheromoneMap& getPheromoneMap();
+    PheromoneMap& getPheromoneMap();
 
     QPointF getNestPosition();
 
