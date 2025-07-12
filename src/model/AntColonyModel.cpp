@@ -73,6 +73,11 @@ FoodStorage& AntColonyModel::getFoodStorage()
     return foods;
 }
 
+void AntColonyModel::setPheromones(PheromoneMap& pheromones)
+{
+    pheromoneMap = pheromones;
+}
+
 void AntColonyModel::addPheromone(const QPointF& pos, qreal strength)
 {
     QMutexLocker locker(&dataMutex);
@@ -97,10 +102,16 @@ PheromoneMap& AntColonyModel::getPheromoneMap()
     return pheromoneMap;
 }
 
-QPointF AntColonyModel::getNestPosition()
+QPointF AntColonyModel::getNestPosition() const
 {
     QMutexLocker locker(&dataMutex);
     return nestPosition;
+}
+
+void AntColonyModel::setNestPosition(const QPointF newPos)
+{
+    QMutexLocker locker(&dataMutex);
+    nestPosition = newPos;
 }
 
 void AntColonyModel::reset()

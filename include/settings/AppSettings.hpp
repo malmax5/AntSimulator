@@ -18,8 +18,11 @@ public:
     void setWindowSize(const QSize& size);
     QSize windowSize();
 
-    void saveSimulationState(AntColonyModel* model, AntSimulator* simulator);
-    bool loadSimulationState(AntColonyModel* model, AntSimulator* simulator); 
+    void saveModelData(const AntColonyModel* model);
+    bool loadModelData(AntColonyModel* model);
+
+    void saveSimulationState(const AntSimulator* simulator);
+    bool loadSimulationState(AntSimulator* simulator); 
 
 signals:
     void settingsChanged();

@@ -20,6 +20,8 @@
         constexpr qreal nestSize = 0.04;
         QPointF nestPos = model->getNestPosition();
 
+        qDebug() << nestPos;
+
         nestItem = new NestItem(nestPos);
 
         scene->addItem(nestItem);

@@ -40,8 +40,20 @@ public:
     void addPheromone(const QPointF& worldPos, qreal strength);
     void evaporate();
     QPointF getDirection(const QPointF& worldPos, qreal radiusDetection) const;
-    QList<PheromonePoint>& getPheromonePoints();
+    const QList<PheromonePoint>& getPheromonePoints() const;
     void clear();
+
+    friend QDataStream& operator<<(QDataStream& out, const PheromoneMap& pheromoneMap)
+    {
+        out << pheromoneMap.points;
+        return out;
+    }
+
+    friend QDataStream& operator>>(QDataStream& in, PheromoneMap& pheromoneMap)
+    {
+        in >> pheromoneMap.points;
+        return in;
+    }
 
 private:
     QList<PheromonePoint> points;

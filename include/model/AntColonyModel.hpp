@@ -26,15 +26,38 @@ public:
     void removeFood(const QPointF& pos);
     FoodStorage& getFoodStorage();
 
+    void setPheromones(PheromoneMap& pheromones);
     void addPheromone(const QPointF& pos, qreal strength);
     void evaporatePheromones();
     QPointF getDiractionByPheromones(const QPointF& pos, qreal detectionRadius) const;
     PheromoneMap& getPheromoneMap();
 
-    QPointF getNestPosition();
+    QPointF getNestPosition() const;
+    void setNestPosition(const QPointF newPos);
 
     void reset();
 
+    friend QDataStream& operator<<(QDataStream& out, const AntColonyModel& model)
+    {
+        out << model.nestPosition
+            << model.ants
+            << model.foods
+            << model.pheromoneMap;
+        
+        return out;
+    }
+
+    friend QDataStream& operator>>(QDataStream& in, AntColonyModel& model)
+    {
+        in >> model.nestPosition
+           >> model.ants
+           >> model.foods
+           >> model.pheromoneMap;
+        
+        return in;
+    }
+
+public:
     mutable QMutex dataMutex;
     
 private:

@@ -24,7 +24,7 @@ int FoodStorage::foodCount()
     return foods.size();
 }
 
-QList<QPointF>& FoodStorage::getFoods()
+const QList<QPointF>& FoodStorage::getFoods() const
 {
     return foods;
 }

@@ -20,72 +20,73 @@ QSize AppSettings::windowSize()
     return settings.value("window/size", QSize(800, 600)).toSize();
 }
 
-void AppSettings::saveSimulationState(AntColonyModel* model, AntSimulator* simulator)
+void AppSettings::saveModelData(const AntColonyModel* model)
 {
-    settings.beginGroup("Simulation");
+    if (!model)
+    {
+        return;
+    }
 
-    //Parameters
+    settings.beginGroup("Simulation model");
+    QByteArray modelData;
+    QDataStream modelStream(&modelData, QIODevice::WriteOnly);
+    modelStream << *model;
+    settings.setValue("modelData", modelData);
+    settings.endGroup();
+    settings.sync();
+}
+
+bool AppSettings::loadModelData(AntColonyModel* model)
+{
+    if (!model)
+    {
+        return false;
+    }
+
+    settings.beginGroup("Simulation model");
+    QByteArray modelData = settings.value("modelData").toByteArray();
+    QDataStream modelStream(&modelData, QIODevice::ReadOnly);
+    modelStream >> *model;
+    settings.endGroup();
+
+    emit settingsChanged();
+
+    return true;
+}
+
+void AppSettings::saveSimulationState(const AntSimulator* simulator)
+{
+    if (!simulator)
+    {
+        return;
+    }
+
+    settings.beginGroup("Simulation state");
+
     settings.setValue("isRunning", simulator->isSimulationRunning());
     settings.setValue("isPaused", simulator->isSimulationPaused());
     settings.setValue("collectedFood", simulator->collectedFood());
     settings.setValue("simulationSpeed", simulator->getSimulationSpeed());
     settings.setValue("antCount", simulator->getAntCount());
 
-    // Ants
-    QByteArray antData;
-    QDataStream antStream(&antData, QIODevice::WriteOnly);
-    antStream << model->getAnts();
-    
-    settings.setValue("ants", antData);
-
-    //Food
-    QByteArray foodData;
-    QDataStream foodStream(&foodData, QIODevice::WriteOnly);
-    foodStream << model->getFoodStorage().getFoods();
-
-    settings.setValue("food", foodData);
-
-    //Pheromones
-    QByteArray pheromonesData;
-    QDataStream pheromonesStream(&pheromonesData, QIODevice::WriteOnly);
-    pheromonesStream << model->getPheromoneMap().getPheromonePoints();
-
-    settings.setValue("pheromones", pheromonesData);
-
     settings.endGroup();
     settings.sync();
 }
 
-bool AppSettings::loadSimulationState(AntColonyModel* model, AntSimulator* simulator)
+bool AppSettings::loadSimulationState(AntSimulator* simulator)
 {
-    if (!model || !simulator)
+    if (!simulator)
     {
         return false;
     }
 
     settings.beginGroup("Simulation");
 
-    //Parameters
     simulator->setSimulationRunning(settings.value("isRunning", false).toBool());
     simulator->setSimulationPaused(settings.value("isPaused", false).toBool());
     simulator->setCollectedFood(settings.value("collectedFood", 0).toInt());
     simulator->setSimulationSpeed(settings.value("simulationSpeed", 1.0).toReal());
     simulator->setAntCount(settings.value("antCount", 10).toInt());
-
-    //Ants
-    QByteArray antData = settings.value("ants").toByteArray();
-    QDataStream antStream(&antData, QIODevice::ReadOnly);
-    antStream >> model->getAnts();
-
-    //Food
-    QByteArray foodData = settings.value("food").toByteArray();
-    QDataStream foodStream(&foodData, QIODevice::ReadOnly);
-    foodStream >> model->getFoodStorage().getFoods();
-
-    //Pheromones
-    QByteArray pheromonesData = settings.value("pheromones").toByteArray();
-    QDataStream pheromonesStream(&pheromonesData, QIODevice::ReadOnly);
-    pheromonesStream >> model->getPheromoneMap().getPheromonePoints();
 
     settings.endGroup();
 

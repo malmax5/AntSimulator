@@ -10,7 +10,7 @@
 AntSimulator::AntSimulator(AntColonyModel* antColonyModel, QObject* parent)
     : QObject(parent), antColonyModel(antColonyModel)
 {
-
+    
 }
 
 bool AntSimulator::isSimulationRunning() const
