@@ -4,4 +4,5 @@
 #include "6YEA5652QU/moc_MainWindow.cpp"
 #include "O3IF7JM7YK/moc_CustomView.cpp"
 #include "O3IF7JM7YK/moc_SimulationVisualizer.cpp"
+#include "6WJ5KOMAB3/moc_AppSettings.cpp"
 #include "MROXUFLNXW/moc_SettingsPanel.cpp"

@@ -34,6 +34,8 @@ set(HEADERS
     include/model/FoodStorage.hpp
     include/model/PheromoneMap.hpp
     include/model/AntColonyModel.hpp
+
+    include/settings/AppSettings.hpp
 )
 
 set(SOURCES
@@ -57,6 +59,8 @@ set(SOURCES
     src/model/FoodStorage.cpp
     src/model/PheromoneMap.cpp
     src/model/AntColonyModel.cpp
+
+    src/settings/AppSettings.cpp
 )
 
 qt_add_resources(RESOURCES "resources.qrc")
