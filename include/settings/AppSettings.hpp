@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QSettings>
+#include <QSplitter>
 
 #include "../model/AntColonyModel.hpp"
 #include "../AntSimulator.hpp"
@@ -17,6 +18,9 @@ public:
 
     void setWindowSize(const QSize& size);
     QSize windowSize();
+
+    void loadSplitterState(const QString& splitterName, QSplitter* splitter);
+    void saveSplitterState(const QString& splitterName, QSplitter* splitter);
 
     void saveModelData(const AntColonyModel* model);
     bool loadModelData(AntColonyModel* model);

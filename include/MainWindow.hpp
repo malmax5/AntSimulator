@@ -54,4 +54,6 @@ private:
     SettingsPanel* settingsPanel;
     AntSimulator* antSimulator;
     QThread* simulationThread;
+
+    QSplitter* splitter;
 };

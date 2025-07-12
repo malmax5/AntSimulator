@@ -12,12 +12,35 @@ AppSettings::AppSettings(QObject* parent)
 void AppSettings::setWindowSize(const QSize& size)
 {
     settings.setValue("window/size", size);
-    emit settingsChanged();
 }
 
 QSize AppSettings::windowSize()
 {
     return settings.value("window/size", QSize(800, 600)).toSize();
+}
+
+void AppSettings::saveSplitterState(const QString& splitterName, QSplitter* splitter)
+{
+    if (!splitter)
+    {
+        return;
+    }
+
+    settings.beginGroup("SplitterStates");
+    settings.setValue(splitterName, splitter->saveState());
+    settings.endGroup();
+}
+
+void AppSettings::loadSplitterState(const QString& splitterName, QSplitter* splitter)
+{
+    if (!splitter)
+    {
+        return;
+    }
+
+    settings.beginGroup("SplitterStates");
+    splitter->restoreState(settings.value(splitterName, QByteArray()).toByteArray());
+    settings.endGroup();
 }
 
 void AppSettings::saveModelData(const AntColonyModel* model)

@@ -34,7 +34,6 @@ public:
 
     friend QDataStream& operator<<(QDataStream& out, const Ant& ant)
     {
-        qDebug() << "<< Ant";
         QMutexLocker locker(&ant.m_mutex);
         out << ant.m_logicalPosition
             << ant.m_target
@@ -46,7 +45,6 @@ public:
 
     friend QDataStream& operator>>(QDataStream& in, Ant& ant)
     {
-        qDebug() << ">> Ant";
         QMutexLocker locker(&ant.m_mutex);
         in >> ant.m_logicalPosition
            >> ant.m_target

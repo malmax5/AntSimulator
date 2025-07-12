@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget* parent)
 
     init();
 
+    AppSettings::instance().loadSplitterState("SceneSettingsSplitter", splitter);
     AppSettings::instance().loadModelData(antColonyModel);
     AppSettings::instance().loadSimulationState(antSimulator);
     QMetaObject::invokeMethod(antSimulator, "restore", 
@@ -61,7 +62,7 @@ void MainWindow::initUI()
 
     settingsPanel = new SettingsPanel();
 
-    QSplitter* splitter = new QSplitter(Qt::Horizontal);
+    splitter = new QSplitter(Qt::Horizontal);
     splitter->addWidget(leftPanel);
     splitter->addWidget(settingsPanel);
 
@@ -118,6 +119,7 @@ void MainWindow::closeEvent(QCloseEvent* event)
     AppSettings::instance().saveModelData(antColonyModel);
     AppSettings::instance().saveSimulationState(antSimulator);
     AppSettings::instance().setWindowSize(size());
+    AppSettings::instance().saveSplitterState("SceneSettingsSplitter", splitter);
 
     if (simulationThread && simulationThread->isRunning())
     {

@@ -22,7 +22,6 @@ public:
         out << foodStorageSize;
         for (const auto& food : foodStorage.foods)
         {
-            qDebug() << "<< Food";
             out << food;
         }
         return out;

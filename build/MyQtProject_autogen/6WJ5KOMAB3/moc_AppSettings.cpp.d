@@ -16,6 +16,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QTimer \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QVector \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20memory.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q20type_traits.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/q23utility.h \
@@ -50,6 +51,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdeadlinetimer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qdebug.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qelapsedtimer.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qendian.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qexceptionhandling.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qflags.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qfloat16.h \
@@ -65,6 +67,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterable.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qiterator.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlatin1stringview.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qline.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlist.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlogging.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmalloc.h \
@@ -85,6 +88,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpair.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qpoint.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrect.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrefcount.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopedpointer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopeguard.h \
@@ -95,6 +99,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsharedpointer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qsize.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qspan.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstring.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringalgorithms.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qstringbuilder.h \
@@ -138,6 +143,38 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qversiontagging.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qxptype_traits.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qaction.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qbitmap.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qbrush.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qcolor.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qcursor.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qfont.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qfontinfo.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qfontmetrics.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qicon.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qimage.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qkeysequence.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpalette.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpixelformat.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpixmap.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qpolygon.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qregion.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qrgb.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qrgba64.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtgui-config.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiexports.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSplitter \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsizepolicy.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsplitter.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgets-config.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qwidget.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -227,6 +264,7 @@
   /usr/include/c++/10/bits/unordered_map.h \
   /usr/include/c++/10/bits/uses_allocator.h \
   /usr/include/c++/10/bits/vector.tcc \
+  /usr/include/c++/10/cassert \
   /usr/include/c++/10/cctype \
   /usr/include/c++/10/cerrno \
   /usr/include/c++/10/chrono \
