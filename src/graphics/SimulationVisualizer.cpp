@@ -5,7 +5,7 @@
     {
         QPixmap backgroundImage = QPixmap(QString(":/icon_resources/resources/icons/background.png"));
         QGraphicsPixmapItem* backgroundItem = scene->addPixmap(backgroundImage);
-        qreal scaleFactor = qMax(1.0 / backgroundImage.width(), 1.0 / backgroundImage.height());
+        qreal scaleFactor = qMax(scene->width() / backgroundImage.width(), scene->height() / backgroundImage.height());
         backgroundItem->setScale(scaleFactor);
         backgroundItem->setPos(0, 0);
         backgroundItem->setZValue(-1);
