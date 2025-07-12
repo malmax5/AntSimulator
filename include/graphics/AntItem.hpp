@@ -19,7 +19,6 @@ public:
 private:
     qreal scaleFactor = 0.00002;
 
-    bool hasFood = false;
     QColor baseColor = Qt::black;
 };
 

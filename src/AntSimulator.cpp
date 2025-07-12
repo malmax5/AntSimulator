@@ -235,7 +235,7 @@ void AntSimulator::moveAnts()
 
         if (currAnt->hasFood())
         {
-            QPointF nestTarget = returnToNest(currAnt);
+            QPointF nestTarget = returnToNest(antPos);
 
             if (nestTarget.isNull())
             {
@@ -249,7 +249,7 @@ void AntSimulator::moveAnts()
                 antColonyModel->addPheromone(antPos, 1.0);
             }
         }
-        else if (QPointF searchTarget = searchForFood(currAnt); !searchTarget.isNull())
+        else if (QPointF searchTarget = searchForFood(antPos); !searchTarget.isNull())
         {
             qreal distance = std::sqrt(QPointF::dotProduct(searchTarget - antPos, searchTarget - antPos));
 
@@ -270,7 +270,7 @@ void AntSimulator::moveAnts()
         }
         else // if not null -> dir from pheromone map
         {
-            
+
         }
 
         QPointF target = antTarget - antPos;
@@ -280,9 +280,9 @@ void AntSimulator::moveAnts()
     }
 }
 
-QPointF AntSimulator::searchForFood(const Ant* ant) const
+QPointF AntSimulator::searchForFood(const QPointF& pos) const
 {
-    QPointF nearestFood = antColonyModel->getFoodStorage().getNearestFood(ant->logicalPosition(), detectionRadius); // !maxDistance
+    QPointF nearestFood = antColonyModel->getFoodStorage().getNearestFood(pos, detectionRadius);
 
     if (!nearestFood.isNull())
     {
@@ -292,9 +292,9 @@ QPointF AntSimulator::searchForFood(const Ant* ant) const
     return QPointF();
 }
 
-QPointF AntSimulator::returnToNest(const Ant* ant) const
+QPointF AntSimulator::returnToNest(const QPointF& pos) const
 {
-    QPointF toNest = antColonyModel->getNestPosition() - ant->logicalPosition();
+    QPointF toNest = antColonyModel->getNestPosition() - pos;
     qreal distance = std::sqrt(QPointF::dotProduct(toNest, toNest));
 
     if (distance < 0.003)

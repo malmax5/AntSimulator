@@ -21,7 +21,7 @@ QPointF Ant::logicalPosition() const
 QPointF Ant::target() const
 {
     QMutexLocker locker(&m_mutex);
-    return m_logicalPosition;
+    return m_target;
 }
 
 bool Ant::hasFood() const
@@ -62,7 +62,7 @@ void Ant::setTarget(const QPointF& newTarget)
 void Ant::setHasFood(bool hasFood)
 {
     QMutexLocker locker(&m_mutex);
-    hasFood = hasFood;
+    m_hasFood = hasFood;
 
     emit hasFoodChanged();
 }

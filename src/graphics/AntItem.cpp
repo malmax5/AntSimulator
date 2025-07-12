@@ -24,8 +24,6 @@ AntItem::AntItem(const Ant* ant, QGraphicsSvgItem* parent)
 
 void AntItem::updatePosition(const QPointF& newPos, bool hasFood, const QPointF& targetPos)
 {
-    this->hasFood = hasFood;
-
     setPos(newPos);
 
     if (!targetPos.isNull())
