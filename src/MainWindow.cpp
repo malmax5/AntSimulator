@@ -6,6 +6,8 @@
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), antColonyModel(new AntColonyModel())
 {
+    resize(AppSettings::instance().windowSize());
+
     init();
 }
 
@@ -112,6 +114,8 @@ void MainWindow::closeEvent(QCloseEvent* event)
         simulationThread->quit();
         simulationThread->wait(1000);
     }
+
+    AppSettings::instance().setWindowSize(size());
 
     QMainWindow::closeEvent(event);
 }

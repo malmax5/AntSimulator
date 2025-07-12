@@ -21,6 +21,8 @@
 #include "AntField.hpp"
 #include "AntSimulator.hpp"
 
+#include "settings/AppSettings.hpp"
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

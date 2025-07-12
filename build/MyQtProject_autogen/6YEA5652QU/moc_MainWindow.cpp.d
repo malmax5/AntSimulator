@@ -13,6 +13,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
+  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/settings/AppSettings.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDeadlineTimer \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QHash \
@@ -23,6 +24,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPair \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QPointF \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSet \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSettings \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QSize \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QString \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QStringList \
