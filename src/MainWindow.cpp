@@ -44,13 +44,14 @@ void MainWindow::initUI()
     scene = new QGraphicsScene(this);
     scene->setSceneRect(0, 0, 1, 1);
 
+    connect(scene, &QGraphicsScene::sceneRectChanged, [](const QRectF& rect) {qDebug() << rect;});
+
     view = new CustomView(scene);
     view->setRenderHint(QPainter::Antialiasing);
     view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
     view->setDragMode(QGraphicsView::NoDrag);
     view->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
     view->setResizeAnchor(QGraphicsView::AnchorUnderMouse);
-    view->scale(400, 400);
 
     visualizer = new SimulationVisualizer(scene, antColonyModel, this);
 
