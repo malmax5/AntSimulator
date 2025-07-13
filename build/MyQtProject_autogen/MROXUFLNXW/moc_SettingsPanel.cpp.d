@@ -149,12 +149,15 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSlider \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSpinBox \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractslider.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsizepolicy.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qslider.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qspinbox.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \

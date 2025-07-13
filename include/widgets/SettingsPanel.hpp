@@ -4,6 +4,7 @@
 #include <QPointF>
 #include <QSpinBox>
 #include <QPushButton>
+#include <QSlider>
 
 class SettingsPanel : public QWidget
 {
@@ -11,6 +12,9 @@ class SettingsPanel : public QWidget
 
 public:
     explicit SettingsPanel(QWidget* parent = nullptr);
+
+    int getAntCount() const;
+    int getSimulationSpeed() const;
 
 signals:
     void startSimulation();
@@ -32,7 +36,9 @@ private slots:
 
 private:
     QSpinBox* antCountSpinBox;
+    QSlider* antCountSlider;
     QSpinBox* speedSpinBox;
+    QSlider* speedSlider;
 
     QPushButton* addFoodButton;
 

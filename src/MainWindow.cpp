@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget* parent)
 
     init();
 
+    AppSettings::instance().loadSettingsState(settingsPanel);
     AppSettings::instance().loadSplitterState("SceneSettingsSplitter", splitter);
     AppSettings::instance().loadModelData(antColonyModel);
     AppSettings::instance().loadSimulationState(antSimulator);
@@ -118,8 +119,9 @@ void MainWindow::closeEvent(QCloseEvent* event)
 {
     AppSettings::instance().saveModelData(antColonyModel);
     AppSettings::instance().saveSimulationState(antSimulator);
-    AppSettings::instance().setWindowSize(size());
+    AppSettings::instance().saveSettingsState(settingsPanel);
     AppSettings::instance().saveSplitterState("SceneSettingsSplitter", splitter);
+    AppSettings::instance().setWindowSize(size());
 
     if (simulationThread && simulationThread->isRunning())
     {

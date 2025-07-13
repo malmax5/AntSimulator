@@ -3,7 +3,6 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QGroupBox>
-#include <QSlider>
 #include <QLabel>
 #include <QPushButton>
 
@@ -20,7 +19,7 @@ SettingsPanel::SettingsPanel(QWidget* parent)
     antCountSpinBox->setRange(1, 1000);
     antCountSpinBox->setValue(10);
 
-    QSlider* antCountSlider = new QSlider(Qt::Horizontal);
+    antCountSlider = new QSlider(Qt::Horizontal);
     antCountSlider->setRange(1, 1000);
     antCountSlider->setValue(10);
     
@@ -70,7 +69,7 @@ SettingsPanel::SettingsPanel(QWidget* parent)
     speedSpinBox->setRange(1, 10);
     speedSpinBox->setValue(1);
 
-    QSlider* speedSlider = new QSlider(Qt::Horizontal);
+    speedSlider = new QSlider(Qt::Horizontal);
     speedSlider->setRange(1, 10);
     speedSlider->setValue(1);
     speedLayout->addWidget(new QLabel("Simulation Speed: "));
@@ -104,14 +103,24 @@ SettingsPanel::SettingsPanel(QWidget* parent)
     mainLayout->addLayout(controlLayout);
 }
 
+int SettingsPanel::getAntCount() const
+{
+    return antCountSpinBox->value();
+}
+
+int SettingsPanel::getSimulationSpeed() const
+{
+    return speedSpinBox->value();
+}
+
 void SettingsPanel::updateAntCount(int count)
 {
-    antCountSpinBox->setValue(count);
+    antCountSlider->setValue(count);
 }
 
 void SettingsPanel::updateSimulationSpeed(qreal speed)
 {
-    speedSpinBox->setValue(static_cast<int>(speed));
+    speedSlider->setValue(static_cast<int>(speed));
 }
 
 void SettingsPanel::onAddFoodButtonClicked(int x, int y)

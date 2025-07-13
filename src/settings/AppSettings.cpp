@@ -19,7 +19,38 @@ QSize AppSettings::windowSize()
     return settings.value("window/size", QSize(800, 600)).toSize();
 }
 
-void AppSettings::saveSplitterState(const QString& splitterName, QSplitter* splitter)
+void AppSettings::loadSettingsState(SettingsPanel* settingsPanel)
+{
+    if (!settingsPanel)
+    {
+        return;
+    }
+
+    settings.beginGroup("SettingsState");
+
+    settingsPanel->updateAntCount(settings.value("AntCount", 10).toInt());
+    settingsPanel->updateSimulationSpeed(settings.value("SimulationSpeed", 1).toReal());
+
+    settings.endGroup();
+}
+
+void AppSettings::saveSettingsState(const SettingsPanel* settingsPanel)
+{
+    if (!settingsPanel)
+    {
+        return;
+    }
+
+    settings.beginGroup("SettingsState");
+
+    settings.setValue("AntCount", settingsPanel->getAntCount());
+    settings.setValue("SimulationSpeed", settingsPanel->getSimulationSpeed());
+
+    settings.endGroup();
+    settings.sync();
+}
+
+void AppSettings::saveSplitterState(const QString& splitterName, const QSplitter* splitter)
 {
     if (!splitter)
     {

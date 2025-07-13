@@ -5,6 +5,7 @@
 
 #include "../model/AntColonyModel.hpp"
 #include "../AntSimulator.hpp"
+#include "../widgets/SettingsPanel.hpp"
 
 class AppSettings : public QObject
 {
@@ -19,8 +20,11 @@ public:
     void setWindowSize(const QSize& size);
     QSize windowSize();
 
+    void loadSettingsState(SettingsPanel* settingsPanel);
+    void saveSettingsState(const SettingsPanel* settingsPanel);
+
     void loadSplitterState(const QString& splitterName, QSplitter* splitter);
-    void saveSplitterState(const QString& splitterName, QSplitter* splitter);
+    void saveSplitterState(const QString& splitterName, const QSplitter* splitter);
 
     void saveModelData(const AntColonyModel* model);
     bool loadModelData(AntColonyModel* model);

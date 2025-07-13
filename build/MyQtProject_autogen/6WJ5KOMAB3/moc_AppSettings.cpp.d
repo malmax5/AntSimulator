@@ -5,6 +5,7 @@
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/AntColonyModel.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/FoodStorage.hpp \
   /home/cbf/LearningQT/Projects/Project_AntSimulator/include/model/PheromoneMap.hpp \
+  /home/cbf/LearningQT/Projects/Project_AntSimulator/include/widgets/SettingsPanel.hpp \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDataStream \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QDebug \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/QMutex \
@@ -69,6 +70,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlatin1stringview.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qline.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlist.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qlogging.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmalloc.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qmap.h \
@@ -90,6 +92,7 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qprocessordetection.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrect.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qrefcount.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qregularexpression.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopedpointer.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qscopeguard.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtCore/qset.h \
@@ -166,10 +169,21 @@
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiexports.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtguiglobal.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qtransform.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSlider \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSpinBox \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QSplitter \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractslider.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsizepolicy.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qslider.h \
+  /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qspinbox.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qsplitter.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/cbf/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \
