@@ -13,7 +13,6 @@ CustomView::CustomView(QGraphicsScene* scene, QWidget* parent)
 
     setViewportUpdateMode(FullViewportUpdate);
     setRenderHint(QPainter::SmoothPixmapTransform);
-    setAlignment(Qt::AlignLeft | Qt::AlignTop);
 
     QPixmap bgImage(":/icon_resources/resources/icons/background.png");
     if(!bgImage.isNull())
@@ -34,7 +33,6 @@ void CustomView::mousePressEvent(QMouseEvent* event)
     if (event->button() == Qt::LeftButton && QApplication::keyboardModifiers().testFlag(Qt::ControlModifier))
     {
         QPointF scenePos = mapToScene(event->pos());
-        qDebug() << scenePos;
         emit foodAddRequest(scenePos);
         return;
     }
@@ -54,7 +52,6 @@ void CustomView::wheelEvent(QWheelEvent* event)
         else
         {
             currentZoom *= factor;
-            qDebug() << currentZoom;
             setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
             this->scale(factor, factor);
             event->accept();
