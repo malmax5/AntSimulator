@@ -24,8 +24,6 @@ public:
     void setSimulationRunning(bool isRunning);
     void setSimulationPaused(bool isPaused);
     void setCollectedFood(int collectedFood);
-    void setGetSimulationSpeed(qreal simulationSpeed);
-    void setGetAntCount(int antCount);
 
 public slots:
     void run();

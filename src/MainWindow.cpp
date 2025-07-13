@@ -59,6 +59,8 @@ void MainWindow::initUI()
 
     foodCollected  = new QLabel("Food collected: 0", view);
     foodCollected->setStyleSheet("color: white;");
+    foodCollected->setAlignment(Qt::AlignLeft);
+    foodCollected->setMinimumWidth(150);
     foodCollected->move(10, 10);
     foodCollected->raise();
 
@@ -112,7 +114,8 @@ void MainWindow::connectSignals()
     });
 
     connect(antSimulator, &AntSimulator::updateCollectedFood, foodCollected, [this](int count){
-        foodCollected->setText(QString("Food collected: %1").arg(count));
+        qDebug() << count;
+        foodCollected->setText("Food collected: " + QString::number(count));
     });
 }
 

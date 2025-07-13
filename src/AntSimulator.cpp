@@ -50,18 +50,8 @@ void AntSimulator::setSimulationPaused(bool isPaused)
 
 void AntSimulator::setCollectedFood(int collectedFood)
 {
-    emit updateCollectedFood(foodCollected);
     this->foodCollected = collectedFood;
-}
-
-void AntSimulator::setGetSimulationSpeed(qreal simulationSpeed)
-{
-    this->simulationSpeed = simulationSpeed;
-}
-
-void AntSimulator::setGetAntCount(int antCount)
-{
-    this->antCount = antCount;
+    emit updateCollectedFood(collectedFood);
 }
 
 void AntSimulator::run()
